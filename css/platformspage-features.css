@@ -1,0 +1,55 @@
+/* Shared feature-list item pattern — reused across EazyTrade, Prive, and
+   EazyTrade Browser sections (Figma nodes 1255:7959, 1255:8066, 1255:8191) */
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.feature-list__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 16px;
+  padding: 19px 18px;
+}
+
+.feature-list__item img {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+}
+
+.feature-list__item span {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grey-pure-black);
+}
+
+.feature-list--dark .feature-list__item {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+}
+
+.feature-list--dark .feature-list__item span {
+  color: var(--grey-pure-white);
+}
+
+@media (max-width: 639px) {
+  .feature-list {
+    gap: 16px;
+  }
+
+  .feature-list__item {
+    padding: 16px;
+  }
+
+  .feature-list__item span {
+    font-size: 16px;
+  }
+}

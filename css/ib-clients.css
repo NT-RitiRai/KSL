@@ -1,0 +1,138 @@
+/* Our Clients — Figma node 2356:11572 */
+
+.ib-clients {
+  background: #001e34;
+  padding: 64px 0;
+  overflow: hidden;
+}
+
+.ib-clients__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.ib-clients__text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1 1 283px;
+  min-width: 0;
+}
+
+.ib-clients__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.ib-clients__badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--grey-pure-white);
+  border-radius: 29px;
+  padding: 10px 18px;
+  font-size: 16px;
+  color: var(--grey-pure-white);
+}
+
+.ib-clients__heading h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--grey-pure-white);
+}
+
+.ib-clients__subtitle {
+  font-size: 16px;
+  color: var(--grey-off-white);
+  margin-top: -16px;
+}
+
+.ib-clients__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ib-clients__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ib-clients__list img {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+}
+
+.ib-clients__list span {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--grey-pure-white);
+}
+
+.ib-clients__quote {
+  border-left: 4px solid var(--grey-pure-white);
+  padding: 27px 16px;
+}
+
+.ib-clients__quote p {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--grey-pure-white);
+}
+
+.ib-clients__visual {
+  flex-shrink: 0;
+  width: 596px;
+  max-width: 42vw;
+}
+
+.ib-clients__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  .ib-clients__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ib-clients__text {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .ib-clients__heading {
+    align-items: center;
+  }
+
+  .ib-clients__list li {
+    justify-content: center;
+  }
+
+  .ib-clients__visual {
+    width: 100%;
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 639px) {
+  .ib-clients {
+    padding: 48px 0;
+  }
+
+  .ib-clients__heading h2 {
+    font-size: 30px;
+  }
+
+  .ib-clients__list span {
+    font-size: 20px;
+  }
+}

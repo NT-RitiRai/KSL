@@ -1,0 +1,146 @@
+/* Investor Charter (IB module) — Figma node 2525:10910 */
+
+.ibic-hero {
+  background: #f5f8fb;
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.ibic-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.ibic-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 533px;
+}
+
+.ibic-hero__text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+  color: var(--grey-dark-charcoal);
+}
+
+.ibic-hero__text p {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+}
+
+.ibic-hero__visual {
+  flex-shrink: 0;
+  width: 440px;
+  max-width: 38vw;
+}
+
+.ibic-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.ibic-list {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.ibic-list__panel {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
+}
+
+.ibic-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--grey-pure-white);
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.ibic-row span {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+}
+
+.ibic-row img {
+  flex-shrink: 0;
+  width: 20px;
+  height: 19px;
+}
+
+@media (max-width: 1180px) {
+  .ibic-hero__text h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .ibic-hero {
+    padding: 56px 0;
+  }
+
+  .ibic-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ibic-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .ibic-hero__visual {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .ibic-list__panel {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 639px) {
+  .ibic-hero__text h1 {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+
+  .ibic-hero__text p {
+    font-size: 16px;
+  }
+
+  .ibic-list {
+    padding: 0 0 48px;
+  }
+
+  .ibic-list__panel {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .ibic-row {
+    padding: 16px;
+  }
+
+  .ibic-row span {
+    font-size: 15px;
+  }
+}

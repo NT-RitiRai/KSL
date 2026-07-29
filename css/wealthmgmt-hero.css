@@ -1,0 +1,119 @@
+/* Protect. Grow. Transition Wealth — With Clarity. — Figma node 2370:7284 */
+
+.wealthmgmt-hero {
+  background: #f5f8fb; /* no matching Figma token — matches other page-hero backgrounds */
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.wealthmgmt-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.wealthmgmt-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 644px;
+}
+
+.wealthmgmt-hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.92px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.wealthmgmt-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+  max-width: 643px;
+}
+
+.wealthmgmt-hero__cta {
+  align-self: flex-start;
+  backdrop-filter: blur(9px);
+  background: var(--secondary-red);
+  border: 1px solid #b10009; /* no matching Figma token */
+  border-radius: 12px;
+  padding: 13px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.wealthmgmt-hero__cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(223, 36, 45, 0.28);
+}
+
+.wealthmgmt-hero__cta:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.wealthmgmt-hero__cta:focus-visible {
+  outline: 2px solid var(--secondary-red);
+  outline-offset: 2px;
+}
+
+.wealthmgmt-hero__visual {
+  flex-shrink: 0;
+  width: 506px;
+  max-width: 40vw;
+}
+
+.wealthmgmt-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1180px) {
+  .wealthmgmt-hero__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .wealthmgmt-hero {
+    padding: 56px 0;
+  }
+
+  .wealthmgmt-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wealthmgmt-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .wealthmgmt-hero__cta {
+    align-self: center;
+  }
+
+  .wealthmgmt-hero__visual {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 639px) {
+  .wealthmgmt-hero__title {
+    font-size: 34px;
+    letter-spacing: -0.9px;
+  }
+
+  .wealthmgmt-hero__subtitle {
+    font-size: 16px;
+  }
+}

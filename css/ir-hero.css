@@ -1,0 +1,107 @@
+/* Investor Relations hero — Figma node 1240:3927 */
+
+.ir-hero {
+  background: #f5f8fb; /* no matching Figma token — matches other page-hero backgrounds */
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.ir-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.ir-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+  max-width: 640px;
+}
+
+.ir-hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 89, 154, 0.02); /* no matching Figma token */
+  border: 1px solid var(--primary-blue);
+  border-radius: 29px;
+  padding: 13px 18px;
+}
+
+.ir-hero__badge img {
+  width: 18px;
+  height: 18px;
+}
+
+.ir-hero__badge span {
+  font-size: 16px;
+  color: var(--primary-blue);
+}
+
+.ir-hero__title {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.ir-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.44;
+  color: var(--grey-medium-dark-grey);
+}
+
+.ir-hero__visual {
+  flex-shrink: 0;
+  width: 592px;
+  max-width: 46vw;
+}
+
+.ir-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1180px) {
+  .ir-hero__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .ir-hero {
+    padding: 56px 0;
+  }
+
+  .ir-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ir-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .ir-hero__visual {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 639px) {
+  .ir-hero__title {
+    font-size: 34px;
+  }
+
+  .ir-hero__subtitle {
+    font-size: 16px;
+  }
+
+  .ir-hero__badge span {
+    font-size: 14px;
+  }
+}

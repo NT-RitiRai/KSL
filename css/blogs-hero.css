@@ -1,0 +1,83 @@
+/* Market Intelligence & Research hero — Figma node 1253:7575 */
+
+.blogs-hero {
+  background: #f5f8fb; /* no matching Figma token */
+  padding: 80px 0;
+}
+
+.blogs-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.blogs-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 639px;
+}
+
+.blogs-hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.92px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.blogs-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+}
+
+.blogs-hero__visual {
+  flex-shrink: 0;
+  width: 525px;
+  max-width: 42vw;
+}
+
+.blogs-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1180px) {
+  .blogs-hero__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .blogs-hero {
+    padding: 56px 0;
+  }
+
+  .blogs-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .blogs-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .blogs-hero__visual {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 639px) {
+  .blogs-hero__title {
+    font-size: 34px;
+    letter-spacing: -0.9px;
+  }
+
+  .blogs-hero__subtitle {
+    font-size: 16px;
+  }
+}

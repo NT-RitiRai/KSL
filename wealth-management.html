@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Management — Khandwala Securities Limited (KSL)</title>
+    <meta name="description"
+        content="KSL Wealth Management offers a comprehensive advisory approach spanning fixed income, equity, insurance, alternates, and estate planning — tailored to individuals, families, and institutions.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/wealthmgmt-hero.css">
+    <link rel="stylesheet" href="css/wealthmgmt-approach.css">
+    <link rel="stylesheet" href="css/wealthmgmt-solutions.css">
+    <link rel="stylesheet" href="css/wealthmgmt-benefit.css">
+    <link rel="stylesheet" href="css/wealthmgmt-testimonials.css">
+    <link rel="stylesheet" href="css/wealthmgmt-whyksl.css">
+    <link rel="stylesheet" href="css/assetmgmt-contact.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/icons/ksl-logo.svg" alt="Khandwala Securities Limited" width="227" height="64" />
+            </a>
+
+            <button class="nav__mobile-toggle" id="navMobileToggle" aria-label="Toggle menu" aria-expanded="false">
+                <img src="assets/icons/list.svg" alt="" />
+            </button>
+
+            <div class="nav__links" id="navLinks">
+                <a href="products.html" class="nav__link">Products</a>
+
+                <a href="pricing.html" class="nav__link">Pricing</a>
+                <a href="partner-with-us.html" class="nav__link">Partner with us</a>
+
+                <button class="nav__login" type="button">
+                    Log in
+                    <img src="assets/icons/caret-down.svg" alt="" />
+                </button>
+
+                <a href="#" class="nav__cta">Open an account</a>
+
+                <div class="nav__menu-item" id="navMenuItem">
+                    <button class="nav__menu-toggle" type="button" id="navMenuToggle" aria-label="Show products menu"
+                        aria-expanded="false" aria-controls="navFlyout">
+                        <img class="nav__menu-icon--open" src="assets/icons/list.svg" alt="" />
+                        <img class="nav__menu-icon--close" src="assets/icons/menu-close.svg" alt="" />
+                    </button>
+
+                    <div class="nav__flyout" id="navFlyout">
+                        <div class="nav__flyout__products">
+                            <a href="ksl-platforms.html#eazytrade" class="nav__flyout__product">
+                                <img src="assets/icons/product-eazytrade.svg" alt="" />
+                                <span class="nav__flyout__product-name">KSL Eazytrade</span>
+                                <span class="nav__flyout__product-desc">Advanced Trading</span>
+                            </a>
+                            <a href="ksl-platforms.html#prive" class="nav__flyout__product">
+                                <img src="assets/icons/product-prive.svg" alt="" />
+                                <span class="nav__flyout__product-name">KSL Prive</span>
+                                <span class="nav__flyout__product-desc">Smart Trading</span>
+                            </a>
+                            <div class="nav__flyout__product">
+                                <img src="assets/icons/product-ppps.svg" alt="" />
+                                <a href="https://wealthbeats.kslindia.com/" target="_blank" rel="noopener"
+                                    class="nav__flyout__product-name">KSL PPPS</a>
+                                <span class="nav__flyout__product-desc">Growth Portfolios</span>
+                            </div>
+                        </div>
+
+                        <div class="nav__flyout__columns">
+                            <div class="nav__flyout__col">
+                                <span class="nav__flyout__col-title">Quick Links</span>
+                                <a href="about.html">About Us</a>
+                                <a href="investor-relations.html">Investor Relations</a>
+                                <a href="https://ipo.meon.co.in/kslindia" target="_blank" rel="noopener">IPOs</a>
+                                <a href="contact-us.html">Contact us</a>
+                                <a href="faqs.html">FAQ</a>
+                                <a href="blogs.html">Blogs</a>
+                            </div>
+                            <div class="nav__flyout__col">
+                                <span class="nav__flyout__col-title">Products &amp; Services</span>
+                                <a href="equity-capital-markets.html">Equity Capital Markets</a>
+                                <a href="investment-banking.html">Investment Banking</a>
+                                <a href="asset-management.html">Asset Management &ndash; PMS</a>
+                                <a href="wealth-management.html">Wealth Management</a>
+                            </div>
+                            <div class="nav__flyout__col">
+                                <span class="nav__flyout__col-title">Others</span>
+                                <a href="https://live.meon.co.in/kslindia/individual" target="_blank"
+                                    rel="noopener">E-KYC</a>
+                                <a href="meet-the-team.html">Meet the Team</a>
+                                <a href="career.html">Career</a>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                                <a href="data-protection-policy.html">Data Protection Policy</a>
+                                <a href="https://www.nseindia.com/static/invest/first-time-investor-fraud-dos-and-donts"
+                                    target="_blank" rel="noopener">Investor Frauds Dos and Donts</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="wealthmgmt-hero">
+        <div class="container wealthmgmt-hero__inner">
+            <div class="wealthmgmt-hero__text">
+                <h1 class="wealthmgmt-hero__title">Protect. Grow. Transition Wealth &mdash; With Clarity.</h1>
+                <p class="wealthmgmt-hero__subtitle">Wealth isn&rsquo;t just built. It is protected, grown, and
+                    thoughtfully transitioned across generations. KSL offers a comprehensive wealth advisory approach
+                    tailored to individuals, families, and institutions.</p>
+                <a href="#wealthmgmt-contact" class="wealthmgmt-hero__cta">Connect With Us</a>
+            </div>
+            <div class="wealthmgmt-hero__visual">
+                <img src="assets/images/wealthmgmt-page/hero-illustration.png"
+                    alt="Illustration representing wealth protection and growth planning" width="506" height="368" />
+            </div>
+        </div>
+    </section>
+
+    <section class="wealthmgmt-approach">
+        <div class="container wealthmgmt-approach__inner">
+            <div class="wealthmgmt-approach__text">
+                <h2>A Holistic Approach to Wealth</h2>
+                <p>At Khandwala Securities Limited, we believe wealth management goes beyond products and returns.
+                    It is about aligning financial decisions with life goals, risk preferences, and long-term
+                    aspirations.</p>
+
+                <div class="wealthmgmt-approach__clients">
+                    <h3>We work with clients to:</h3>
+                    <ul class="wealthmgmt-approach__checklist">
+                        <li>
+                            <img src="assets/icons/wealthmgmt-page/icon-checkmark.svg" alt="" />
+                            <span>Structure portfolios across asset classes</span>
+                        </li>
+                        <li>
+                            <img src="assets/icons/wealthmgmt-page/icon-checkmark.svg" alt="" />
+                            <span>Plan for long-term financial security</span>
+                        </li>
+                        <li>
+                            <img src="assets/icons/wealthmgmt-page/icon-checkmark.svg" alt="" />
+                            <span>Manage risk and preserve capital</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="wealthmgmt-approach__callout">
+                    <p>Advice First. Products Second.</p>
+                </div>
+            </div>
+
+            <div class="wealthmgmt-approach__card">
+                <h3>How We Work With Clients</h3>
+                <p>Our approach is centered on clarity, discipline, and long-term thinking:</p>
+                <div class="wealthmgmt-approach__list">
+                    <div class="wealthmgmt-approach__item">
+                        <span class="wealthmgmt-approach__icon"><img
+                                src="assets/icons/wealthmgmt-page/icon-understanding.svg" alt="" /></span>
+                        <p><strong>Understanding You:</strong> Your financial goals, risk appetite, and time horizon
+                        </p>
+                    </div>
+                    <div class="wealthmgmt-approach__item">
+                        <span class="wealthmgmt-approach__icon"><img
+                                src="assets/icons/wealthmgmt-page/icon-strategy.svg" alt="" /></span>
+                        <p><strong>Designing the Strategy:</strong> Asset allocation and product selection aligned to
+                            your needs</p>
+                    </div>
+                    <div class="wealthmgmt-approach__item">
+                        <span class="wealthmgmt-approach__icon">
+                            <img src="assets/icons/wealthmgmt-page/icon-review-a.svg" alt="" />
+                            <img src="assets/icons/wealthmgmt-page/icon-review-b.svg" alt="" />
+                        </span>
+                        <p><strong>Ongoing Review:</strong> Periodic monitoring and portfolio alignment</p>
+                    </div>
+                    <div class="wealthmgmt-approach__item">
+                        <span class="wealthmgmt-approach__icon">
+                            <img src="assets/icons/wealthmgmt-page/icon-advisory-a.svg" alt="" />
+                            <img src="assets/icons/wealthmgmt-page/icon-advisory-b.svg" alt="" />
+                            <img src="assets/icons/wealthmgmt-page/icon-advisory-c.svg" alt="" />
+                        </span>
+                        <p><strong>Advisory-Led Engagement:</strong> Focus on suitability rather than product push
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wealthmgmt-solutions">
+        <div class="container wealthmgmt-solutions__inner">
+            <div class="wealthmgmt-solutions__heading">
+                <h2>Wealth Solutions</h2>
+                <p>We offer access to a curated range of financial solutions:</p>
+                <p class="wealthmgmt-solutions__tag">Curated Solutions. Not Complicated Choices.</p>
+            </div>
+
+            <div class="wealthmgmt-solutions__grid">
+                <div class="wealthmgmt-solutions__row">
+                    <article class="wealthmgmt-solutions__card">
+                        <span class="wealthmgmt-solutions__icon"><img
+                                src="assets/icons/wealthmgmt-page/icon-fixedincome.svg" alt="" /></span>
+                        <h3>Fixed Income &amp; Debt Solutions</h3>
+                        <ul>
+                            <li>Bonds (Government &amp; Corporate)</li>
+                            <li>Structured fixed income opportunities</li>
+                            <li>Debt-oriented investment strategies</li>
+                        </ul>
+                    </article>
+                    <article class="wealthmgmt-solutions__card">
+                        <span class="wealthmgmt-solutions__icon"><img
+                                src="assets/icons/wealthmgmt-page/icon-equity.svg" alt="" /></span>
+                        <h3>Equity &amp; Market-Linked Solutions</h3>
+                        <ul>
+                            <li>Direct equities (advisory-led)</li>
+                            <li>Market-linked products</li>
+                            <li>Long-term equity participation strategies</li>
+                        </ul>
+                    </article>
+                    <article class="wealthmgmt-solutions__card">
+                        <span class="wealthmgmt-solutions__icon"><img
+                                src="assets/icons/wealthmgmt-page/icon-insurance.svg" alt="" /></span>
+                        <h3>Insurance &amp; Risk Protection</h3>
+                        <ul>
+                            <li>Life insurance advisory</li>
+                            <li>Risk management solutions</li>
+                            <li>Protection planning</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="wealthmgmt-solutions__row wealthmgmt-solutions__row--two">
+                    <article class="wealthmgmt-solutions__card">
+                        <span class="wealthmgmt-solutions__icon"><img
+                                src="assets/icons/wealthmgmt-page/icon-alternate.svg" alt="" /></span>
+                        <h3>Alternate &amp; Structured Opportunities</h3>
+                        <ul>
+                            <li>Structured products</li>
+                            <li>Select alternative investment opportunities</li>
+                        </ul>
+                    </article>
+                    <article class="wealthmgmt-solutions__card">
+                        <span class="wealthmgmt-solutions__icon"><img
+                                src="assets/icons/wealthmgmt-page/icon-estate.svg" alt="" /></span>
+                        <h3>Estate &amp; Succession Planning</h3>
+                        <ul>
+                            <li>Wealth transfer strategies</li>
+                            <li>Family wealth structuring</li>
+                            <li>Legacy planning</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wealthmgmt-benefit">
+        <div class="container">
+            <div class="wealthmgmt-benefit__intro">
+                <span class="wealthmgmt-benefit__badge">Our Approach</span>
+                <h2>We work with:</h2>
+                <p>Designed for individuals seeking a structured and thoughtful approach to managing wealth.</p>
+            </div>
+
+            <div class="wealthmgmt-benefit__grid">
+                <article class="wealthmgmt-benefit__card">
+                    <img src="assets/images/assetmgmt-page/benefit-hni.png" alt="" />
+                    <div class="wealthmgmt-benefit__text">
+                        <h3>HNIs</h3>
+                    </div>
+                </article>
+                <article class="wealthmgmt-benefit__card">
+                    <img src="assets/images/assetmgmt-page/benefit-family.png" alt="" />
+                    <div class="wealthmgmt-benefit__text">
+                        <h3>Families &amp; Promoters</h3>
+                    </div>
+                </article>
+                <article class="wealthmgmt-benefit__card">
+                    <img src="assets/images/wealthmgmt-page/benefit-businessowners.png" alt="" />
+                    <div class="wealthmgmt-benefit__text">
+                        <h3>Business Owners</h3>
+                        <p>First-time or seasoned &mdash; get research-backed guidance and seamless execution from a
+                            team that knows the market.</p>
+                    </div>
+                </article>
+                <article class="wealthmgmt-benefit__card">
+                    <img src="assets/images/assetmgmt-page/benefit-investors.png" alt="" />
+                    <div class="wealthmgmt-benefit__text">
+                        <h3>Emerging Wealth Creators</h3>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="wealthmgmt-testimonials">
+        <div class="container wealthmgmt-testimonials__inner">
+            <div class="wealthmgmt-testimonials__heading">
+                <h2>Happy Clients</h2>
+                <p>Trusted by investors across market cycles and investment journeys.</p>
+            </div>
+
+            <div class="wealthmgmt-testimonials__grid">
+                <article class="wealthmgmt-testimonials__card">
+                    <div class="wealthmgmt-testimonials__stars">
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                    </div>
+                    <p class="wealthmgmt-testimonials__quote">KSL has been an exceptional partner in managing my
+                        investment portfolio. From the very beginning, their team has taken the time to understand my
+                        financial objectives and tailor a strategy that aligns with my goals&hellip;
+                        <span>Read more</span>
+                    </p>
+                    <div class="wealthmgmt-testimonials__author">
+                        <span class="wealthmgmt-testimonials__avatar">JV</span>
+                        <div>
+                            <span class="wealthmgmt-testimonials__name">Mr. Jaikishan Vaswani</span>
+                            <span class="wealthmgmt-testimonials__role">HNI INVESTOR</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="wealthmgmt-testimonials__card">
+                    <div class="wealthmgmt-testimonials__stars">
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                    </div>
+                    <p class="wealthmgmt-testimonials__quote">Partnering with Khandwala Securities for our investment
+                        banking needs has been a game-changer. Their deep expertise, strategic foresight, and
+                        hands-on support ensured smooth execution of our transactions.&hellip;
+                        <span>Read more</span>
+                    </p>
+                    <div class="wealthmgmt-testimonials__author">
+                        <span class="wealthmgmt-testimonials__avatar">VK</span>
+                        <div>
+                            <span class="wealthmgmt-testimonials__name">V Sanal Kumar</span>
+                            <span class="wealthmgmt-testimonials__role">VISHNUSURYA PROJECTS AND INFRA LIMITED,
+                                DIRECTOR &amp; CEO</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="wealthmgmt-testimonials__card">
+                    <div class="wealthmgmt-testimonials__stars">
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                        <img src="assets/icons/star-filled.svg" alt="" />
+                    </div>
+                    <p class="wealthmgmt-testimonials__quote">Partnering with Khandwala Securities for our investment
+                        banking needs has been a game-changer. Their deep expertise, strategic foresight, and
+                        hands-on support ensured smooth execution of our transactions.&hellip;
+                        <span>Read more</span>
+                    </p>
+                    <div class="wealthmgmt-testimonials__author">
+                        <span class="wealthmgmt-testimonials__avatar">DS</span>
+                        <div>
+                            <span class="wealthmgmt-testimonials__name">Late Mr. Darbari Seth</span>
+                            <span class="wealthmgmt-testimonials__role">TATA GROUP OF COMPANIES.</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="wealthmgmt-whyksl">
+        <div class="wealthmgmt-whyksl__blob wealthmgmt-whyksl__blob--right" aria-hidden="true"></div>
+        <div class="wealthmgmt-whyksl__blob wealthmgmt-whyksl__blob--left" aria-hidden="true"></div>
+
+        <div class="container wealthmgmt-whyksl__inner">
+            <div class="wealthmgmt-whyksl__heading">
+                <h2>Why Khandwala Securities Limited</h2>
+                <p>Experience You Can Rely On.</p>
+            </div>
+
+            <div class="wealthmgmt-whyksl__grid">
+                <article class="wealthmgmt-whyksl__card">
+                    <span class="wealthmgmt-whyksl__icon"><img src="assets/icons/assetmgmt-page/icon-years.svg"
+                            alt="" /></span>
+                    <h3>90+ years</h3>
+                    <p>Group legacy in financial markets</p>
+                </article>
+                <article class="wealthmgmt-whyksl__card">
+                    <span class="wealthmgmt-whyksl__icon"><img src="assets/icons/assetmgmt-page/icon-growth.svg"
+                            alt="" /></span>
+                    <h3>Deep understanding</h3>
+                    <p>Of capital markets and investor behavior</p>
+                </article>
+                <article class="wealthmgmt-whyksl__card">
+                    <span class="wealthmgmt-whyksl__icon"><img
+                            src="assets/icons/wealthmgmt-page/icon-integrated.svg" alt="" /></span>
+                    <h3>Integrated platform</h3>
+                    <p>Across advisory, broking, and investment banking</p>
+                </article>
+                <article class="wealthmgmt-whyksl__card">
+                    <span class="wealthmgmt-whyksl__icon"><img
+                            src="assets/icons/wealthmgmt-page/icon-relationship.svg" alt="" /></span>
+                    <h3>Relationship-driven</h3>
+                    <p>Approach</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="assetmgmt-contact" id="wealthmgmt-contact">
+        <div class="container">
+            <div class="assetmgmt-contact__panel">
+                <div class="assetmgmt-contact__text">
+                    <div class="assetmgmt-contact__heading">
+                        <h2>Let&rsquo;s Build Your Next Growth Chapter</h2>
+                        <p>Whether you are planning to raise capital, explore strategic partnerships, or go public
+                            &mdash; we are ready to partner with you.</p>
+                    </div>
+
+                    <div class="assetmgmt-contact__chips">
+                        <a href="tel:02240767373" class="assetmgmt-contact__chip">
+                            <img src="assets/icons/about-page/icon-phone.png" alt="" />
+                            022-40767373
+                        </a>
+                        <a href="https://wa.me/912240767373" target="_blank" rel="noopener"
+                            class="assetmgmt-contact__chip">
+                            <img src="assets/icons/about-page/icon-whatsapp.png" alt="" />
+                            Whatsapp
+                        </a>
+                        <a href="mailto:investorgrievances@kslindia.com" class="assetmgmt-contact__chip">
+                            <img src="assets/icons/about-page/icon-email.png" alt="" />
+                            Email
+                        </a>
+                    </div>
+
+                    <div class="assetmgmt-contact__address">
+                        <img src="assets/icons/assetmgmt-page/icon-pin.svg" alt="" />
+                        <div>
+                            <span class="assetmgmt-contact__address-title">Mumbai Office Headquarters</span>
+                            <p class="assetmgmt-contact__address-text">Khandwala Securities Limited G-II, Ground
+                                Floor, Dalamal House, Nariman Point, Mumbai &ndash; 400021</p>
+                        </div>
+                    </div>
+
+                    <div class="assetmgmt-contact__address">
+                        <img src="assets/icons/assetmgmt-page/icon-pin.svg" alt="" />
+                        <div>
+                            <span class="assetmgmt-contact__address-title">Mumbai Branch Office</span>
+                            <p class="assetmgmt-contact__address-text">517, 5th Floor, Lodha Supremus Building, Next
+                                to Lodha Eternis, Near Hotel Tunga International, End of 11th Road, off. Mahakali
+                                Caves Road, Andheri East</p>
+                        </div>
+                    </div>
+
+                    <div class="assetmgmt-contact__actions">
+                        <a href="#" class="assetmgmt-contact__btn">Schedule a Consultation</a>
+                        <a href="#" class="assetmgmt-contact__btn">Connect With Our Team</a>
+                    </div>
+                </div>
+
+                <div class="assetmgmt-contact__photo">
+                    <img src="assets/images/assetmgmt-page/contact-photo.png"
+                        alt="Khandwala Securities Limited office" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="wealthmgmt-faq">
+        <div class="faq__blob faq__blob--right" aria-hidden="true"></div>
+        <div class="faq__blob faq__blob--left" aria-hidden="true"></div>
+
+        <div class="container faq__inner">
+            <h2 class="faq__title">Frequently Asked Questions</h2>
+            <p class="faq__subtitle">Answers to help you get started with confidence.</p>
+
+            <div class="faq__list">
+                <div class="faq__item is-open">
+                    <button class="faq__question" id="wealthmgmt-faq-q-1" aria-expanded="true"
+                        aria-controls="wealthmgmt-faq-a-1" type="button">
+                        <span class="faq__question-text">What is merchant banking?</span>
+                        <span class="faq__chevron" aria-hidden="true">
+                            <img src="assets/icons/chevron-down.svg" alt="" />
+                        </span>
+                    </button>
+                    <span class="faq__divider" aria-hidden="true"></span>
+                    <div class="faq__answer-wrap" id="wealthmgmt-faq-a-1" role="region"
+                        aria-labelledby="wealthmgmt-faq-q-1">
+                        <div class="faq__answer-inner">
+                            <p class="faq__answer">Merchant banking involves advisory and execution services for
+                                capital market transactions such as IPOs, rights issues, buybacks, open offers, and
+                                valuations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" id="wealthmgmt-faq-q-2" aria-expanded="false"
+                        aria-controls="wealthmgmt-faq-a-2" type="button">
+                        <span class="faq__question-text">Who needs merchant banking services?</span>
+                        <span class="faq__chevron" aria-hidden="true">
+                            <img src="assets/icons/chevron-down.svg" alt="" />
+                        </span>
+                    </button>
+                    <span class="faq__divider" aria-hidden="true"></span>
+                    <div class="faq__answer-wrap" id="wealthmgmt-faq-a-2" role="region"
+                        aria-labelledby="wealthmgmt-faq-q-2">
+                        <div class="faq__answer-inner">
+                            <!-- Placeholder: Figma source only authors answer copy for the first (default-open) item. -->
+                            <p class="faq__answer">Companies raising capital, undertaking IPOs or rights issues,
+                                pursuing buybacks or open offers, or requiring independent valuations typically
+                                engage merchant banking services.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" id="wealthmgmt-faq-q-3" aria-expanded="false"
+                        aria-controls="wealthmgmt-faq-a-3" type="button">
+                        <span class="faq__question-text">How does KSL support IPO transactions?</span>
+                        <span class="faq__chevron" aria-hidden="true">
+                            <img src="assets/icons/chevron-down.svg" alt="" />
+                        </span>
+                    </button>
+                    <span class="faq__divider" aria-hidden="true"></span>
+                    <div class="faq__answer-wrap" id="wealthmgmt-faq-a-3" role="region"
+                        aria-labelledby="wealthmgmt-faq-q-3">
+                        <div class="faq__answer-inner">
+                            <!-- Placeholder: Figma source only authors answer copy for the first (default-open) item. -->
+                            <p class="faq__answer">KSL supports IPO transactions end-to-end &mdash; from structuring
+                                and regulatory filings to due diligence, valuation, and marketing &mdash; guiding
+                                companies through a smooth path to listing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__ticker" aria-label="Investor alerts">
+            <div class="footer__ticker-track">
+                <p class="footer__ticker-text">Investor Alert : 1. KYC is a one-time exercise while dealing in
+                    securities markets – once KYC is done through a SEBI registered intermediary (Broker, DP, Mutual
+                    Fund etc.), you need not undergo the same process again when you approach another intermediary. 2.
+                    For Stock Broking Transaction ‘Prevent unauthorised transactions in your account –> Update your
+                    mobile numbers/email IDs with your stock brokers. Receive information of your transactions directly
+                    from Exchange on your mobile/email at the end of the day…Issued in the interest of Investors. 3. For
+                    Depository Transaction ‘Prevent Unauthorized Transactions in your demat account –> Update your
+                    Mobile Number with your Depository Participant. Receive alerts on your Registered Mobile for all
+                    debit and other important transactions in your demat account directly from CDSL/NSDL on the same
+                    day…Issued in the interest of investors. 4. No need to issue cheques by investors while subscribing
+                    to IPO. Just write the bank account number and sign in the application form to authorise your bank
+                    to make payment in case of allotment. No worries for refund as the money remains in
+                    investor’s account. 5. Investors should be cautious on unsolicited emails and SMS advising to buy,
+                    sell or hold securities and trade only on the basis of informed decision. Investors are advised to
+                    invest after conducting appropriate analysis of respective companies and not to blindly follow
+                    unfounded rumours, tips etc. Further, you are also requested to share your knowledge or evidence of
+                    systemic wrongdoing, potential frauds or unethical behaviour through the anonymous portal facility
+                    provided on BSE &amp; NSE website. **Fraudulent activities detected. Investors should only transact
+                    with authorized Khandwala Securities Limited channels. Read our full advisory on
+                    https://kslindia.com</p>
+                <p class="footer__ticker-text" aria-hidden="true">Investor Alert : 1. KYC is a one-time exercise while
+                    dealing in securities markets – once KYC is done through a SEBI registered intermediary (Broker, DP,
+                    Mutual Fund etc.), you need not undergo the same process again when you approach another
+                    intermediary. 2. For Stock Broking Transaction ‘Prevent unauthorised transactions in your
+                    account –> Update your mobile numbers/email IDs with your stock brokers. Receive
+                    information of your transactions directly from Exchange on your mobile/email at the end of the
+                    day…Issued in the interest of Investors. 3. For Depository Transaction ‘Prevent
+                    Unauthorized Transactions in your demat account –> Update your Mobile Number with your
+                    Depository Participant. Receive alerts on your Registered Mobile for all debit and other important
+                    transactions in your demat account directly from CDSL/NSDL on the same day…Issued in the
+                    interest of investors. 4. No need to issue cheques by investors while subscribing to IPO. Just write
+                    the bank account number and sign in the application form to authorise your bank to make payment in
+                    case of allotment. No worries for refund as the money remains in investor’s account. 5.
+                    Investors should be cautious on unsolicited emails and SMS advising to buy, sell or hold securities
+                    and trade only on the basis of informed decision. Investors are advised to invest after conducting
+                    appropriate analysis of respective companies and not to blindly follow unfounded rumours, tips etc.
+                    Further, you are also requested to share your knowledge or evidence of systemic wrongdoing,
+                    potential frauds or unethical behaviour through the anonymous portal facility provided on BSE &amp;
+                    NSE website. **Fraudulent activities detected. Investors should only transact with authorized
+                    Khandwala Securities Limited channels. Read our full advisory on https://kslindia.com</p>
+            </div>
+        </div>
+
+        <div class="container footer__inner">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <img src="assets/icons/ksl-logo.svg" alt="Khandwala Securities Limited" width="240"
+                            height="68" />
+                    </a>
+
+                    <div class="footer__qr">
+                        <div class="footer__qr-image">
+                            <img src="assets/images/footer-qr-code.png" alt="QR code to download the KSL app" width="72"
+                                height="72" />
+                        </div>
+                        <div class="footer__qr-copy">
+                            <p class="footer__qr-text">Scan to download App on the Playstore and Appstore.</p>
+                            <div class="footer__qr-stores">
+                                <img src="assets/icons/store-googleplay.svg" alt="Get it on Google Play" width="24"
+                                    height="24" />
+                                <img src="assets/icons/store-apple.svg" alt="Download on the App Store" width="24"
+                                    height="24" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__social">
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="YouTube">
+                            <img src="assets/icons/social-youtube.svg" alt="" width="20" height="16" />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
+                            <img src="assets/icons/social-instagram.svg" alt="" width="20" height="20" />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="Facebook">
+                            <img src="assets/icons/social-facebook.svg" alt="" width="20" height="20" />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="Telegram">
+                            <img src="assets/icons/social-telegram.svg" alt="" width="20" height="18" />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn">
+                            <img src="assets/icons/social-linkedin.svg" alt="" width="20" height="20" />
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="footer__nav" aria-label="Footer">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Quick Links</span>
+                        <div class="footer__col-links">
+                            <a href="https://tradepluse.kslindia.com/TradeNetX" target="_blank" rel="noopener">Branch
+                                Login</a>
+                            <a href="https://tradepluse.kslindia.com/TradeWeb45/Login.aspx" target="_blank"
+                                rel="noopener">Back Office Login</a>
+                            <a href="https://live.meon.co.in/kslindia/individual" target="_blank"
+                                rel="noopener">E-KYC</a>
+                            <a href="products.html">Products</a>
+                            <a href="ksl-platforms.html#eazytrade">KSL Eazytrade</a>
+                            <a href="ksl-platforms.html#prive">KSL Priv&eacute;</a>
+                            <a href="https://www.nseindia.com/" target="_blank" rel="noopener">NSE</a>
+                            <a href="https://www.bseindia.com/" target="_blank" rel="noopener">BSE</a>
+                            <a href="partner-with-us.html">Partner with us</a>
+                            <a href="pricing.html">Pricing</a>
+                            <a href="https://ipo.meon.co.in/kslindia" target="_blank" rel="noopener">IPOs</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <span class="footer__col-title">Products &amp; Services</span>
+                        <div class="footer__col-links">
+                            <a href="equity-capital-markets.html">Equity Capital Markets</a>
+                            <a href="investment-banking.html">Investment Banking</a>
+                            <a href="asset-management.html">Asset management- PMS</a>
+                            <a href="wealth-management.html">Wealth Management</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <span class="footer__col-title">Others</span>
+                        <div class="footer__col-links">
+                            <a href="about.html">About Us</a>
+                            <a href="meet-the-team.html">Meet the team</a>
+                            <a href="career.html">Career</a>
+                            <a href="investor-relations.html">Investor Relations</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="data-protection-policy.html">Data Protection Policy</a>
+                            <a href="https://www.nseindia.com/static/invest/first-time-investor-fraud-dos-and-donts"
+                                target="_blank" rel="noopener">Investor Frauds Dos and Donts</a>
+                            <a href="contact-us.html">Contact us</a>
+                            <a href="blogs.html">Blogs</a>
+                            <a href="faqs.html">FAQ</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer__divider"></div>
+
+            <p class="footer__copyright">&#9450; 2026 Khandwala Securities Limited India | All rights reserved | Website
+                designed &amp; developed by <span class="footer__copyright-credit">Nine Triangles</span></p>
+
+            <div class="footer__divider"></div>
+
+            <div class="footer__legal">
+                <div class="footer__legal-text">
+                    <p>@ 2025 Khandwala Securities Limited (KSL)* Member of NSE, BSE CIN Number: L67120MH1993PLC070709
+                    </p>
+                    <p class="footer__legal-address">Khandwala Securities Limited: Registered and Correspondence Office
+                        Address :- G-II, Ground Floor, Dalamal House, Nariman Point, Mumbai &ndash; 400021. Tel:
+                        91-22-40767373; Fax: 91-22-40767377; <br />Website: www.kslindia.com;</p>
+                    <p>Khandwala Securities Ltd.: CIN: L67120MH1993PLC070709; BSE (Cash) Registration No: INZ000176837/
+                        NSE (Cash, WDM and F&amp;O) Registration No: INZ000176837; CDSL Registration No.: IN-DP-55-2015
+                        / Portfolio Manager Registration No: INP000000340 / Research Analyst Registration No:
+                        INH000015206/Merchant Banker (Category I) Registration No: INM000001899/ IRDA : 1144971 / AMFI
+                        ARN: 1673.</p>
+                    <p>*Research &amp; Advisory services is backed by proper research. Registration granted by SEBI and
+                        certification from NISM in no way guarantees performance of the intermediary or provide any
+                        assurance of returns to investors. Please read the Risk Disclosure Document prescribed by the
+                        Stock Exchanges carefully before investing. There is no assurance or guarantee of the returns.
+                        #Such representations are not indicative of future results. Investment in securities market are
+                        subject to market risk, read all the related documents carefully before investing. Investments
+                        in debt securities/ municipal debt securities/ securitised debt instruments are subject to risks
+                        including delay and/ or default in payment. Read all the offer related documents carefully.
+                        Details of Compliance Officer: Name: Mr. Abhishek Joshi, Email Id: abhishek.joshi@kslindia. com,
+                        Contact No.: 91-22&ndash;40767373. Customer having any query/feedback/ clarification may write
+                        to investorgrievances@kslindia.com In case of grievances for services like stock broking,
+                        depository participant, research analyst or any other services rendered by Khandwala Securities
+                        Limited write to investorgrievances@kslindia.com.</p>
+                </div>
+                <div class="footer__legal-notice">
+                    <p>* Attention Investors...</p>
+                    <button type="button" class="footer__legal-toggle">Read more</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/faq.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

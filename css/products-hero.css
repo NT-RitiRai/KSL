@@ -1,0 +1,83 @@
+/* Innovative Investment Solutions for Every Investor — Figma node 2820:11446 */
+
+.products-hero {
+  background: #f5f8fb; /* no matching Figma token — matches other page-hero backgrounds */
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.products-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.products-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 684px;
+}
+
+.products-hero__text h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.92px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.products-hero__text p {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+}
+
+.products-hero__visual {
+  flex-shrink: 0;
+  width: 525px;
+  max-width: 42vw;
+}
+
+.products-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1180px) {
+  .products-hero__text h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .products-hero {
+    padding: 56px 0;
+  }
+
+  .products-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .products-hero__text {
+    max-width: none;
+  }
+
+  .products-hero__visual {
+    width: 100%;
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 639px) {
+  .products-hero__text h1 {
+    font-size: 34px;
+    letter-spacing: -0.9px;
+  }
+
+  .products-hero__text p {
+    font-size: 16px;
+  }
+}

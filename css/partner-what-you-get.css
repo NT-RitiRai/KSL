@@ -1,0 +1,100 @@
+/* What You Get When You Partner With KSL — Figma node 2323:8747 */
+
+.partner-benefits {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.partner-benefits__inner {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.partner-benefits__left {
+  flex: 0 0 660px;
+  min-width: 0;
+}
+
+.partner-benefits__title {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+}
+
+.partner-benefits__tagline {
+  font-size: 18px;
+  color: var(--grey-off-black);
+  margin-top: 12px;
+}
+
+.partner-benefits__illustration {
+  width: 100%;
+  height: auto;
+  margin-top: 24px;
+}
+
+.partner-benefits__list {
+  flex: 1 1 0;
+  min-width: 0;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-lightest-grey); /* no matching Figma token */
+  box-shadow: 0px 5px 15px 0px rgba(25, 33, 61, 0.06); /* no matching Figma token */
+  border-radius: 24px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.partner-benefits__item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.partner-benefits__item img {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.partner-benefits__item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--grey-off-black);
+}
+
+.partner-benefits__item p {
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--grey-medium-dark-grey);
+  margin-top: 4px;
+}
+
+@media (max-width: 1023px) {
+  .partner-benefits__inner {
+    flex-direction: column;
+  }
+
+  .partner-benefits__left {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .partner-benefits {
+    padding: 48px 0;
+  }
+
+  .partner-benefits__title {
+    font-size: 24px;
+  }
+
+  .partner-benefits__list {
+    padding: 24px;
+  }
+}

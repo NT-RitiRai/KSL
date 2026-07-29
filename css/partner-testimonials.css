@@ -1,0 +1,128 @@
+/* What Our Partners Say About Us — Figma node 1376:8726 */
+
+.partner-testimonials {
+  background: linear-gradient(0deg, #001e34 0%, var(--primary-blue) 100%);
+  padding: 64px 0;
+}
+
+.partner-testimonials__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.partner-testimonials__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.partner-testimonials__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.partner-testimonials__subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-off-white);
+}
+
+.partner-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.partner-testimonials__card {
+  background: rgba(255, 255, 255, 0.08); /* no matching Figma token */
+  border: 1px solid rgba(255, 255, 255, 0.16); /* no matching Figma token */
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.partner-testimonials__stars {
+  display: flex;
+  gap: 8px;
+}
+
+.partner-testimonials__stars img {
+  width: 24px;
+  height: 24px;
+}
+
+.partner-testimonials__quote {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.25;
+  color: var(--grey-lightest-grey);
+}
+
+.partner-testimonials__quote strong {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.partner-testimonials__person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.partner-testimonials__avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.24); /* no matching Figma token */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grey-pure-white);
+}
+
+.partner-testimonials__name,
+.partner-testimonials__role {
+  display: block;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.partner-testimonials__name {
+  font-weight: 600;
+  color: var(--grey-pure-white);
+}
+
+.partner-testimonials__role {
+  font-size: 14px;
+  color: var(--grey-light-grey);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+@media (max-width: 1023px) {
+  .partner-testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 639px) {
+  .partner-testimonials {
+    padding: 48px 0;
+  }
+
+  .partner-testimonials__title {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,116 @@
+/* Where Institutional Expertise Meets Your Ambition — Figma node 1051:1731 */
+
+.partner-why {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.partner-why__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.partner-why__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.partner-why__badge {
+  display: inline-flex;
+  background: rgba(49, 49, 223, 0.02); /* no matching Figma token */
+  border: 1px solid var(--primary-blue);
+  border-radius: 29px;
+  padding: 10px 18px;
+  font-size: 16px;
+  color: var(--primary-blue);
+}
+
+.partner-why__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.partner-why__desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  max-width: 820px;
+}
+
+.partner-why__grid {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.partner-why__card {
+  flex: 1 1 0;
+  background: #f9f9f9; /* no matching Figma token */
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 24px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.partner-why__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: #ebf2f7; /* no matching Figma token */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.partner-why__icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.partner-why__card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.partner-why__card-tagline {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+}
+
+.partner-why__card-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-medium-dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .partner-why__grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 639px) {
+  .partner-why {
+    padding: 48px 0;
+  }
+
+  .partner-why__title {
+    font-size: 28px;
+  }
+}

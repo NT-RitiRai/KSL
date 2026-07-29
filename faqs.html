@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs — Khandwala Securities Limited (KSL)</title>
+    <meta name="description"
+        content="Find answers to common questions about KSL's trading platforms, account opening, research support, and security practices.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/faqpage-hero.css">
+    <link rel="stylesheet" href="css/faqpage-list.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/contact-form.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/icons/ksl-logo.svg" alt="Khandwala Securities Limited" width="227" height="64" />
+            </a>
+
+            <button class="nav__mobile-toggle" id="navMobileToggle" aria-label="Toggle menu" aria-expanded="false">
+                <img src="assets/icons/list.svg" alt="" />
+            </button>
+
+            <div class="nav__links" id="navLinks">
+                <a href="products.html" class="nav__link">Products</a>
+
+                <a href="pricing.html" class="nav__link">Pricing</a>
+                <a href="partner-with-us.html" class="nav__link">Partner with us</a>
+
+                <button class="nav__login" type="button">
+                    Log in
+                    <img src="assets/icons/caret-down.svg" alt="" />
+                </button>
+
+                <a href="#" class="nav__cta">Open an account</a>
+
+                <div class="nav__menu-item" id="navMenuItem">
+                    <button class="nav__menu-toggle" type="button" id="navMenuToggle" aria-label="Show products menu"
+                        aria-expanded="false" aria-controls="navFlyout">
+                        <img class="nav__menu-icon--open" src="assets/icons/list.svg" alt="" />
+                        <img class="nav__menu-icon--close" src="assets/icons/menu-close.svg" alt="" />
+                    </button>
+
+                    <div class="nav__flyout" id="navFlyout">
+                        <div class="nav__flyout__products">
+                            <a href="ksl-platforms.html#eazytrade" class="nav__flyout__product">
+                                <img src="assets/icons/product-eazytrade.svg" alt="" />
+                                <span class="nav__flyout__product-name">KSL Eazytrade</span>
+                                <span class="nav__flyout__product-desc">Advanced Trading</span>
+                            </a>
+                            <a href="ksl-platforms.html#prive" class="nav__flyout__product">
+                                <img src="assets/icons/product-prive.svg" alt="" />
+                                <span class="nav__flyout__product-name">KSL Prive</span>
+                                <span class="nav__flyout__product-desc">Smart Trading</span>
+                            </a>
+                            <div class="nav__flyout__product">
+                                <img src="assets/icons/product-ppps.svg" alt="" />
+                                <a href="https://wealthbeats.kslindia.com/" target="_blank" rel="noopener"
+                                    class="nav__flyout__product-name">KSL PPPS</a>
+                                <span class="nav__flyout__product-desc">Growth Portfolios</span>
+                            </div>
+                        </div>
+
+                        <div class="nav__flyout__columns">
+                            <div class="nav__flyout__col">
+                                <span class="nav__flyout__col-title">Quick Links</span>
+                                <a href="about.html">About Us</a>
+                                <a href="investor-relations.html">Investor Relations</a>
+                                <a href="https://ipo.meon.co.in/kslindia" target="_blank" rel="noopener">IPOs</a>
+                                <a href="contact-us.html">Contact us</a>
+                                <a href="faqs.html">FAQ</a>
+                                <a href="blogs.html">Blogs</a>
+                            </div>
+                            <div class="nav__flyout__col">
+                                <span class="nav__flyout__col-title">Products &amp; Services</span>
+                                <a href="equity-capital-markets.html">Equity Capital Markets</a>
+                                <a href="investment-banking.html">Investment Banking</a>
+                                <a href="asset-management.html">Asset Management &ndash; PMS</a>
+                                <a href="wealth-management.html">Wealth Management</a>
+                            </div>
+                            <div class="nav__flyout__col">
+                                <span class="nav__flyout__col-title">Others</span>
+                                <a href="https://live.meon.co.in/kslindia/individual" target="_blank"
+                                    rel="noopener">E-KYC</a>
+                                <a href="meet-the-team.html">Meet the Team</a>
+                                <a href="career.html">Career</a>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                                <a href="data-protection-policy.html">Data Protection Policy</a>
+                                <a href="https://www.nseindia.com/static/invest/first-time-investor-fraud-dos-and-donts"
+                                    target="_blank" rel="noopener">Investor Frauds Dos and Donts</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="faqpage-hero">
+        <div class="container faqpage-hero__inner">
+            <div class="faqpage-hero__text">
+                <div class="faqpage-hero__badge">
+                    <span class="faqpage-hero__badge-icon">?</span>
+                    <span>Frequently Asked Questions</span>
+                </div>
+                <h1 class="faqpage-hero__title">How can we help?</h1>
+                <p class="faqpage-hero__subtitle">Find answers to common questions about our services and platforms.</p>
+            </div>
+            <div class="faqpage-hero__visual">
+                <img src="assets/images/faq-page/hero-illustration.svg"
+                    alt="Illustration of a person with a large question mark, representing frequently asked questions"
+                    width="600" height="355" />
+            </div>
+        </div>
+    </section>
+
+    <section class="faqpage-list">
+        <div class="container faqpage-list__inner">
+            <div class="faqpage-list__intro">
+                <h2 class="faqpage-list__title">Frequently Asked Questions</h2>
+                <p class="faqpage-list__subtitle">Answers to help you get started with confidence.</p>
+
+                <!-- Note: Figma's source only authors real content for the "All" category —
+                     the other category pills are shown for visual fidelity but are not wired
+                     to filter the list, since no per-question category data was authored to
+                     filter by. -->
+                <div class="faqpage-list__filters" role="tablist" aria-label="FAQ category">
+                    <button type="button" class="faqpage-list__filter is-active" role="tab"
+                        aria-selected="true">All</button>
+                    <button type="button" class="faqpage-list__filter" role="tab"
+                        aria-selected="false">Partnership</button>
+                    <button type="button" class="faqpage-list__filter" role="tab" aria-selected="false">Trading
+                        &amp; Pricing</button>
+                    <button type="button" class="faqpage-list__filter" role="tab"
+                        aria-selected="false">Account</button>
+                    <button type="button" class="faqpage-list__filter" role="tab"
+                        aria-selected="false">Support</button>
+                    <button type="button" class="faqpage-list__filter" role="tab"
+                        aria-selected="false">General</button>
+                    <button type="button" class="faqpage-list__filter" role="tab" aria-selected="false">Tax</button>
+                </div>
+            </div>
+
+            <div class="faq__list">
+                <div class="faq__item is-open">
+                    <button class="faq__question" id="faqpage-q-1" aria-expanded="true" aria-controls="faqpage-a-1"
+                        type="button">
+                        <span class="faq__question-text">What documents are required to open a Demat account?</span>
+                        <span class="faq__chevron" aria-hidden="true">
+                            <img src="assets/icons/chevron-down.svg" alt="" />
+                        </span>
+                    </button>
+                    <span class="faq__divider" aria-hidden="true"></span>
+                    <div class="faq__answer-wrap" id="faqpage-a-1" role="region" aria-labelledby="faqpage-q-1">
+                        <div class="faq__answer-inner">
+                            <p class="faq__answer">Basic KYC documents including PAN, address proof, and bank details
+                                are required as per regulatory guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" id="faqpage-q-2" aria-expanded="false" aria-controls="faqpage-a-2"
+                        type="button">
+                        <span class="faq__question-text">What platforms can I trade on?</span>
+                        <span class="faq__chevron" aria-hidden="true"><img src="assets/icons/chevron-down.svg"
+                                alt="" /></span>
+                    </button>
+                    <span class="faq__divider" aria-hidden="true"></span>
+                    <div class="faq__answer-wrap" id="faqpage-a-2" role="region" aria-labelledby="faqpage-q-2">
+                        <div class="faq__answer-inner">
+                            <!-- Placeholder: Figma source only authors answer copy for the first (default-open) item. -->
+                            <p class="faq__answer">You can trade through KSL Eazytrade, KSL Priv&eacute;, or our
+                                branch and call-and-trade desk &mdash; whichever suits your style.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" id="faqpage-q-3" aria-expanded="false" aria-controls="faqpage-a-3"
+                        type="button">
+                        <span class="faq__question-text">Can I access research and advisory support?</span>
+                        <span class="faq__chevron" aria-hidden="true"><img src="assets/icons/chevron-down.svg"
+                                alt="" /></span>
+                    </button>
+                    <span class="faq__divider" aria-hidden="true"></span>
+                    <div class="faq__answer-wrap" id="faqpage-a-3" role="region" aria-labelledby="faqpage-q-3">
+                        <div class="faq__answer-inner">
+                            <!-- Placeholder: Figma source only authors answer copy for the first (default-open) item. -->
+                            <p class="faq__answer">Yes, all clients get access to KSL&rsquo;s in-house research desk
+                                and advisory support backed by over nine decades of market experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" id="faqpage-q-4" aria-expanded="false" aria-controls="faqpage-a-4"
+                        type="button">
+                        <span class="faq__question-text">Is my money and data secure?</span>
+                        <span class="faq__chevron" aria-hidden="true"><img src="assets/icons/chevron-down.svg"
+                                alt="" /></span>
+                    </button>
+                    <span class="faq__divider" aria-hidden="true"></span>
+                    <div class="faq__answer-wrap" id="faqpage-a-4" role="region" aria-labelledby="faqpage-q-4">
+                        <div class="faq__answer-inner">
+                            <!-- Placeholder: Figma source only authors answer copy for the first (default-open) item. -->
+                            <p class="faq__answer">Yes. Your funds and data are protected under SEBI-regulated
+                                custody and security practices, with your holdings held safely in your own demat
+                                account.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form" id="faqs-contact-form">
+        <div class="container">
+            <div class="contact-form__panel">
+                <div class="contact-form__fields">
+                    <h2 class="contact-form__title">Get in Touch</h2>
+                    <p class="contact-form__desc">Fill out the form below and we&rsquo;ll get back to you as soon as
+                        possible.</p>
+
+                    <form class="contact-form__form">
+                        <div class="contact-form__field">
+                            <label for="faqsName">Name</label>
+                            <input type="text" id="faqsName" name="name" placeholder="John Doe" />
+                        </div>
+
+                        <div class="contact-form__row">
+                            <div class="contact-form__field">
+                                <label for="faqsPhone">Contact Number</label>
+                                <div class="contact-form__phone">
+                                    <span>+91</span>
+                                    <input type="tel" id="faqsPhone" name="phone" placeholder="97097079998" />
+                                </div>
+                            </div>
+                            <div class="contact-form__field">
+                                <label for="faqsEmail">Email ID</label>
+                                <input type="email" id="faqsEmail" name="email" placeholder="abc@gmail.com" />
+                            </div>
+                        </div>
+
+                        <div class="contact-form__field">
+                            <label for="faqsSubject">Subject</label>
+                            <select id="faqsSubject" name="subject">
+                                <option value="" selected disabled>How can we help?</option>
+                                <option value="general">General Enquiry</option>
+                                <option value="account">Account Opening</option>
+                                <option value="support">Customer Support</option>
+                                <option value="other">Something else</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="contact-form__submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="contact-form__visual">
+                    <img src="assets/images/contact-bg.png"
+                        alt="Map showing KSL's registered office location near Nariman Point, Mumbai" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__ticker" aria-label="Investor alerts">
+            <div class="footer__ticker-track">
+                <p class="footer__ticker-text">Investor Alert : 1. KYC is a one-time exercise while dealing in
+                    securities markets – once KYC is done through a SEBI registered intermediary (Broker, DP, Mutual
+                    Fund etc.), you need not undergo the same process again when you approach another intermediary. 2.
+                    For Stock Broking Transaction ‘Prevent unauthorised transactions in your account –> Update your
+                    mobile numbers/email IDs with your stock brokers. Receive information of your transactions directly
+                    from Exchange on your mobile/email at the end of the day…Issued in the interest of Investors. 3. For
+                    Depository Transaction ‘Prevent Unauthorized Transactions in your demat account –> Update your
+                    Mobile Number with your Depository Participant. Receive alerts on your Registered Mobile for all
+                    debit and other important transactions in your demat account directly from CDSL/NSDL on the same
+                    day…Issued in the interest of investors. 4. No need to issue cheques by investors while subscribing
+                    to IPO. Just write the bank account number and sign in the application form to authorise your bank
+                    to make payment in case of allotment. No worries for refund as the money remains in
+                    investor’s account. 5. Investors should be cautious on unsolicited emails and SMS advising to buy,
+                    sell or hold securities and trade only on the basis of informed decision. Investors are advised to
+                    invest after conducting appropriate analysis of respective companies and not to blindly follow
+                    unfounded rumours, tips etc. Further, you are also requested to share your knowledge or evidence of
+                    systemic wrongdoing, potential frauds or unethical behaviour through the anonymous portal facility
+                    provided on BSE &amp; NSE website. **Fraudulent activities detected. Investors should only transact
+                    with authorized Khandwala Securities Limited channels. Read our full advisory on
+                    https://kslindia.com</p>
+                <p class="footer__ticker-text" aria-hidden="true">Investor Alert : 1. KYC is a one-time exercise while
+                    dealing in securities markets – once KYC is done through a SEBI registered intermediary (Broker, DP,
+                    Mutual Fund etc.), you need not undergo the same process again when you approach another
+                    intermediary. 2. For Stock Broking Transaction ‘Prevent unauthorised transactions in your
+                    account –> Update your mobile numbers/email IDs with your stock brokers. Receive
+                    information of your transactions directly from Exchange on your mobile/email at the end of the
+                    day…Issued in the interest of Investors. 3. For Depository Transaction ‘Prevent
+                    Unauthorized Transactions in your demat account –> Update your Mobile Number with your
+                    Depository Participant. Receive alerts on your Registered Mobile for all debit and other important
+                    transactions in your demat account directly from CDSL/NSDL on the same day…Issued in the
+                    interest of investors. 4. No need to issue cheques by investors while subscribing to IPO. Just write
+                    the bank account number and sign in the application form to authorise your bank to make payment in
+                    case of allotment. No worries for refund as the money remains in investor’s account. 5.
+                    Investors should be cautious on unsolicited emails and SMS advising to buy, sell or hold securities
+                    and trade only on the basis of informed decision. Investors are advised to invest after conducting
+                    appropriate analysis of respective companies and not to blindly follow unfounded rumours, tips etc.
+                    Further, you are also requested to share your knowledge or evidence of systemic wrongdoing,
+                    potential frauds or unethical behaviour through the anonymous portal facility provided on BSE &amp;
+                    NSE website. **Fraudulent activities detected. Investors should only transact with authorized
+                    Khandwala Securities Limited channels. Read our full advisory on https://kslindia.com</p>
+            </div>
+        </div>
+
+        <div class="container footer__inner">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <img src="assets/icons/ksl-logo.svg" alt="Khandwala Securities Limited" width="240"
+                            height="68" />
+                    </a>
+
+                    <div class="footer__qr">
+                        <div class="footer__qr-image">
+                            <img src="assets/images/footer-qr-code.png" alt="QR code to download the KSL app" width="72"
+                                height="72" />
+                        </div>
+                        <div class="footer__qr-copy">
+                            <p class="footer__qr-text">Scan to download App on the Playstore and Appstore.</p>
+                            <div class="footer__qr-stores">
+                                <img src="assets/icons/store-googleplay.svg" alt="Get it on Google Play" width="24"
+                                    height="24" />
+                                <img src="assets/icons/store-apple.svg" alt="Download on the App Store" width="24"
+                                    height="24" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__social">
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="YouTube">
+                            <img src="assets/icons/social-youtube.svg" alt="" width="20" height="16" />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
+                            <img src="assets/icons/social-instagram.svg" alt="" width="20" height="20" />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="Facebook">
+                            <img src="assets/icons/social-facebook.svg" alt="" width="20" height="20" />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="Telegram">
+                            <img src="assets/icons/social-telegram.svg" alt="" width="20" height="18" />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn">
+                            <img src="assets/icons/social-linkedin.svg" alt="" width="20" height="20" />
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="footer__nav" aria-label="Footer">
+                    <div class="footer__col">
+                        <span class="footer__col-title">Quick Links</span>
+                        <div class="footer__col-links">
+                            <a href="https://tradepluse.kslindia.com/TradeNetX" target="_blank" rel="noopener">Branch
+                                Login</a>
+                            <a href="https://tradepluse.kslindia.com/TradeWeb45/Login.aspx" target="_blank"
+                                rel="noopener">Back Office Login</a>
+                            <a href="https://live.meon.co.in/kslindia/individual" target="_blank"
+                                rel="noopener">E-KYC</a>
+                            <a href="products.html">Products</a>
+                            <a href="ksl-platforms.html#eazytrade">KSL Eazytrade</a>
+                            <a href="ksl-platforms.html#prive">KSL Priv&eacute;</a>
+                            <a href="https://www.nseindia.com/" target="_blank" rel="noopener">NSE</a>
+                            <a href="https://www.bseindia.com/" target="_blank" rel="noopener">BSE</a>
+                            <a href="partner-with-us.html">Partner with us</a>
+                            <a href="pricing.html">Pricing</a>
+                            <a href="https://ipo.meon.co.in/kslindia" target="_blank" rel="noopener">IPOs</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <span class="footer__col-title">Products &amp; Services</span>
+                        <div class="footer__col-links">
+                            <a href="equity-capital-markets.html">Equity Capital Markets</a>
+                            <a href="investment-banking.html">Investment Banking</a>
+                            <a href="asset-management.html">Asset management- PMS</a>
+                            <a href="wealth-management.html">Wealth Management</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <span class="footer__col-title">Others</span>
+                        <div class="footer__col-links">
+                            <a href="about.html">About Us</a>
+                            <a href="meet-the-team.html">Meet the team</a>
+                            <a href="career.html">Career</a>
+                            <a href="investor-relations.html">Investor Relations</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="data-protection-policy.html">Data Protection Policy</a>
+                            <a href="https://www.nseindia.com/static/invest/first-time-investor-fraud-dos-and-donts"
+                                target="_blank" rel="noopener">Investor Frauds Dos and Donts</a>
+                            <a href="contact-us.html">Contact us</a>
+                            <a href="blogs.html">Blogs</a>
+                            <a href="faqs.html">FAQ</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer__divider"></div>
+
+            <p class="footer__copyright">&#9450; 2026 Khandwala Securities Limited India | All rights reserved | Website
+                designed &amp; developed by <span class="footer__copyright-credit">Nine Triangles</span></p>
+
+            <div class="footer__divider"></div>
+
+            <div class="footer__legal">
+                <div class="footer__legal-text">
+                    <p>@ 2025 Khandwala Securities Limited (KSL)* Member of NSE, BSE CIN Number: L67120MH1993PLC070709
+                    </p>
+                    <p class="footer__legal-address">Khandwala Securities Limited: Registered and Correspondence Office
+                        Address :- G-II, Ground Floor, Dalamal House, Nariman Point, Mumbai &ndash; 400021. Tel:
+                        91-22-40767373; Fax: 91-22-40767377; <br />Website: www.kslindia.com;</p>
+                    <p>Khandwala Securities Ltd.: CIN: L67120MH1993PLC070709; BSE (Cash) Registration No: INZ000176837/
+                        NSE (Cash, WDM and F&amp;O) Registration No: INZ000176837; CDSL Registration No.: IN-DP-55-2015
+                        / Portfolio Manager Registration No: INP000000340 / Research Analyst Registration No:
+                        INH000015206/Merchant Banker (Category I) Registration No: INM000001899/ IRDA : 1144971 / AMFI
+                        ARN: 1673.</p>
+                    <p>*Research &amp; Advisory services is backed by proper research. Registration granted by SEBI and
+                        certification from NISM in no way guarantees performance of the intermediary or provide any
+                        assurance of returns to investors. Please read the Risk Disclosure Document prescribed by the
+                        Stock Exchanges carefully before investing. There is no assurance or guarantee of the returns.
+                        #Such representations are not indicative of future results. Investment in securities market are
+                        subject to market risk, read all the related documents carefully before investing. Investments
+                        in debt securities/ municipal debt securities/ securitised debt instruments are subject to risks
+                        including delay and/ or default in payment. Read all the offer related documents carefully.
+                        Details of Compliance Officer: Name: Mr. Abhishek Joshi, Email Id: abhishek.joshi@kslindia. com,
+                        Contact No.: 91-22&ndash;40767373. Customer having any query/feedback/ clarification may write
+                        to investorgrievances@kslindia.com In case of grievances for services like stock broking,
+                        depository participant, research analyst or any other services rendered by Khandwala Securities
+                        Limited write to investorgrievances@kslindia.com.</p>
+                </div>
+                <div class="footer__legal-notice">
+                    <p>* Attention Investors...</p>
+                    <button type="button" class="footer__legal-toggle">Read more</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/faq.js" defer></script>
+    <script src="js/faqpage-filters.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

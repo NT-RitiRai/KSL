@@ -1,0 +1,213 @@
+/* Investor Complaints (IB module) — Figma node 2523:19853 */
+
+.ibcx-hero {
+  background: #f5f8fb;
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.ibcx-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.ibcx-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 533px;
+}
+
+.ibcx-hero__text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+  color: var(--grey-dark-charcoal);
+}
+
+.ibcx-hero__text p {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+}
+
+.ibcx-hero__visual {
+  flex-shrink: 0;
+  width: 440px;
+  max-width: 38vw;
+}
+
+.ibcx-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.ibcx-list {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.ibcx-list__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.ibcx-list__panel {
+  max-width: 1080px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
+}
+
+.ibcx-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--grey-pure-white);
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.ibcx-row span {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+}
+
+.ibcx-row img {
+  flex-shrink: 0;
+  width: 20px;
+  height: 19px;
+}
+
+.ibcx-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.ibcx-pagination__step {
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-medium-dark-grey);
+}
+
+.ibcx-pagination__step--next {
+  color: var(--primary-blue);
+}
+
+.ibcx-pagination__numbers {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ibcx-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.ibcx-page--active {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--grey-pure-white);
+}
+
+.ibcx-page--ellipsis {
+  border-color: var(--primary-blue);
+}
+
+@media (max-width: 1180px) {
+  .ibcx-hero__text h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .ibcx-hero {
+    padding: 56px 0;
+  }
+
+  .ibcx-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ibcx-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .ibcx-hero__visual {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .ibcx-list__panel {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 639px) {
+  .ibcx-hero__text h1 {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+
+  .ibcx-hero__text p {
+    font-size: 16px;
+  }
+
+  .ibcx-list {
+    padding: 0 0 48px;
+  }
+
+  .ibcx-list__panel {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .ibcx-row {
+    padding: 16px;
+  }
+
+  .ibcx-row span {
+    font-size: 15px;
+  }
+
+  .ibcx-pagination {
+    gap: 12px;
+  }
+
+  .ibcx-page {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+}

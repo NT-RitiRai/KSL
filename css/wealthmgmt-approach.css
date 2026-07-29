@@ -1,0 +1,204 @@
+/* A Holistic Approach to Wealth — Figma node 2370:7373 */
+
+.wealthmgmt-approach {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.wealthmgmt-approach__inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+}
+
+.wealthmgmt-approach__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 604px;
+  min-width: 0;
+  max-width: 604px;
+}
+
+.wealthmgmt-approach__text > h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.wealthmgmt-approach__text > p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  max-width: 571px;
+}
+
+.wealthmgmt-approach__clients {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wealthmgmt-approach__clients h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+}
+
+.wealthmgmt-approach__checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 370px;
+}
+
+.wealthmgmt-approach__checklist li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.wealthmgmt-approach__checklist img {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.wealthmgmt-approach__checklist span {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grey-pure-black);
+}
+
+.wealthmgmt-approach__callout {
+  background: #eef9ff;
+  border-left: 4px solid var(--primary-blue);
+  border-radius: 14px;
+  padding: 27px 24px;
+  margin-top: auto;
+}
+
+.wealthmgmt-approach__callout p {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--grey-dark-charcoal);
+}
+
+.wealthmgmt-approach__card {
+  flex-shrink: 0;
+  width: 636px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background: #f8fafc;
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 24px;
+  box-shadow: 0px 1px 10.2px 0px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+
+.wealthmgmt-approach__card > h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+}
+
+.wealthmgmt-approach__card > p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  margin-top: -20px;
+}
+
+.wealthmgmt-approach__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wealthmgmt-approach__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.wealthmgmt-approach__icon {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--grey-pure-white);
+  border-radius: 12px;
+  box-shadow: 0px 2px 8.1px 0px rgba(0, 0, 0, 0.08);
+}
+
+.wealthmgmt-approach__icon img {
+  width: 22px;
+  height: 22px;
+}
+
+.wealthmgmt-approach__icon img:nth-child(n + 2) {
+  position: absolute;
+}
+
+.wealthmgmt-approach__item p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-pure-black);
+}
+
+.wealthmgmt-approach__item p strong {
+  font-weight: 600;
+}
+
+@media (max-width: 1180px) {
+  .wealthmgmt-approach__inner {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1023px) {
+  .wealthmgmt-approach__inner {
+    flex-direction: column;
+  }
+
+  .wealthmgmt-approach__text {
+    flex: 1 1 auto;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .wealthmgmt-approach__clients {
+    align-items: center;
+  }
+
+  .wealthmgmt-approach__checklist li {
+    justify-content: center;
+  }
+
+  .wealthmgmt-approach__card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .wealthmgmt-approach {
+    padding: 48px 0;
+  }
+
+  .wealthmgmt-approach__text > h2 {
+    font-size: 30px;
+  }
+
+  .wealthmgmt-approach__card {
+    padding: 24px;
+  }
+}

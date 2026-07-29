@@ -1,0 +1,128 @@
+/* KSL EazyTrade Browser — Figma node 1258:8264 */
+
+.platformspage-browser {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.platformspage-browser__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.platformspage-browser__intro h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+}
+
+.platformspage-browser__intro p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+}
+
+.platformspage-browser__layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.platformspage-browser__visual {
+  flex-shrink: 0;
+  width: 769px;
+  max-width: 42vw;
+}
+
+.platformspage-browser__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.platformspage-browser__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.platformspage-browser__visit-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(9px);
+  background: rgba(223, 36, 45, 0.08);
+  border: 1px solid var(--secondary-red);
+  border-radius: 12px;
+  padding: 13px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary-red);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.platformspage-browser__visit-btn:hover {
+  background: var(--secondary-red);
+  color: var(--grey-pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(223, 36, 45, 0.24);
+}
+
+.platformspage-browser__visit-btn:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.platformspage-browser__visit-btn:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.platformspage-browser__visit-btn img {
+  width: 18px;
+  height: 15px;
+  transition: filter 0.15s ease;
+}
+
+@media (max-width: 1180px) {
+  .platformspage-browser__layout {
+    flex-wrap: wrap;
+  }
+
+  .platformspage-browser__visual {
+    max-width: 480px;
+    order: -1;
+  }
+
+  .platformspage-browser .feature-list {
+    flex: 1 1 260px;
+  }
+}
+
+@media (max-width: 639px) {
+  .platformspage-browser {
+    padding: 48px 0;
+  }
+
+  .platformspage-browser__intro h2 {
+    font-size: 30px;
+  }
+
+  .platformspage-browser__layout {
+    flex-direction: column;
+  }
+
+  .platformspage-browser__visual {
+    max-width: 100%;
+  }
+
+  .platformspage-browser .feature-list {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,157 @@
+/* Partner with us hero — Figma node 1039:1519 */
+
+.partner-hero {
+  background: #f5f8fb; /* no matching Figma token */
+  padding: 80px 0;
+}
+
+.partner-hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.partner-hero__text {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.partner-hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.92px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.partner-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+  max-width: 601px;
+}
+
+.partner-hero__panel {
+  flex: 1 1 0;
+  background: var(--grey-pure-white);
+  border-radius: 24px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.partner-hero__panel-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+}
+
+.partner-hero__panel-desc {
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--grey-dark-grey);
+  margin-top: -8px;
+}
+
+.partner-hero__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.partner-hero__row {
+  display: flex;
+  gap: 16px;
+}
+
+.partner-hero__form input,
+.partner-hero__form select {
+  flex: 1 1 0;
+  min-width: 0;
+  background: #f8fafc; /* no matching Figma token */
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-family: var(--font-base);
+  font-size: 16px;
+  color: var(--grey-dark-charcoal);
+}
+
+.partner-hero__form select {
+  color: var(--grey-medium-light-grey);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9' viewBox='0 0 16 9' fill='none'%3E%3Cpath d='M1 1L8 8L15 1' stroke='%23a0a0a0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.partner-hero__field-full {
+  width: 100%;
+}
+
+.partner-hero__submit {
+  background: var(--primary-blue);
+  border: 1px solid rgba(160, 160, 160, 0.3); /* no matching Figma token */
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-family: var(--font-base);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grey-pure-white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.partner-hero__submit:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(0, 89, 154, 0.3);
+}
+
+.partner-hero__submit:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.partner-hero__submit:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1023px) {
+  .partner-hero__inner {
+    flex-direction: column;
+  }
+
+  .partner-hero__text {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 639px) {
+  .partner-hero {
+    padding: 48px 0;
+  }
+
+  .partner-hero__title {
+    font-size: 34px;
+    letter-spacing: -0.9px;
+  }
+
+  .partner-hero__panel {
+    padding: 24px 20px;
+  }
+
+  .partner-hero__panel-title {
+    font-size: 28px;
+  }
+
+  .partner-hero__row {
+    flex-direction: column;
+  }
+}

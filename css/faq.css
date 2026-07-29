@@ -1,0 +1,254 @@
+/* FAQ accordion — Figma node 667:3054 */
+
+.faq {
+  position: relative;
+  overflow: hidden;
+  background: var(--blue-tint-04);
+  padding: 64px 0;
+}
+
+.faq__blob {
+  position: absolute;
+  width: 226px;
+  height: 183px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.faq__blob--right {
+  right: -80px;
+  bottom: -40px;
+  background: var(--primary-blue);
+}
+
+.faq__blob--left {
+  left: -140px;
+  top: -80px;
+  background: var(--secondary-red);
+}
+
+.faq__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.faq__title {
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+  text-align: center;
+}
+
+.faq__subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  text-align: center;
+  margin-top: -16px;
+}
+
+.faq__list {
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq__item {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  padding: 26px 32px;
+  text-align: left;
+  font-family: var(--font-base);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.faq__item:not(.is-open) .faq__question:hover {
+  background: rgba(0, 89, 154, 0.06);
+}
+
+.faq__item.is-open .faq__question:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.faq__question:active {
+  opacity: 0.85;
+}
+
+.faq__question-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.35;
+  color: var(--black-100);
+}
+
+.faq__chevron {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--neutral-300);
+  /* Custom small shadow from Figma — no matching token */
+  box-shadow: 0px 0.465px 0.465px 0px rgba(25, 33, 61, 0.07);
+}
+
+.faq__chevron img {
+  width: 14px;
+  height: auto;
+  transform: rotate(-90deg);
+  transition: transform 0.25s ease;
+}
+
+.faq__divider {
+  display: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.24);
+  margin: 0 32px;
+}
+
+.faq__answer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq__answer-inner {
+  overflow: hidden;
+}
+
+.faq__answer {
+  padding: 14px 24px 0;
+  padding-bottom: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.35;
+  letter-spacing: 0.032px;
+  color: var(--grey-off-white);
+}
+
+/* Collapsed (default) item styling */
+.faq__item:not(.is-open) {
+  background: var(--white-200);
+  border: 1px solid rgba(50, 103, 255, 0.1);
+  /* Custom small shadow from Figma — no matching token */
+  box-shadow: 0px 1px 2px 0px rgba(25, 33, 61, 0.06);
+}
+
+.faq__item:not(.is-open) .faq__question {
+  padding: 26px 32px;
+}
+
+/* Expanded item styling */
+.faq__item.is-open {
+  background: var(--primary-blue);
+  border: 1px solid #003a64;
+  /* No matching token — Figma-specific darker blue border */
+  /* Custom shadow from Figma — no matching token */
+  box-shadow: 0px 5px 7.5px 0px rgba(25, 33, 61, 0.06);
+}
+
+.faq__item.is-open .faq__question-text {
+  color: var(--grey-pure-white);
+}
+
+.faq__item.is-open .faq__chevron {
+  background: var(--grey-pure-white);
+}
+
+.faq__item.is-open .faq__chevron img {
+  transform: rotate(0deg);
+}
+
+.faq__item.is-open .faq__divider {
+  display: block;
+}
+
+.faq__item.is-open .faq__answer-wrap {
+  grid-template-rows: 1fr;
+}
+
+.faq__view-more {
+  margin: 8px auto 0;
+  padding: 11px 20px;
+}
+
+@media (max-width: 1023px) {
+  .faq {
+    padding: 48px 0;
+  }
+
+  .faq__title {
+    font-size: 30px;
+  }
+
+  .faq__question {
+    padding: 20px 24px;
+  }
+
+  .faq__item:not(.is-open) .faq__question {
+    padding: 20px 24px;
+  }
+
+  .faq__answer {
+    padding: 12px 24px 0;
+  }
+
+  .faq__divider {
+    margin: 0 24px;
+  }
+}
+
+@media (max-width: 639px) {
+  .faq__title {
+    font-size: 24px;
+  }
+
+  .faq__question-text {
+    font-size: 17px;
+  }
+
+  .faq__question {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .faq__item:not(.is-open) .faq__question {
+    padding: 16px;
+  }
+
+  .faq__answer {
+    padding: 10px 16px 0;
+    font-size: 15px;
+  }
+
+  .faq__divider {
+    margin: 0 16px;
+  }
+
+  .faq__chevron {
+    width: 28px;
+    height: 28px;
+  }
+}

@@ -1,0 +1,180 @@
+/* Data Protection Policy content — Figma node 1278:5730 (TOC sidebar + legal sections) */
+
+.dpppage-content {
+  background: var(--grey-pure-white);
+  padding: 64px 0 96px;
+}
+
+.dpppage-content__inner {
+  display: flex;
+  align-items: start;
+  gap: 56px;
+}
+
+/* Sidebar table of contents */
+
+.dpppage-toc {
+  flex-shrink: 0;
+  width: 330px;
+}
+
+.dpppage-toc__card {
+  position: sticky;
+  top: 112px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 24px;
+  box-shadow: 0px 0px 9.3px 0px rgba(0, 0, 0, 0.08);
+  padding: 26px 24px;
+  max-height: calc(100vh - 136px);
+  overflow-y: auto;
+}
+
+.dpppage-toc__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--black-100);
+  margin-bottom: 20px;
+}
+
+.dpppage-toc__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dpppage-toc__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.dpppage-toc__link img {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.dpppage-toc__link span {
+  font-size: 14px;
+  color: var(--grey-medium-dark-grey);
+}
+
+.dpppage-toc__link.is-active {
+  background: var(--primary-blue);
+}
+
+.dpppage-toc__link.is-active img {
+  filter: brightness(0) invert(1);
+}
+
+.dpppage-toc__link.is-active span {
+  font-weight: 600;
+  color: var(--grey-pure-white);
+}
+
+/* Legal content body */
+
+.dpppage-body {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dpppage-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--grey-lightest-grey);
+  scroll-margin-top: 112px;
+}
+
+.dpppage-section:first-child {
+  padding-top: 0;
+}
+
+.dpppage-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.dpppage-section--no-body {
+  gap: 0;
+}
+
+.dpppage-section__heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dpppage-section__heading img {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.dpppage-section__heading h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--black-100);
+}
+
+.dpppage-section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dpppage-section__text p,
+.dpppage-section__text li {
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--grey-medium-dark-grey);
+}
+
+.dpppage-section__text ul,
+.dpppage-section__text ol {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 24px;
+}
+
+.dpppage-section__text ul {
+  list-style: disc;
+}
+
+.dpppage-section__text ol {
+  list-style: lower-alpha;
+}
+
+@media (max-width: 1023px) {
+  .dpppage-content__inner {
+    flex-direction: column;
+  }
+
+  .dpppage-toc {
+    width: 100%;
+  }
+
+  .dpppage-toc__card {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .dpppage-content {
+    padding: 48px 0 64px;
+  }
+
+  .dpppage-section__heading h2 {
+    font-size: 18px;
+  }
+}

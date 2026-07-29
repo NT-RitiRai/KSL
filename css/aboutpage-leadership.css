@@ -1,0 +1,48 @@
+/* Leadership Management — About page, Figma node 2842:12277
+   Reuses .person-card from css/aboutpage-board.css */
+
+.leadership {
+  padding: 64px 0;
+}
+
+.leadership__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--grey-dark-charcoal);
+  margin-bottom: 32px;
+}
+
+.leadership__grid {
+  display: flex;
+  gap: 24px;
+}
+
+.leadership__cta {
+  display: flex;
+  margin: 32px auto 0;
+}
+
+@media (max-width: 1023px) {
+  .leadership__grid {
+    flex-wrap: wrap;
+  }
+
+  .leadership__grid .person-card {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 639px) {
+  .leadership {
+    padding: 48px 0;
+  }
+
+  .leadership__title {
+    font-size: 30px;
+  }
+
+  .leadership__grid .person-card {
+    flex: 1 1 100%;
+  }
+}

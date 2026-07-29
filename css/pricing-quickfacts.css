@@ -1,0 +1,85 @@
+/* Brokerage quick facts — Figma node 2567:11364 */
+
+.pricing-quickfacts {
+  background: var(--grey-pure-white);
+  padding: 48px 0;
+}
+
+.pricing-quickfacts__grid {
+  display: flex;
+  align-items: stretch;
+}
+
+.pricing-quickfacts__item {
+  flex: 1 1 0;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.pricing-quickfacts__label {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--grey-dark-charcoal);
+}
+
+.pricing-quickfacts__value {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-top: 8px;
+}
+
+.pricing-quickfacts__value--flat {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+}
+
+.pricing-quickfacts__value--flat span {
+  font-size: 28px;
+  color: var(--grey-medium-light-grey);
+}
+
+.pricing-quickfacts__value--flat small {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-dark-grey);
+}
+
+.pricing-quickfacts__note {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--grey-medium-dark-grey);
+  margin-top: 8px;
+}
+
+.pricing-quickfacts__divider {
+  width: 1px;
+  background: var(--grey-lightest-grey);
+}
+
+@media (max-width: 1023px) {
+  .pricing-quickfacts__grid {
+    flex-wrap: wrap;
+    row-gap: 32px;
+  }
+
+  .pricing-quickfacts__item {
+    flex: 1 1 45%;
+  }
+
+  .pricing-quickfacts__divider {
+    display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .pricing-quickfacts {
+    padding: 40px 0;
+  }
+
+  .pricing-quickfacts__item {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,76 @@
+/* Your Trusted Points of Contact — Figma node 2391:9729 */
+
+.ib-contact-cta {
+  background: linear-gradient(0deg, #001e34 0%, var(--primary-blue) 100%);
+  padding: 56px 0;
+}
+
+.ib-contact-cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 31px;
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ib-contact-cta__content h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--grey-pure-white);
+  margin-bottom: 24px;
+}
+
+.ib-contact-cta__content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-off-white);
+  max-width: 616px;
+}
+
+.ib-contact-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--secondary-red);
+  border: 1px solid #d2003e;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.ib-contact-cta__btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(223, 36, 45, 0.3);
+}
+
+.ib-contact-cta__btn:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.ib-contact-cta__btn:focus-visible {
+  outline: 2px solid var(--grey-pure-white);
+  outline-offset: 2px;
+}
+
+.ib-contact-cta__btn img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 639px) {
+  .ib-contact-cta {
+    padding: 48px 0;
+  }
+
+  .ib-contact-cta__content h2 {
+    font-size: 28px;
+  }
+}

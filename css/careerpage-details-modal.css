@@ -1,0 +1,226 @@
+/* Job Details modal (popup) — Figma node 1456:7226 */
+
+.job-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.job-modal.is-open {
+  display: flex;
+}
+
+.job-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.job-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  max-height: calc(100vh - 80px);
+  background: var(--grey-pure-white);
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-modal__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-pure-black);
+  border-radius: 24px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.job-modal__close:hover {
+  background: var(--grey-pure-black);
+  transform: rotate(90deg);
+}
+
+.job-modal__close:hover img {
+  filter: invert(1);
+}
+
+.job-modal__close:active {
+  transform: rotate(90deg) scale(0.92);
+}
+
+.job-modal__close img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.15s ease;
+}
+
+.job-modal__scroll {
+  overflow-y: auto;
+}
+
+.job-modal__content {
+  padding: 64px 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.job-modal__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--grey-lightest-grey);
+}
+
+.job-modal__header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  line-height: 1.35;
+  color: var(--primary-blue);
+}
+
+.job-modal__breadcrumb {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  color: var(--grey-medium-dark-grey);
+}
+
+.job-modal__breadcrumb strong {
+  font-weight: 700;
+}
+
+.job-modal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 96px;
+}
+
+.job-modal__meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #141414;
+}
+
+.job-modal__meta img {
+  width: 24px;
+  height: 24px;
+}
+
+.job-modal__section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.job-modal__section h3 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+  color: var(--grey-pure-black);
+}
+
+.job-modal__section > p {
+  font-size: 16px;
+  letter-spacing: -0.16px;
+  line-height: 1.35;
+  color: var(--grey-dark-charcoal);
+}
+
+.job-modal__section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.job-modal__section li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 18px;
+  letter-spacing: -0.18px;
+  line-height: 1.35;
+  color: var(--grey-dark-grey);
+}
+
+.job-modal__section li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--grey-dark-grey);
+}
+
+.job-modal__dept {
+  font-size: 18px;
+  letter-spacing: -0.18px;
+  color: var(--grey-dark-grey);
+}
+
+.job-modal__tags {
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: -0.18px;
+  color: var(--grey-dark-grey);
+}
+
+.careerpage-apply--modal {
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .job-modal {
+    padding: 0;
+  }
+
+  .job-modal__dialog {
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .job-modal__content {
+    padding: 56px 24px 0;
+  }
+
+  .job-modal__meta {
+    gap: 16px 32px;
+  }
+}
+
+@media (max-width: 639px) {
+  .job-modal__header h2 {
+    font-size: 26px;
+  }
+
+  .job-modal__section h3 {
+    font-size: 20px;
+  }
+
+  .job-modal__section li {
+    font-size: 16px;
+  }
+}

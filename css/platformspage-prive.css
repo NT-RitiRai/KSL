@@ -1,0 +1,133 @@
+/* KSL Prive — Figma node 1253:7246 */
+
+.platformspage-prive {
+  background: linear-gradient(0deg, #001e34 0%, var(--primary-blue) 100%);
+  padding: 64px 80px;
+  scroll-margin-top: 96px;
+}
+
+.platformspage-prive__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.platformspage-prive__intro h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.platformspage-prive__intro p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-lightest-grey);
+}
+
+.platformspage-prive__layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.platformspage-prive__visual {
+  flex-shrink: 0;
+  width: 800px;
+  max-width: 42vw;
+}
+
+.platformspage-prive__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.platformspage-prive__downloads {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.platformspage-prive__download-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(32, 68, 98, 0.4);
+  border: 1px solid #60a5fa;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #60a5fa;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.platformspage-prive__download-btn:hover {
+  background: #60a5fa;
+  color: #001e34;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
+}
+
+.platformspage-prive__download-btn:hover img {
+  filter: brightness(0);
+}
+
+.platformspage-prive__download-btn:active {
+  transform: translateY(0);
+  filter: brightness(0.9);
+  box-shadow: none;
+}
+
+.platformspage-prive__download-btn img {
+  width: 18px;
+  height: 18px;
+  transition: filter 0.15s ease;
+}
+
+@media (max-width: 1180px) {
+  .platformspage-prive__layout {
+    flex-wrap: wrap;
+  }
+
+  .platformspage-prive__visual {
+    max-width: 480px;
+    order: -1;
+  }
+
+  .platformspage-prive .feature-list {
+    flex: 1 1 260px;
+  }
+}
+
+@media (max-width: 639px) {
+  .platformspage-prive {
+    padding: 48px 24px;
+  }
+
+  .platformspage-prive__intro h2 {
+    font-size: 26px;
+  }
+
+  .platformspage-prive__layout {
+    flex-direction: column;
+  }
+
+  .platformspage-prive__visual {
+    max-width: 100%;
+  }
+
+  .platformspage-prive .feature-list {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .platformspage-prive__downloads {
+    flex-direction: column;
+  }
+}

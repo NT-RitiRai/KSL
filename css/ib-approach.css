@@ -1,0 +1,122 @@
+/* How We Create Value — Figma node 1401:13605 */
+
+.ib-approach {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+  overflow: hidden;
+}
+
+.ib-approach__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.ib-approach__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 603px;
+  min-width: 0;
+  max-width: 603px;
+}
+
+.ib-approach__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  background: rgba(0, 89, 154, 0.02);
+  border: 1px solid var(--primary-blue);
+  border-radius: 29px;
+  padding: 10px 18px;
+  font-size: 16px;
+  color: var(--primary-blue);
+}
+
+.ib-approach__text h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.ib-approach__text > p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  max-width: 590px;
+}
+
+.ib-approach__checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ib-approach__checklist li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ib-approach__checklist img {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.ib-approach__checklist span {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grey-pure-black);
+}
+
+.ib-approach__tag {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--grey-dark-charcoal);
+}
+
+.ib-approach__visual {
+  flex-shrink: 0;
+  width: 596px;
+  max-width: 42vw;
+}
+
+.ib-approach__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  .ib-approach__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ib-approach__text {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .ib-approach__checklist li {
+    justify-content: center;
+  }
+
+  .ib-approach__visual {
+    width: 100%;
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 639px) {
+  .ib-approach {
+    padding: 48px 0;
+  }
+
+  .ib-approach__text h2 {
+    font-size: 30px;
+  }
+}

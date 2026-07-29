@@ -1,0 +1,86 @@
+/* InvestorAi — Figma node 2822:12139 */
+
+.products-investorai {
+  background: var(--blue-tint-04);
+  padding: 64px 0 0;
+}
+
+.products-feature__intro {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-medium-dark-grey);
+  max-width: 571px;
+}
+
+.products-feature__intro strong {
+  font-weight: 600;
+  font-style: italic;
+  color: var(--grey-dark-charcoal);
+}
+
+.products-feature__note--white {
+  background: var(--grey-pure-white);
+}
+
+.products-tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.products-tech h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+  text-align: center;
+}
+
+.products-tech__grid {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+}
+
+.products-tech__card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--grey-pure-white);
+  border-radius: 24px;
+  box-shadow: 0px 0px 7.2px 0px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.products-tech__card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--grey-dark-charcoal);
+}
+
+.products-tech__card p {
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--grey-medium-dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .products-tech__grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 639px) {
+  .products-investorai {
+    padding: 48px 0 0;
+  }
+
+  .products-tech h2 {
+    font-size: 28px;
+  }
+}

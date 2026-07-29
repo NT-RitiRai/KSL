@@ -1,0 +1,102 @@
+/* Want to work with the best? — Figma node 2433:9594 */
+
+.team-cta {
+  background: var(--grey-pure-white);
+  padding: 0 0 64px;
+}
+
+.team-cta__panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  background: linear-gradient(0deg, #001e34 0%, var(--primary-blue) 100%);
+  padding: 56px 64px;
+}
+
+.team-cta__diagonal {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 89, 154, 0.48);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  pointer-events: none;
+}
+
+.team-cta__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  max-width: 1176px;
+  margin: 0 auto;
+}
+
+.team-cta__content h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+  margin-bottom: 16px;
+}
+
+.team-cta__content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-off-white);
+  max-width: 533px;
+}
+
+.team-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  backdrop-filter: blur(9px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--grey-pure-white);
+  border-radius: 12px;
+  padding: 11px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.team-cta__btn:hover {
+  background: var(--grey-pure-white);
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-cta__btn:hover img {
+  filter: brightness(0);
+}
+
+.team-cta__btn:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: none;
+}
+
+.team-cta__btn img {
+  width: 21px;
+  height: auto;
+  transition: filter 0.15s ease;
+}
+
+@media (max-width: 639px) {
+  .team-cta {
+    padding: 0 0 48px;
+  }
+
+  .team-cta__panel {
+    padding: 40px 24px;
+    border-radius: 24px;
+  }
+
+  .team-cta__content h2 {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,109 @@
+/* "Your Market. Your Terms." — Figma node 666:2353 */
+
+.market {
+  padding: 64px 0;
+}
+
+.market__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.market__panel {
+  flex: 1 1 620px;
+  min-width: 0;
+  background: linear-gradient(180deg, var(--primary-blue) 0%, #001e34 100%); /* gradient stops from Figma fill, no single token */
+  border-radius: 32px;
+  padding: 47px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.market__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.market__subtitle {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-light-grey);
+  margin-top: 16px;
+}
+
+.market__features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.market__feature {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08); /* no matching Figma token — translucent card on gradient */
+  border: 1px solid rgba(255, 255, 255, 0.16); /* no matching Figma token */
+  border-radius: 20px;
+  padding: 16px 19px;
+  min-height: 90px;
+}
+
+.market__feature img {
+  width: 32px;
+  height: 32px;
+}
+
+.market__feature span {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-pure-white);
+}
+
+.market__visual {
+  flex: 0 1 464px;
+  align-self: center;
+}
+
+.market__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  .market__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .market__panel {
+    width: 100%;
+  }
+
+  .market__visual {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 639px) {
+  .market {
+    padding: 40px 0;
+  }
+
+  .market__panel {
+    padding: 32px 24px;
+    border-radius: 24px;
+  }
+
+  .market__title {
+    font-size: 30px;
+  }
+
+  .market__features {
+    grid-template-columns: 1fr;
+  }
+}

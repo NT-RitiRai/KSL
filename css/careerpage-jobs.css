@@ -1,0 +1,191 @@
+/* Open Positions — Figma node 1243:6617 */
+
+.careerpage-jobs {
+  background: linear-gradient(0deg, #001e34 0%, var(--primary-blue) 100%);
+  padding: 64px 80px;
+}
+
+.careerpage-jobs__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.careerpage-jobs__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.careerpage-jobs__subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-lightest-grey);
+}
+
+.careerpage-jobs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.job-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.job-card__top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.job-card__dept {
+  background: rgba(96, 165, 250, 0.16);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--grey-pure-white);
+}
+
+.job-card__location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--grey-lightest-grey);
+}
+
+.job-card__location img {
+  width: 18px;
+  height: 18px;
+}
+
+.job-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.job-card__main h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--grey-pure-white);
+  margin-bottom: 15px;
+}
+
+.job-card__tags {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.job-card__tags span {
+  background: var(--grey-pure-white);
+  border: 0.5px solid #282828;
+  border-radius: 6px;
+  padding: 2.5px 8px;
+  font-size: 14px;
+  color: #282828;
+}
+
+.job-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.job-card__posted {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  width: 128px;
+}
+
+.job-card__type {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--grey-pure-white);
+}
+
+.job-card__date {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--grey-lightest-grey);
+}
+
+.job-card__cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: 1px solid var(--grey-pure-white);
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.job-card__cta:hover {
+  background: var(--grey-pure-white);
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.job-card__cta:hover img {
+  filter: brightness(0);
+}
+
+.job-card__cta:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: none;
+}
+
+.job-card__cta img {
+  width: 9px;
+  height: 16.5px;
+  transition: filter 0.15s ease;
+}
+
+@media (max-width: 639px) {
+  .careerpage-jobs {
+    padding: 48px 24px;
+  }
+
+  .careerpage-jobs__title {
+    font-size: 30px;
+  }
+
+  .job-card__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-card__meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .job-card__posted {
+    align-items: flex-start;
+  }
+}

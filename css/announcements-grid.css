@@ -1,0 +1,142 @@
+/* Corporate Announcements grid + pagination — Figma node 1736:6271 */
+
+.announcements-grid {
+  padding: 64px 0;
+}
+
+.announcements-grid__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.announcements-grid__row {
+  display: flex;
+  gap: 24px;
+}
+
+.announce-card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--grey-pure-white);
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.14);
+}
+
+.announce-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--grey-pure-black);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.announce-card__divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.announce-card__date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.announce-card__date img {
+  width: 20px;
+  height: 20px;
+}
+
+.announce-card__date span {
+  font-size: 16px;
+  letter-spacing: -0.16px;
+  color: var(--grey-medium-dark-grey);
+}
+
+.announce-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.announce-card__link:first-child {
+  margin-top: 0;
+}
+
+.announce-card__link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-off-black);
+  text-decoration: underline;
+}
+
+.announce-card__link img {
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+}
+
+.announcements-grid__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.announce-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.announce-page--active {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--grey-pure-white);
+}
+
+@media (max-width: 1023px) {
+  .announcements-grid__row {
+    flex-wrap: wrap;
+  }
+
+  .announce-card {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 639px) {
+  .announcements-grid {
+    padding: 48px 0;
+  }
+
+  .announce-card {
+    flex: 1 1 100%;
+  }
+
+  .announcements-grid__pagination {
+    gap: 10px;
+  }
+
+  .announce-page {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+}

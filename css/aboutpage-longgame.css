@@ -1,0 +1,84 @@
+/* About page — "The Long Game" — Figma node 989:2188 */
+
+.long-game {
+  background: linear-gradient(180deg, var(--primary-blue) 0%, #001e34 100%); /* same gradient as .market__panel on the homepage, no single Figma token */
+  box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.08); /* no matching Figma token */
+  padding: 64px 0;
+}
+
+.long-game__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.long-game__title {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--grey-pure-white);
+  text-align: center;
+}
+
+.long-game__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.long-game__card {
+  background: rgba(255, 255, 255, 0.08); /* no matching Figma token — translucent card on gradient */
+  border-radius: 24px;
+  padding: 24px;
+  min-height: 191px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.long-game__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.long-game__stat {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--grey-pure-white);
+}
+
+.long-game__label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--grey-pure-white);
+}
+
+@media (max-width: 1023px) {
+  .long-game__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .long-game {
+    padding: 48px 0;
+  }
+
+  .long-game__title {
+    font-size: 30px;
+  }
+
+  .long-game__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .long-game__card {
+    min-height: auto;
+  }
+}

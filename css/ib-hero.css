@@ -1,0 +1,121 @@
+/* Transforming Businesses into Market Leaders — Figma node 1391:9853 */
+
+.ib-hero {
+  background: #f5f8fb; /* no matching Figma token — matches other page-hero backgrounds */
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.ib-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.ib-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 709px;
+}
+
+.ib-hero__text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.5px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.ib-hero__text p {
+  font-size: 18px;
+  line-height: 1.35;
+  color: var(--grey-dark-grey);
+  max-width: 709px;
+}
+
+.ib-hero__cta {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary-red);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 13px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.ib-hero__cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(223, 36, 45, 0.28);
+}
+
+.ib-hero__cta:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.ib-hero__cta:focus-visible {
+  outline: 2px solid var(--secondary-red);
+  outline-offset: 2px;
+}
+
+.ib-hero__visual {
+  flex-shrink: 0;
+  width: 440px;
+  max-width: 38vw;
+}
+
+.ib-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  .ib-hero {
+    padding: 56px 0;
+  }
+
+  .ib-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ib-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .ib-hero__cta {
+    align-self: center;
+  }
+
+  .ib-hero__visual {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .ib-hero__text h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 639px) {
+  .ib-hero__text h1 {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+
+  .ib-hero__text p {
+    font-size: 16px;
+  }
+}

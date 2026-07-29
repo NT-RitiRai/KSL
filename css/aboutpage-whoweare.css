@@ -1,0 +1,65 @@
+/* "Who We Are?" — About page, Figma node 987:2158 / 987:2172 */
+
+.who-we-are {
+  padding: 64px 0;
+}
+
+.who-we-are__inner {
+  display: flex;
+  align-items: center;
+  gap: 88px;
+}
+
+.who-we-are__visual {
+  flex: 1 1 620px;
+  min-width: 0;
+}
+
+.who-we-are__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.who-we-are__content {
+  flex: 1 1 604px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.who-we-are__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.who-we-are__desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .who-we-are__inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .who-we-are__visual,
+  .who-we-are__content {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .who-we-are {
+    padding: 40px 0;
+  }
+
+  .who-we-are__title {
+    font-size: 30px;
+  }
+}

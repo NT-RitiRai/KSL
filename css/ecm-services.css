@@ -1,0 +1,144 @@
+/* Three Ways We Help You Win in Equity Markets — Figma node 2327:6121 */
+
+.ecm-services {
+  background: linear-gradient(180deg, var(--primary-blue) 0%, #001e34 100%);
+  padding: 64px 0;
+}
+
+.ecm-services__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.ecm-services__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.ecm-services__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.ecm-services__tagline {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--grey-pure-white);
+}
+
+.ecm-services__grid {
+  display: flex;
+  align-items: stretch;
+  gap: 25px;
+  width: 100%;
+}
+
+.ecm-services__card {
+  flex: 1 1 0;
+  background: #f8fafc; /* no matching Figma token */
+  border-radius: 24px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ecm-services__card--alt {
+  background: var(--grey-pure-white);
+}
+
+.ecm-services__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--grey-pure-white);
+  box-shadow: 0px 2px 8.1px 0px rgba(0, 0, 0, 0.08); /* no matching Figma token */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecm-services__icon img {
+  max-width: 28px;
+  max-height: 28px;
+}
+
+.ecm-services__card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+}
+
+.ecm-services__card-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+}
+
+.ecm-services__card-quote {
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--grey-medium-dark-grey);
+  text-transform: uppercase;
+}
+
+.ecm-services__card-desc {
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--grey-medium-dark-grey);
+}
+
+.ecm-services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ecm-services__list li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ecm-services__list img {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.ecm-services__list span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--grey-off-black);
+}
+
+@media (max-width: 1023px) {
+  .ecm-services__grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 639px) {
+  .ecm-services {
+    padding: 48px 0;
+  }
+
+  .ecm-services__title {
+    font-size: 28px;
+  }
+}

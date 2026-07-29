@@ -1,0 +1,132 @@
+/* Regulatory & Statutory Charges — Figma node 2320:6719 */
+
+.charges-table {
+  background: var(--grey-pure-white);
+  padding: 0 0 64px;
+}
+
+.charges-table__card {
+  background: var(--grey-pure-white);
+  border: 1px solid #ededed; /* no matching Figma token */
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08); /* no matching Figma token */
+  border-radius: 32px;
+  padding: 64px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.charges-table__title {
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--grey-dark-charcoal);
+}
+
+.charges-table__tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(0, 89, 154, 0.16); /* no matching Figma token */
+  border-radius: 56px;
+  padding: 10px;
+  align-self: flex-start;
+}
+
+.charges-table__tab {
+  background: var(--grey-pure-white);
+  border: none;
+  border-radius: 56px;
+  padding: 10.5px 18px;
+  font-family: var(--font-base);
+  font-size: 16px;
+  color: var(--grey-dark-charcoal);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.charges-table__tab:not(.is-active):hover {
+  background: var(--blue-tint-04);
+  color: var(--primary-blue);
+}
+
+.charges-table__tab:active {
+  transform: scale(0.96);
+}
+
+.charges-table__tab.is-active {
+  background: var(--primary-blue);
+  color: var(--grey-pure-white);
+  font-weight: 600;
+}
+
+.charges-table__tab.is-active:hover {
+  filter: brightness(1.1);
+}
+
+.charges-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.charges-table__table th,
+.charges-table__table td {
+  text-align: left;
+  padding: 11px 18px;
+  border-bottom: 1px solid var(--grey-lightest-grey);
+  font-size: 16px;
+}
+
+.charges-table__table thead th {
+  background: rgba(0, 89, 154, 0.04); /* no matching Figma token */
+  font-weight: 600;
+  color: var(--grey-pure-black);
+}
+
+.charges-table__table tbody td:first-child {
+  font-weight: 500;
+  color: var(--grey-dark-charcoal);
+}
+
+.charges-table__table tbody td:last-child {
+  color: var(--grey-medium-dark-grey);
+}
+
+.charges-table__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.charges-table__table em {
+  font-style: italic;
+  font-size: 12px;
+  color: var(--grey-medium-dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .charges-table__card {
+    padding: 40px 32px;
+  }
+
+  .charges-table__tabs {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .charges-table__table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .charges-table__card {
+    padding: 32px 20px;
+    border-radius: 24px;
+  }
+
+  .charges-table__title {
+    font-size: 26px;
+  }
+}

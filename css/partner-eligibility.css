@@ -1,0 +1,85 @@
+/* Do You Have What It Takes? — Figma node 1060:2727 */
+
+.partner-eligibility {
+  background: #f5f8fb; /* no matching Figma token */
+  padding: 64px 0;
+}
+
+.partner-eligibility__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.partner-eligibility__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.partner-eligibility__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.partner-eligibility__subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  max-width: 754px;
+}
+
+.partner-eligibility__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.partner-eligibility__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 16px;
+  padding: 20px;
+  min-height: 97px;
+}
+
+.partner-eligibility__item img {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+}
+
+.partner-eligibility__item span {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grey-pure-black);
+}
+
+@media (max-width: 1023px) {
+  .partner-eligibility__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .partner-eligibility {
+    padding: 48px 0;
+  }
+
+  .partner-eligibility__title {
+    font-size: 28px;
+  }
+
+  .partner-eligibility__grid {
+    grid-template-columns: 1fr;
+  }
+}

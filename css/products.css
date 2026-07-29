@@ -1,0 +1,210 @@
+/* Explore Our Products & Plans — Figma node 667:2430 */
+
+.products {
+  position: relative;
+  overflow: hidden;
+  /* rgba(0,89,154,0.04) reused from --blue-tint-04, no dedicated Figma variable for this section bg */
+  background: var(--blue-tint-04);
+  padding: 64px 0;
+}
+
+.products__blob {
+  position: absolute;
+  width: 226px;
+  height: 183px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 89, 154, 0.12) 0%, rgba(0, 89, 154, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.products__blob--tr {
+  top: -88px;
+  right: -100px;
+}
+
+.products__blob--bl {
+  bottom: -120px;
+  left: -140px;
+}
+
+.products__title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.products__row {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 4px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.products__row::-webkit-scrollbar {
+  display: none;
+}
+
+.products__card {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 302px;
+  scroll-snap-align: start;
+  height: 378px;
+  background: var(--grey-pure-white);
+  border: 1px solid rgba(0, 89, 154, 0.16);
+  border-radius: 24px;
+  box-shadow: 0px 3px 32px 0px rgba(0, 0, 0, 0.04);
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* The clip-and-reveal "Know more" interaction (Figma hover variant 2381:9151, 426px vs.
+   378px default) only makes sense where hover is a real, sustained input — on touch it
+   would permanently hide the CTA behind an unreachable hover state, so it's scoped to
+   hover-capable/fine-pointer devices. Touch/coarse-pointer keeps the link always visible
+   via the plain flex flow below. */
+@media (hover: hover) and (pointer: fine) {
+  .products__card {
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+  }
+
+  .products__card:hover {
+    height: 426px;
+  }
+}
+
+.products__icon {
+  height: 64px;
+  width: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: rgba(0, 89, 154, 0.08);
+  border: 0.762px solid rgba(0, 89, 154, 0.16);
+  border-radius: 16px;
+  /* kf_2381_9153_background-color_0 */
+  transition: background-color 0.3s ease-out;
+}
+
+.products__card:hover .products__icon {
+  background-color: #00599a;
+}
+
+.products__icon img {
+  width: 36px;
+  height: 36px;
+  /* kf_2381_9155_background-color_0 — Figma reports the icon glyph's fill swap (blue -> white)
+     as a background-color keyframe; since the icon is a flat-color <img>, filter achieves the
+     same visual result without needing to inline the SVG. */
+  transition: filter 0.3s ease-out;
+}
+
+.products__card:hover .products__icon img {
+  filter: brightness(0) invert(1);
+}
+
+.products__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+.products__card-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.products__card-name {
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+}
+
+.products__card-tagline {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--grey-pure-black);
+}
+
+.products__card-desc {
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--grey-dark-grey);
+}
+
+.products__card-link {
+  /* Safe default: always visible, in normal flex flow (pinned to the bottom via
+     margin-top:auto on .products__card-body's sibling gap). Overridden below for
+     hover-capable devices to match Figma's clip-and-reveal interaction. */
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary-blue);
+  font-size: 16px;
+}
+
+.products__card-link img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .products__card-link {
+    /* Positioned below the card's default 378px bounds (clipped by .products__card's
+       overflow:hidden) and slides up into view on hover — kf_2381_9161_translate_0.
+       top:470px + translateY(-88px) on hover == 382px, landing 20px above the card's
+       426px hover-state bottom edge, matching Figma's own two variants exactly. */
+    position: absolute;
+    left: 19px;
+    top: 470px;
+    margin-top: 0;
+    transition: transform 0.3s ease-out;
+  }
+
+  .products__card:hover .products__card-link {
+    transform: translateY(-88px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .products__row {
+    padding-left: 2px;
+  }
+}
+
+@media (max-width: 639px) {
+  .products {
+    padding: 48px 0;
+  }
+
+  .products__card {
+    flex-basis: 260px;
+    height: auto;
+    min-height: 340px;
+    overflow: visible;
+  }
+
+  /* Defensive reset: guarantees "Know more" is never clipped/lost at narrow widths,
+     even in the edge case of a fine-pointer/hover-capable device (e.g. a resized
+     desktop browser window) where the @media(hover:hover) rules above would otherwise
+     still apply alongside this breakpoint. */
+  .products__card-link {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: auto;
+  }
+}

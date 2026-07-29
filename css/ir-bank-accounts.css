@@ -1,0 +1,108 @@
+/* Official Bank Accounts CTA — Figma node 2664:11330 */
+
+.ir-bank-accounts {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.ir-bank-accounts__panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  background: linear-gradient(0deg, var(--primary-blue) 0%, #001e34 100%);
+  padding: 56px 64px 64px;
+}
+
+.ir-bank-accounts__bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 306px;
+  transform: scaleX(-1);
+  pointer-events: none;
+}
+
+.ir-bank-accounts__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.ir-bank-accounts__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.ir-bank-accounts__desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-off-white);
+  max-width: 533px;
+  margin-top: 16px;
+}
+
+.ir-bank-accounts__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(9px);
+  border: 1px solid var(--grey-pure-white);
+  border-radius: 12px;
+  padding: 11px 16px;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ir-bank-accounts__btn:hover {
+  background: var(--grey-pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ir-bank-accounts__btn:hover span {
+  color: var(--primary-blue);
+}
+
+.ir-bank-accounts__btn:hover img {
+  filter: brightness(0);
+}
+
+.ir-bank-accounts__btn:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: none;
+}
+
+.ir-bank-accounts__btn img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.15s ease;
+}
+
+.ir-bank-accounts__btn span {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  transition: color 0.15s ease;
+}
+
+@media (max-width: 639px) {
+  .ir-bank-accounts {
+    padding: 48px 0;
+  }
+
+  .ir-bank-accounts__panel {
+    padding: 40px 24px 48px;
+  }
+
+  .ir-bank-accounts__title {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,189 @@
+/* Track Record — Figma node 2525:11883 */
+
+.tr-hero {
+  background: #f5f8fb;
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.tr-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.tr-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 533px;
+}
+
+.tr-hero__text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+  color: var(--grey-dark-charcoal);
+}
+
+.tr-hero__text p {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+}
+
+.tr-hero__visual {
+  flex-shrink: 0;
+  width: 440px;
+  max-width: 38vw;
+}
+
+.tr-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.tr-grid {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.tr-grid__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Placeholder: Figma source authors three real track-record cards (Udayshivakumar Infra
+   Limited, DCX Systems Limited, Tolins Tyres Limited) and repeats that same row three times —
+   reproduced faithfully rather than inventing six additional companies that don't exist in
+   the source design. */
+.tr-grid__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.tr-grid__row {
+  display: flex;
+  gap: 24px;
+}
+
+.tr-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tr-pagination__step {
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-medium-dark-grey);
+}
+
+.tr-pagination__step--next {
+  color: var(--primary-blue);
+}
+
+.tr-pagination__numbers {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tr-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.tr-page--active {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--grey-pure-white);
+}
+
+.tr-page--ellipsis {
+  border-color: var(--primary-blue);
+}
+
+@media (max-width: 1180px) {
+  .tr-hero__text h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .tr-hero {
+    padding: 56px 0;
+  }
+
+  .tr-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tr-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .tr-hero__visual {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .tr-grid__row {
+    flex-wrap: wrap;
+  }
+
+  .tr-grid__row .ib-track__card {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 240px;
+  }
+}
+
+@media (max-width: 639px) {
+  .tr-hero__text h1 {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+
+  .tr-hero__text p {
+    font-size: 16px;
+  }
+
+  .tr-grid {
+    padding: 0 0 48px;
+  }
+
+  .tr-grid__row .ib-track__card {
+    flex: 1 1 100%;
+  }
+
+  .tr-pagination {
+    gap: 12px;
+  }
+
+  .tr-page {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+}

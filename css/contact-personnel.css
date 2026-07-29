@@ -1,0 +1,130 @@
+/* Key Personnel — Figma node 1059:1769 */
+
+.contact-personnel {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.contact-personnel__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.contact-personnel__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.contact-personnel__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.contact-personnel__subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+}
+
+.contact-personnel__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  width: 100%;
+}
+
+.contact-personnel__card {
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-off-white);
+  border-radius: 24px;
+  padding: 0 24px 24px;
+  overflow: hidden;
+}
+
+.contact-personnel__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0 18px;
+  border-bottom: 1px solid var(--grey-light-grey);
+}
+
+.contact-personnel__icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: #ebf2f7; /* no matching Figma token */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-personnel__icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-personnel__name {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.contact-personnel__role {
+  display: block;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--primary-blue);
+  margin-top: 10px;
+}
+
+.contact-personnel__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.contact-personnel__row--inline {
+  align-items: center;
+  margin-top: 10px;
+}
+
+.contact-personnel__row img {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.contact-personnel__row span,
+.contact-personnel__row a {
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+  text-decoration: none;
+}
+
+@media (max-width: 1023px) {
+  .contact-personnel__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .contact-personnel {
+    padding: 48px 0;
+  }
+
+  .contact-personnel__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,67 @@
+<section class="careerpage-apply">
+  <div class="container">
+    <div class="careerpage-apply__panel">
+      <img class="careerpage-apply__bg" src="assets/images/career-page/apply-bg.svg" alt="" aria-hidden="true" />
+
+      <div class="careerpage-apply__left">
+        <div class="careerpage-apply__heading">
+          <h2>Don&rsquo;t see a fit?</h2>
+          <p>We&rsquo;re always looking for sharp minds in Research, Tech, and Wealth Advisory. Send us your profile and we&rsquo;ll keep you in mind for upcoming roles.</p>
+        </div>
+        <ul class="careerpage-apply__perks">
+          <li>
+            <img src="assets/icons/career-page/icon-checkmark.svg" alt="" />
+            <span>Direct exposure to senior management &amp; regulators</span>
+          </li>
+          <li>
+            <img src="assets/icons/career-page/icon-checkmark.svg" alt="" />
+            <span>Work on high-impact IPOs &amp; capital market deals</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="careerpage-apply__form">
+        <div class="careerpage-apply__row">
+          <div class="careerpage-apply__field">
+            <label for="careerName">Full Name</label>
+            <input type="text" id="careerName" name="name" placeholder="John Doe" />
+          </div>
+          <div class="careerpage-apply__field">
+            <label for="careerPhone">Contact Number</label>
+            <div class="careerpage-apply__phone">
+              <span>+91</span>
+              <input type="tel" id="careerPhone" name="phone" placeholder="97097079998" />
+            </div>
+          </div>
+        </div>
+
+        <div class="careerpage-apply__field">
+          <label for="careerEmail">Email ID</label>
+          <input type="email" id="careerEmail" name="email" placeholder="abc123@gmail.com" />
+        </div>
+
+        <div class="careerpage-apply__field">
+          <label for="careerRole">Role of Interest</label>
+          <select id="careerRole" name="role">
+            <option value="analyst-associate" selected>Analyst / Associate</option>
+            <option value="research">Research</option>
+            <option value="technology">Technology</option>
+            <option value="wealth-advisory">Wealth Advisory</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+
+        <div class="careerpage-apply__field">
+          <label for="careerResume">Upload Resume (PDF)</label>
+          <label class="careerpage-apply__dropzone" for="careerResume">
+            <img src="assets/icons/career-page/icon-filetext.svg" alt="" />
+            <span>Click to drag &amp; drop or browse</span>
+            <input type="file" id="careerResume" name="resume" accept="application/pdf" hidden />
+          </label>
+        </div>
+
+        <button type="submit" class="careerpage-apply__submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,147 @@
+/* A New-Age Investment Banking Boutique — Figma node 1401:13404 */
+
+.ib-stats {
+  background: var(--grey-pure-white);
+  padding: 0 0 64px;
+}
+
+.ib-stats__inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.ib-stats__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 604px;
+  min-width: 0;
+  max-width: 604px;
+}
+
+.ib-stats__text h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.ib-stats__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ib-stats__lead {
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--grey-dark-charcoal);
+}
+
+.ib-stats__body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+}
+
+.ib-stats__callout {
+  background: #eef9ff;
+  border-left: 4px solid var(--primary-blue);
+  border-radius: 14px;
+  padding: 27px 16px;
+}
+
+.ib-stats__callout p {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--grey-dark-charcoal);
+}
+
+.ib-stats__cards {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1 1 636px;
+  min-width: 0;
+}
+
+.ib-stats__card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background: #f8fafc;
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 24px;
+  box-shadow: 0px 1px 10.2px 0px rgba(0, 0, 0, 0.05);
+  padding: 32px 24px 24px;
+}
+
+.ib-stats__card--blue {
+  background: #eff6ff;
+  border-color: #dbeafe;
+  box-shadow: none;
+}
+
+.ib-stats__number {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+}
+
+.ib-stats__card--blue .ib-stats__number {
+  color: var(--primary-blue);
+}
+
+.ib-stats__card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ib-stats__card-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-pure-black);
+}
+
+.ib-stats__card-text p {
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--grey-dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .ib-stats__inner {
+    flex-direction: column;
+  }
+
+  .ib-stats__text,
+  .ib-stats__cards {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+
+  .ib-stats__cards {
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .ib-stats {
+    padding: 0 0 48px;
+  }
+
+  .ib-stats__text h2 {
+    font-size: 30px;
+  }
+
+  .ib-stats__cards {
+    flex-direction: column;
+  }
+}

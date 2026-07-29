@@ -1,0 +1,237 @@
+/* KSL Blogs — Figma node 667:2944 */
+
+.blogs {
+  padding: 80px 0;
+}
+
+.blogs__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.blogs__view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grey-dark-charcoal);
+  white-space: nowrap;
+}
+
+.blogs__view-all-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* 3-column layout: two large cards + one column of 3 stacked small cards.
+   Ratio (378 / 378 / 476) from the design ≈ 1 / 1 / 1.26fr */
+.blogs__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.26fr;
+  align-items: start;
+  gap: 24px;
+}
+
+/* Shared card chrome */
+.blogs__card {
+  background: var(--grey-pure-white);
+  border: 0.5px solid var(--grey-light-grey);
+  border-radius: 24px;
+}
+
+.blogs__card--large {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  /* No matching Figma variable for this drop-shadow value */
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+.blogs__thumb {
+  width: 100%;
+  aspect-ratio: 1920 / 1080;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--grey-lightest-grey);
+}
+
+.blogs__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blogs__body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.blogs__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.blogs__date {
+  font-size: 16px;
+  color: var(--grey-medium-light-grey);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.blogs__tags {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--grey-off-black);
+}
+
+.blogs__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.blogs__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blogs__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--grey-off-black);
+}
+
+.blogs__excerpt {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--grey-dark-grey);
+}
+
+.blogs__link-btn {
+  align-self: flex-start;
+}
+
+/* Column 3: stacked small list items */
+.blogs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.blogs__card--small {
+  display: flex;
+  padding: 16px;
+  overflow: hidden;
+  /* No matching Figma variable for this drop-shadow value */
+  box-shadow: 0px 2px 32px rgba(0, 0, 0, 0.05);
+}
+
+.blogs__card--small > .blogs__thumb--small {
+  margin-right: 16px;
+}
+
+.blogs__thumb--small {
+  width: 110px;
+  height: 76px;
+  aspect-ratio: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.blogs__row-body {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.blogs__meta--stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.blogs__meta--stacked .blogs__date,
+.blogs__meta--stacked .blogs__tags {
+  font-size: 10px;
+}
+
+.blogs__content--small {
+  flex: 1 1 0;
+  min-width: 0;
+  gap: 14px;
+}
+
+.blogs__text--small {
+  gap: 6px;
+}
+
+.blogs__title--small {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.blogs__excerpt--small {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.blogs__link-text {
+  font-size: 14px;
+  color: var(--grey-dark-grey);
+  text-decoration: underline;
+}
+
+@media (max-width: 1023px) {
+  .blogs {
+    padding: 56px 0;
+  }
+
+  .blogs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blogs__row-body {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 639px) {
+  .blogs {
+    padding: 40px 0;
+  }
+
+  .blogs__head {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .blogs__card--small {
+    flex-direction: column;
+  }
+
+  .blogs__card--small > .blogs__thumb--small {
+    margin-right: 0;
+    margin-bottom: 12px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .blogs__row-body {
+    flex-direction: column;
+  }
+}

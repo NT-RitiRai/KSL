@@ -1,0 +1,100 @@
+/* Why Build Your Career at KSL? — Figma node 1242:6578 */
+
+.careerpage-why {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.careerpage-why__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.careerpage-why__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+}
+
+.careerpage-why__subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+}
+
+.careerpage-why__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.careerpage-why__card {
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #f5f8fb;
+  border: 1px solid var(--grey-off-white);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.careerpage-why__card--wide {
+  flex: 1 1 calc(50% - 12px);
+}
+
+.careerpage-why__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--grey-pure-white);
+  border-radius: 12px;
+  box-shadow: 0px 2px 8.1px 0px rgba(0, 0, 0, 0.08);
+}
+
+.careerpage-why__icon img {
+  width: 28px;
+  height: 28px;
+}
+
+.careerpage-why__card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--grey-pure-black);
+}
+
+.careerpage-why__card p {
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--grey-dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .careerpage-why__card,
+  .careerpage-why__card--wide {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 639px) {
+  .careerpage-why {
+    padding: 48px 0;
+  }
+
+  .careerpage-why__title {
+    font-size: 30px;
+  }
+
+  .careerpage-why__card,
+  .careerpage-why__card--wide {
+    flex: 1 1 100%;
+  }
+}

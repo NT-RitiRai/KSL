@@ -1,0 +1,144 @@
+/* Transaction Track Record — Figma node 2525:12944 */
+
+.ib-track {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.ib-track__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.ib-track__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.ib-track__heading h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--grey-pure-black);
+}
+
+.ib-track__heading p {
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--grey-dark-charcoal);
+}
+
+.ib-track__grid {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.ib-track__card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--grey-pure-white);
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.14);
+}
+
+.ib-track__card--active {
+  background: var(--primary-blue);
+  border-color: #003a65;
+}
+
+.ib-track__card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+}
+
+.ib-track__card--active h3 {
+  color: var(--grey-pure-white);
+}
+
+.ib-track__divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+  width: 210px;
+}
+
+.ib-track__card--active .ib-track__divider {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ib-track__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-off-black);
+}
+
+.ib-track__card--active .ib-track__link {
+  color: var(--grey-pure-white);
+}
+
+.ib-track__link img {
+  width: 20px;
+  height: 19px;
+}
+
+.ib-track__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 89, 154, 0.04);
+  border: 1px solid var(--primary-blue);
+  border-radius: 10px;
+  padding: 11px 20px;
+  font-size: 16px;
+  color: var(--primary-blue);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ib-track__btn:hover {
+  background: var(--primary-blue);
+  color: var(--grey-pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 89, 154, 0.24);
+}
+
+.ib-track__btn:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.ib-track__btn:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1023px) {
+  .ib-track__grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 639px) {
+  .ib-track {
+    padding: 48px 0;
+  }
+
+  .ib-track__heading h2 {
+    font-size: 30px;
+  }
+}

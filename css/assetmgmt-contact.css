@@ -1,0 +1,204 @@
+/* Let's Build Your Next Growth Chapter — Figma node 2842:12231 */
+
+.assetmgmt-contact {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.assetmgmt-contact__panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--primary-blue);
+  border-radius: 40px;
+  box-shadow: 0px 4px 32px 0px rgba(0, 89, 154, 0.24);
+  padding: 43px 64px;
+  overflow: hidden;
+}
+
+.assetmgmt-contact__text {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 497px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.assetmgmt-contact__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.assetmgmt-contact__heading h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+}
+
+.assetmgmt-contact__heading p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-medium-dark-grey);
+  max-width: 486px;
+}
+
+.assetmgmt-contact__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.assetmgmt-contact__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--grey-medium-dark-grey);
+  border-radius: 10px;
+  padding: 10px 20px 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grey-pure-black);
+}
+
+.assetmgmt-contact__chip img {
+  width: 24px;
+  height: 24px;
+}
+
+.assetmgmt-contact__address {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 474px;
+}
+
+.assetmgmt-contact__address img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.assetmgmt-contact__address-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-pure-black);
+  margin-bottom: 6px;
+}
+
+.assetmgmt-contact__address-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-medium-dark-grey);
+}
+
+.assetmgmt-contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.assetmgmt-contact__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  background: var(--primary-blue);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grey-pure-white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.assetmgmt-contact__btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(0, 89, 154, 0.3);
+}
+
+.assetmgmt-contact__btn:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.assetmgmt-contact__btn:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+.assetmgmt-contact__photo {
+  position: relative;
+  z-index: 1;
+  flex: 0 1 567px;
+  align-self: stretch;
+}
+
+.assetmgmt-contact__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+@media (max-width: 1180px) {
+  .assetmgmt-contact__panel {
+    gap: 32px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .assetmgmt-contact__panel {
+    flex-direction: column;
+    border-radius: 24px;
+  }
+
+  .assetmgmt-contact__text {
+    flex: 1 1 auto;
+  }
+
+  .assetmgmt-contact__photo {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 320px;
+  }
+}
+
+@media (max-width: 639px) {
+  .assetmgmt-contact {
+    padding: 40px 0;
+  }
+
+  .assetmgmt-contact__panel {
+    padding: 32px 24px;
+  }
+
+  .assetmgmt-contact__heading h2 {
+    font-size: 28px;
+  }
+
+  .assetmgmt-contact__chips {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .assetmgmt-contact__chip {
+    justify-content: center;
+  }
+
+  .assetmgmt-contact__actions {
+    flex-direction: column;
+  }
+}

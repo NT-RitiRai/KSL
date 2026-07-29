@@ -1,0 +1,129 @@
+/* Asset Management hero — Figma node 1410:14140 */
+
+.assetmgmt-hero {
+  background: #f5f8fb; /* no matching Figma token — matches other page-hero backgrounds */
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.assetmgmt-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.assetmgmt-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 644px;
+}
+
+.assetmgmt-hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.92px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.assetmgmt-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+  max-width: 643px;
+}
+
+.assetmgmt-hero__tag {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--grey-dark-charcoal);
+  max-width: 571px;
+  margin-bottom: 8px;
+}
+
+.assetmgmt-hero__cta {
+  align-self: flex-start;
+  backdrop-filter: blur(9px);
+  background: var(--secondary-red);
+  border: 1px solid #b10009; /* no matching Figma token */
+  border-radius: 12px;
+  padding: 13px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.assetmgmt-hero__cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(223, 36, 45, 0.28);
+}
+
+.assetmgmt-hero__cta:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.assetmgmt-hero__cta:focus-visible {
+  outline: 2px solid var(--secondary-red);
+  outline-offset: 2px;
+}
+
+.assetmgmt-hero__visual {
+  flex-shrink: 0;
+  width: 609px;
+  max-width: 44vw;
+}
+
+.assetmgmt-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1180px) {
+  .assetmgmt-hero__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .assetmgmt-hero {
+    padding: 56px 0;
+  }
+
+  .assetmgmt-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .assetmgmt-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .assetmgmt-hero__cta {
+    align-self: center;
+  }
+
+  .assetmgmt-hero__visual {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 639px) {
+  .assetmgmt-hero__title {
+    font-size: 34px;
+    letter-spacing: -0.9px;
+  }
+
+  .assetmgmt-hero__subtitle {
+    font-size: 16px;
+  }
+}

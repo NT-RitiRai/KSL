@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude plugin *)",
+      "mcp__figma__get_metadata",
+      "Bash(curl -sL -o product-eazytrade.svg \"https://www.figma.com/api/mcp/asset/5aee0b1e-24eb-49f7-81a6-7ea648f26bd6\")",
+      "Bash(curl -sL -o product-prive.svg \"https://www.figma.com/api/mcp/asset/f23d5385-0b65-433e-a25e-d552b77224de\")",
+      "Bash(curl -sL -o product-ppps.svg \"https://www.figma.com/api/mcp/asset/eadcc709-328b-4f19-927d-5483743f76a0\")",
+      "mcp__figma__get_design_context",
+      "mcp__figma__get_screenshot",
+      "Bash(curl -sL -o /Users/ntmac/Documents/FED-Learnings/assets/icons/chevron-down.svg \"https://www.figma.com/api/mcp/asset/92be6bf4-ebf0-4d8b-8e6f-8406747a677f\")",
+      "mcp__figma__download_assets",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-ntmac-Documents-FED-Learnings/0c42591c-b887-4c58-94c0-1c6ab6487306/scratchpad/star-raw.svg \"https://www.figma.com/api/mcp/asset/1088714d-a385-45ea-829a-c5a016e4ed5f\")",
+      "Bash(curl -sL -o /Users/ntmac/Documents/FED-Learnings/assets/icons/icon-card1.svg \"https://www.figma.com/api/mcp/asset/e6e663c2-72b9-4c8a-824b-e7d5600da052\")",
+      "Bash(curl -sL -o /Users/ntmac/Documents/FED-Learnings/assets/icons/icon-ppps.svg \"https://www.figma.com/api/mcp/asset/c38a21c6-9540-410a-8ccb-d1c8f44061ed\")",
+      "Bash(curl -sL -o /Users/ntmac/Documents/FED-Learnings/assets/icons/icon-brokerage.svg \"https://www.figma.com/api/mcp/asset/c55f5517-ff36-48bb-b343-e5988afa8cd6\")",
+      "Bash(curl -sL -o /Users/ntmac/Documents/FED-Learnings/assets/icons/icon-investorai.svg \"https://www.figma.com/api/mcp/asset/5a95f2fe-2a05-43b7-a884-fa3686043c1a\")",
+      "Bash(curl -L -s -o /private/tmp/claude-501/-Users-ntmac-Documents-FED-Learnings/0c42591c-b887-4c58-94c0-1c6ab6487306/scratchpad/footer-logo.png \"https://www.figma.com/api/mcp/asset/560a80d6-e3f1-4900-b832-e19b4ad1614a\")",
+      "mcp__figma__get_variable_defs",
+      "Bash(mkdir -p /Users/ntmac/Documents/FED-Learnings/assets/images)",
+      "Bash(curl -sL -o blog-thumb-1.png \"https://www.figma.com/api/mcp/asset/12eaf9a9-6c6f-4fbc-aca8-bbd68eb93b34\")",
+      "Bash(curl -sL -o blog-thumb-2.png \"https://www.figma.com/api/mcp/asset/4ad117fa-c36e-4f79-9be5-5ca149bc95a7\")",
+      "Bash(curl -sL -o blog-thumb-3.png \"https://www.figma.com/api/mcp/asset/30bc47e5-d785-44a8-b783-a66d6962eed2\")",
+      "Bash(curl -sL -o blog-thumb-4.png \"https://www.figma.com/api/mcp/asset/17a2ff8a-c2a8-4e7a-9438-56f7ce9b1a4e\")",
+      "Bash(curl -L -s -o /Users/ntmac/Documents/FED-Learnings/assets/icons/icon-product-card.svg \"https://www.figma.com/api/mcp/asset/2896748e-2f12-4fcd-8482-89992e923a86\")",
+      "Bash(curl -sL -o icon-rm-service.svg \"https://www.figma.com/api/mcp/asset/59f0e953-56e1-472f-a64a-901bef39cb74\")",
+      "Bash(curl -sL -o icon-transparent-comm.svg \"https://www.figma.com/api/mcp/asset/50cec483-5f62-4325-a508-ca6c3edebce2\")",
+      "Bash(curl -sL -o icon-long-term.svg \"https://www.figma.com/api/mcp/asset/d795f545-b340-4d6f-8552-8df929541eb7\")",
+      "Bash(curl -sL -o icon-research-based.svg \"https://www.figma.com/api/mcp/asset/5a7c7e67-e1e8-4c87-ae99-ce9be4fca16a\")",
+      "Bash(curl -sL -o icon-tailored-service.svg \"https://www.figma.com/api/mcp/asset/d8bcbf0a-793a-4003-b273-958d03fce4ce\")",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --no-sandbox --screenshot=/private/tmp/claude-501/-Users-ntmac-Documents-FED-Learnings/0c42591c-b887-4c58-94c0-1c6ab6487306/scratchpad/shots/full.png --window-size=1440,6000 --hide-scrollbars --virtual-time-budget=5000 http://localhost:8123/index.html)",
+      "Bash(sed -i '' \"s/await send\\('Page.enable'\\);/await send\\('Page.enable'\\); await send\\('Network.enable'\\); await send\\('Network.setCacheDisabled', { cacheDisabled: true }\\);/\" ecm-interaction-test.mjs)",
+      "Bash(node ecm-interaction-test.mjs)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/9b4cf7fb-8a95-43cc-aa61-5394ba47737c\" -o assets/images/data-protection-page/hero-illustration.png)"
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+/* About Us — Figma node 663:2236 */
+
+.about {
+  padding: 64px 0;
+}
+
+.about__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.about__visual {
+  flex: 1 1 620px;
+  min-width: 0;
+}
+
+.about__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.about__content {
+  flex: 1 1 580px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.about__desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  margin-top: 16px;
+}
+
+.about__cta {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  background: var(--blue-tint-04);
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 11px 20px;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.about__cta:hover {
+  background: var(--primary-blue);
+  color: var(--grey-pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 89, 154, 0.24);
+}
+
+.about__cta:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.about__cta:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1023px) {
+  .about__inner {
+    flex-direction: column;
+  }
+
+  .about__visual,
+  .about__content {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .about__title {
+    font-size: 30px;
+  }
+}

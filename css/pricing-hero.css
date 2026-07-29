@@ -1,0 +1,83 @@
+/* Pricing hero — Figma node 1221:6325 */
+
+.pricing-hero {
+  background: #f5f8fb; /* no matching Figma token */
+  padding: 80px 0;
+}
+
+.pricing-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.pricing-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 639px;
+}
+
+.pricing-hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.92px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.pricing-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+}
+
+.pricing-hero__visual {
+  flex-shrink: 0;
+  width: 687px;
+  max-width: 45vw;
+}
+
+.pricing-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1180px) {
+  .pricing-hero__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .pricing-hero {
+    padding: 56px 0;
+  }
+
+  .pricing-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pricing-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .pricing-hero__visual {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 639px) {
+  .pricing-hero__title {
+    font-size: 34px;
+    letter-spacing: -0.9px;
+  }
+
+  .pricing-hero__subtitle {
+    font-size: 16px;
+  }
+}

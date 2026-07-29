@@ -1,0 +1,311 @@
+/* Header / Nav — Figma node 1540:8897 */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px var(--container-pad);
+}
+
+/* Frosted-glass background lives on a pseudo-element rather than .nav itself —
+   backdrop-filter/transform/filter on .nav would make it a containing block
+   for position:fixed descendants (the mobile .nav__links drawer), trapping
+   the drawer inside the thin nav bar instead of the viewport. */
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10.6px);
+  -webkit-backdrop-filter: blur(10.6px);
+  box-shadow: var(--nav-shadow);
+}
+
+.nav__logo img {
+  width: 170px;
+  height: auto;
+}
+
+@media (min-width: 640px) {
+  .nav__logo img {
+    width: 200px;
+  }
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  font-size: 16px;
+  color: var(--grey-dark-grey);
+}
+
+.nav__link:hover {
+  color: var(--primary-blue);
+}
+
+.nav__login {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--blue-tint-04);
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px 16px;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nav__login:hover {
+  background: var(--primary-blue);
+  color: var(--grey-pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 89, 154, 0.24);
+}
+
+.nav__login:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.nav__login:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.nav__login img {
+  width: 21px;
+  height: 24px;
+  transition: filter 0.15s ease;
+}
+
+.nav__cta {
+  background: var(--secondary-red);
+  border: 1px solid var(--secondary-red);
+  color: var(--grey-pure-white);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 11px 24px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.nav__cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(223, 36, 45, 0.28);
+}
+
+.nav__cta:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.nav__cta:focus-visible,
+.nav__login:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+.nav__menu-item {
+  position: relative;
+}
+
+.nav__menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-tint-04);
+  border: 1px solid var(--primary-blue);
+  border-radius: 27px;
+  padding: 10px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.nav__menu-toggle:hover {
+  background: rgba(0, 89, 154, 0.12);
+  transform: translateY(-1px);
+}
+
+.nav__menu-toggle:active {
+  background: rgba(0, 89, 154, 0.2);
+  transform: translateY(0);
+}
+
+.nav__menu-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav__menu-toggle .nav__menu-icon--close {
+  display: none;
+}
+
+.nav__menu-item.is-open .nav__menu-icon--open {
+  display: none;
+}
+
+.nav__menu-item.is-open .nav__menu-icon--close {
+  display: block;
+}
+
+.nav__mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.nav__mobile-toggle:hover {
+  background: var(--blue-tint-04);
+}
+
+.nav__mobile-toggle:active {
+  opacity: 0.7;
+}
+
+.nav__mobile-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Hamburger flyout — Figma node 1134:3811 ("Header", Variant2), replaces the old
+   hover-on-"Products" mega menu; now lives under the circular hamburger button. */
+.nav__flyout {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 641px;
+  max-width: calc(100vw - 40px);
+  background: var(--grey-pure-white);
+  backdrop-filter: blur(10.6px);
+  -webkit-backdrop-filter: blur(10.6px);
+  box-shadow: var(--dropdown-shadow);
+  padding: 32px 40px;
+  /* border-radius: 12px; */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  z-index: 10;
+}
+
+.nav__menu-item:hover .nav__flyout,
+.nav__menu-item:focus-within .nav__flyout,
+.nav__menu-item.is-open .nav__flyout {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav__flyout__products {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--grey-lightest-grey);
+  margin-bottom: 26px;
+}
+
+.nav__flyout__product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  width: 132px;
+}
+
+.nav__flyout__product img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__flyout__product-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--grey-dark-charcoal);
+}
+
+.nav__flyout__product-desc {
+  font-size: 14px;
+  color: var(--grey-medium-dark-grey);
+}
+
+.nav__flyout__columns {
+  display: flex;
+  gap: 56px;
+}
+
+.nav__flyout__col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+.nav__flyout__col-title {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-blue);
+}
+
+.nav__flyout__col a {
+  font-size: 16px;
+  color: var(--grey-medium-dark-grey);
+}
+
+.nav__flyout__col a:hover {
+  color: var(--primary-blue);
+}
+
+@media (max-width: 1023px) {
+  .nav__links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(320px, 85vw);
+    background: var(--grey-pure-white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 96px 24px 24px;
+    gap: 20px;
+    box-shadow: var(--dropdown-shadow);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+  }
+
+  .nav__links.is-open {
+    transform: translateX(0);
+  }
+
+  .nav__menu-toggle {
+    display: none;
+  }
+
+  .nav__mobile-toggle {
+    display: inline-flex;
+  }
+}

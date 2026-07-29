@@ -1,0 +1,123 @@
+/* Residency confirmation popup — Figma node 2523:17461. Reuses .ib-modal-overlay/.ib-modal
+   base classes from ib-modals.css and adds the residency-specific radio group + confirm button. */
+
+.ib-modal--wide {
+  width: 904px;
+  overflow-y: auto;
+}
+
+.ib-modal--wide > * {
+  flex-shrink: 0;
+}
+
+/* ib-modals.css has a @media(max-width:639px) rule capping .ib-modal__body at 50vh for the
+   Terms/Disclosures popup's internally-scrolling body. That rule also matches this modal's
+   reused .ib-modal__body--static, re-imposing a height cap the --static variant is meant to
+   remove — the legal text then overflows past that cap and visually overlaps the residency
+   question below it. This modal scrolls as a whole (.ib-modal--wide), so the body must not
+   have its own separate height cap on any viewport. */
+.ib-modal__body--static {
+  max-height: none;
+}
+
+.od-residency__heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+  margin-top: 24px;
+}
+
+.od-residency__options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.od-residency__option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.od-residency__option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.od-residency__radio {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  border-radius: 50%;
+  border: 1.5px solid var(--grey-medium-dark-grey);
+  position: relative;
+}
+
+.od-residency__option input[type="radio"]:checked + .od-residency__radio {
+  border-color: var(--primary-blue);
+}
+
+.od-residency__option input[type="radio"]:checked + .od-residency__radio::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+}
+
+.od-residency__option input[type="radio"]:focus-visible + .od-residency__radio {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+.od-residency__option span:last-child {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--grey-darkest-grey);
+}
+
+.od-residency__confirm {
+  align-self: flex-end;
+  margin-top: 24px;
+  background: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  border-radius: 12px;
+  padding: 12px 29px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.od-residency__confirm:hover:not(:disabled) {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(0, 89, 154, 0.28);
+}
+
+.od-residency__confirm:active:not(:disabled) {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.od-residency__confirm:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+.od-residency__confirm:disabled {
+  opacity: 0.5;
+}
+
+@media (max-width: 639px) {
+  .od-residency__confirm {
+    align-self: stretch;
+    text-align: center;
+  }
+}

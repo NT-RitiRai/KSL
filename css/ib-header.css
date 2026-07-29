@@ -1,0 +1,247 @@
+/* Investment Banking page header — Figma node 2502:10585 */
+
+.ib-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.ib-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px var(--container-pad);
+}
+
+.ib-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10.6px);
+  -webkit-backdrop-filter: blur(10.6px);
+  box-shadow: var(--nav-shadow);
+}
+
+.ib-nav__logo img {
+  width: 170px;
+  height: auto;
+}
+
+@media (min-width: 640px) {
+  .ib-nav__logo img {
+    width: 200px;
+  }
+}
+
+.ib-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.ib-nav__dropdown {
+  position: relative;
+}
+
+.ib-nav__dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--grey-dark-grey);
+  transition: color 0.15s ease;
+}
+
+.ib-nav__dropdown-toggle:hover {
+  color: var(--primary-blue);
+}
+
+.ib-nav__dropdown-toggle:active {
+  opacity: 0.7;
+}
+
+.ib-nav__dropdown-toggle img {
+  width: 21px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.ib-nav__dropdown.is-open .ib-nav__dropdown-toggle {
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+.ib-nav__dropdown.is-open .ib-nav__dropdown-toggle img {
+  transform: rotate(180deg);
+}
+
+.ib-nav__dropdown-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 220px;
+  background: var(--grey-pure-white);
+  box-shadow: var(--dropdown-shadow);
+  border-radius: 8px;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+
+.ib-nav__dropdown.is-open .ib-nav__dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.ib-nav__dropdown-panel a {
+  font-size: 16px;
+  color: var(--grey-dark-grey);
+}
+
+.ib-nav__dropdown-panel a:hover {
+  color: var(--primary-blue);
+}
+
+.ib-nav__menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-tint-04);
+  border: 1px solid var(--primary-blue);
+  border-radius: 27px;
+  padding: 10px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.ib-nav__menu-toggle:hover {
+  background: rgba(0, 89, 154, 0.12);
+  transform: translateY(-1px);
+}
+
+.ib-nav__menu-toggle:active {
+  background: rgba(0, 89, 154, 0.2);
+  transform: translateY(0);
+}
+
+.ib-nav__menu-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+.ib-nav__menu-toggle .nav__menu-icon--close {
+  display: none;
+}
+
+.ib-nav__menu-item.is-open .nav__menu-icon--open {
+  display: none;
+}
+
+.ib-nav__menu-item.is-open .nav__menu-icon--close {
+  display: block;
+}
+
+.ib-nav__menu-item {
+  position: relative;
+}
+
+/* header.css defines .nav__flyout's default hidden state (opacity:0/visibility:hidden)
+   and the reveal rule keyed to .nav__menu-item.is-open. This page's toggle wrapper is
+   .ib-nav__menu-item, so it needs its own matching reveal rule or the flyout — reused
+   verbatim from the standard header — never becomes visible when toggled open. */
+.ib-nav__menu-item:hover .nav__flyout,
+.ib-nav__menu-item:focus-within .nav__flyout,
+.ib-nav__menu-item.is-open .nav__flyout {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.ib-nav__mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.ib-nav__mobile-toggle:hover {
+  background: var(--blue-tint-04);
+}
+
+.ib-nav__mobile-toggle:active {
+  opacity: 0.7;
+}
+
+.ib-nav__mobile-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 1023px) {
+  .ib-nav__links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(320px, 85vw);
+    background: var(--grey-pure-white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 96px 24px 24px;
+    gap: 8px;
+    box-shadow: var(--dropdown-shadow);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+    z-index: 20;
+  }
+
+  .ib-nav__links.is-open {
+    transform: translateX(0);
+  }
+
+  .ib-nav__dropdown {
+    width: 100%;
+  }
+
+  .ib-nav__dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .ib-nav__dropdown-panel {
+    position: static;
+    box-shadow: none;
+    padding: 8px 0 8px 16px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+
+  .ib-nav__dropdown.is-open .ib-nav__dropdown-panel {
+    display: flex;
+  }
+
+  .ib-nav__menu-toggle {
+    display: none;
+  }
+
+  .ib-nav__mobile-toggle {
+    display: inline-flex;
+  }
+}

@@ -1,0 +1,84 @@
+/* Data Protection Policy hero — Figma node 1264:11926 */
+
+.dpppage-hero {
+  background: #f5f8fb; /* no matching Figma token — matches other page-hero backgrounds */
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.dpppage-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.dpppage-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 636px;
+}
+
+.dpppage-hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.92px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.dpppage-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+}
+
+.dpppage-hero__visual {
+  flex-shrink: 0;
+  width: 514px;
+  max-width: 42vw;
+}
+
+.dpppage-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1180px) {
+  .dpppage-hero__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .dpppage-hero {
+    padding: 56px 0;
+  }
+
+  .dpppage-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dpppage-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .dpppage-hero__visual {
+    width: 100%;
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 639px) {
+  .dpppage-hero__title {
+    font-size: 34px;
+    letter-spacing: -0.9px;
+  }
+
+  .dpppage-hero__subtitle {
+    font-size: 16px;
+  }
+}

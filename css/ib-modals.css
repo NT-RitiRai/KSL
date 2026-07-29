@@ -1,0 +1,155 @@
+/* Terms of Use / Disclosures popups — Figma nodes 2502:9011 (Terms of Use), 2502:12426 (Disclosures) */
+
+.ib-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(18, 18, 18, 0.55);
+  padding: 24px;
+}
+
+.ib-modal-overlay.is-open {
+  display: flex;
+}
+
+.ib-modal {
+  position: relative;
+  width: 904px;
+  max-width: 100%;
+  max-height: 90vh;
+  background: var(--grey-pure-white);
+  border-radius: 24px;
+  padding: 28px 32px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ib-modal__title {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary-blue);
+  padding-right: 40px;
+}
+
+.ib-modal__divider {
+  height: 1px;
+  background: var(--grey-lightest-grey);
+  margin-top: 30px;
+}
+
+.ib-modal__body {
+  overflow-y: auto;
+  margin-top: 13px;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 338px;
+}
+
+.ib-modal__body p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-darkest-grey);
+}
+
+.ib-modal__body strong {
+  font-weight: 500;
+}
+
+.ib-modal__body--static {
+  max-height: none;
+  overflow-y: visible;
+}
+
+.ib-modal__accept {
+  align-self: flex-end;
+  margin-top: 24px;
+  background: #ebf2f7;
+  border: 1px solid var(--primary-blue);
+  border-radius: 12px;
+  padding: 12px 29px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-blue);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ib-modal__accept:hover {
+  background: var(--primary-blue);
+  color: var(--grey-pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 89, 154, 0.24);
+}
+
+.ib-modal__accept:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.ib-modal__accept:focus-visible,
+.ib-modal__close:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+.ib-modal__close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ebf2f7;
+  border: 1px solid var(--primary-blue);
+  border-radius: 12px;
+  padding: 8px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.ib-modal__close:hover {
+  background: var(--primary-blue);
+  transform: rotate(90deg);
+}
+
+.ib-modal__close:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.ib-modal__close:active {
+  transform: rotate(90deg) scale(0.92);
+}
+
+.ib-modal__close img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.15s ease;
+}
+
+.ib-modal--compact {
+  padding-top: 28px;
+}
+
+@media (max-width: 639px) {
+  .ib-modal {
+    padding: 24px 20px 24px;
+    border-radius: 16px;
+  }
+
+  .ib-modal__title {
+    font-size: 22px;
+  }
+
+  .ib-modal__body {
+    max-height: 50vh;
+  }
+
+  .ib-modal__accept {
+    align-self: stretch;
+    text-align: center;
+  }
+}

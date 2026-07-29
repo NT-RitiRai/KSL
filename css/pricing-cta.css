@@ -1,0 +1,115 @@
+/* Ready to Start Investing? — Figma node 2307:20666 */
+
+.pricing-cta {
+  background: var(--grey-pure-white);
+  padding: 0 0 64px;
+}
+
+.pricing-cta__panel {
+  background: var(--blue-tint-04);
+  border-radius: 24px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.pricing-cta__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--grey-pure-black);
+}
+
+.pricing-cta__desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  max-width: 616px;
+}
+
+.pricing-cta__form {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 697px;
+}
+
+.pricing-cta__phone {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-light-grey);
+  border-radius: 12px;
+  padding: 14px 19px;
+}
+
+.pricing-cta__phone span {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-dark-charcoal);
+}
+
+.pricing-cta__phone input {
+  flex: 1 1 0;
+  min-width: 0;
+  border: none;
+  background: none;
+  font-family: var(--font-base);
+  font-size: 16px;
+  color: var(--grey-medium-dark-grey);
+}
+
+.pricing-cta__submit {
+  flex-shrink: 0;
+  background: var(--primary-blue);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-family: var(--font-base);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.pricing-cta__submit:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(0, 89, 154, 0.3);
+}
+
+.pricing-cta__submit:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+.pricing-cta__submit:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 639px) {
+  .pricing-cta {
+    padding-bottom: 48px;
+  }
+
+  .pricing-cta__panel {
+    padding: 40px 24px;
+  }
+
+  .pricing-cta__title {
+    font-size: 24px;
+  }
+
+  .pricing-cta__form {
+    flex-direction: column;
+  }
+}

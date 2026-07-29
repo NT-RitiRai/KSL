@@ -1,0 +1,51 @@
+/* Equity Capital Markets intro/CTA — Figma node 992:1742 */
+
+.ecm-intro {
+  padding: 64px 0;
+  background: var(--grey-pure-white);
+}
+
+.ecm-intro__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.ecm-intro__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+  max-width: 780px;
+}
+
+.ecm-intro__tagline {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--grey-off-black);
+  max-width: 571px;
+}
+
+.ecm-intro__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 1080px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+}
+
+@media (max-width: 639px) {
+  .ecm-intro {
+    padding: 48px 0;
+  }
+
+  .ecm-intro__title {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,159 @@
+/* Ways to Associate — Figma node 2323:9328 */
+
+.partner-ways {
+  background: linear-gradient(0deg, #001e34 0%, var(--primary-blue) 100%);
+  padding: 64px 0;
+}
+
+.partner-ways__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.partner-ways__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.partner-ways__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.partner-ways__desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-lightest-grey);
+  max-width: 590px;
+}
+
+.partner-ways__grid {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.partner-ways__card {
+  flex: 1 1 0;
+  position: relative;
+  background: rgba(248, 250, 252, 0.08); /* no matching Figma token */
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.partner-ways__card--popular {
+  background: rgba(255, 255, 255, 0.08); /* no matching Figma token */
+}
+
+.partner-ways__badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--grey-pure-white);
+  color: var(--primary-blue);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-bottom-left-radius: 12px;
+}
+
+.partner-ways__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.partner-ways__card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+  margin-top: -8px;
+}
+
+.partner-ways__card-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-lightest-grey);
+  margin-top: 6px;
+}
+
+.partner-ways__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.partner-ways__list li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.partner-ways__list img {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.partner-ways__list span {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-lightest-grey);
+}
+
+.partner-ways__cta {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.08); /* no matching Figma token */
+  border: 1px solid transparent;
+  color: var(--grey-pure-white);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 13px 24px;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.partner-ways__cta:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: var(--grey-pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.partner-ways__cta:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+@media (max-width: 1023px) {
+  .partner-ways__grid {
+    flex-direction: column;
+  }
+
+  .partner-ways__card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .partner-ways {
+    padding: 48px 0;
+  }
+
+  .partner-ways__title {
+    font-size: 28px;
+  }
+}

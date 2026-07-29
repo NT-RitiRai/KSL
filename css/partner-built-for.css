@@ -1,0 +1,96 @@
+/* Who is this Built For? — Figma node 2323:8719 */
+
+.partner-built-for {
+  background: linear-gradient(0deg, #001f35 0%, var(--primary-blue) 100%);
+  padding: 64px 0;
+}
+
+.partner-built-for__inner {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.partner-built-for__checklist {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.partner-built-for__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.partner-built-for__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.partner-built-for__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(23, 37, 57, 0.2); /* no matching Figma token */
+  border-radius: 16px;
+  padding: 25px 24px;
+}
+
+.partner-built-for__item img {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+}
+
+.partner-built-for__item span {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+}
+
+.partner-built-for__panel {
+  flex: 1 1 0;
+  background: var(--grey-pure-white);
+  border-radius: 24px;
+  padding: 24px 24px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.partner-built-for__panel-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+}
+
+.partner-built-for__panel-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-medium-dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .partner-built-for__inner {
+    flex-direction: column;
+  }
+
+  .partner-built-for__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 639px) {
+  .partner-built-for {
+    padding: 48px 0;
+  }
+
+  .partner-built-for__title {
+    font-size: 28px;
+  }
+}

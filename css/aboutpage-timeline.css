@@ -1,0 +1,199 @@
+/* "Where It All Began" timeline — About page, Figma node 2284:8369 */
+
+.timeline {
+  padding: 64px 0;
+  background: #f5f8fb; /* no matching Figma token */
+}
+
+.timeline__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.timeline__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.timeline__title {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--grey-dark-charcoal);
+}
+
+.timeline__subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  max-width: 582px;
+}
+
+.timeline__row {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: 1280px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.timeline__row::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline__card {
+  position: relative;
+  flex: 0 0 302px;
+  scroll-snap-align: start;
+  height: 270px;
+  border-radius: 24px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-light-grey);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.15s ease;
+}
+
+.timeline__card:active {
+  transform: scale(0.98);
+}
+
+.timeline__card--filled {
+  background: var(--primary-blue);
+  border-color: var(--grey-pure-white);
+}
+
+.timeline__year {
+  font-size: 26px;
+  font-weight: 500;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  /* gradient year number on plain cards, matching Figma's blue-to-red text fill */
+  background: linear-gradient(180deg, var(--primary-blue) 0%, var(--secondary-red) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.timeline__card--filled .timeline__year {
+  background: none;
+  -webkit-text-fill-color: var(--grey-pure-white);
+  color: var(--grey-pure-white);
+}
+
+.timeline__reveal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.timeline__card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.timeline__card--filled .timeline__card-title {
+  color: var(--grey-pure-white);
+}
+
+.timeline__card-desc {
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--grey-dark-grey);
+}
+
+.timeline__card--filled .timeline__card-desc {
+  color: var(--grey-off-white);
+}
+
+/* Expanded state — triggered by hover (desktop) or .is-active (click/keyboard, all inputs) */
+.timeline__card:hover .timeline__year,
+.timeline__card.is-active .timeline__year {
+  transform: translateY(-66px);
+  font-size: 20px;
+}
+
+.timeline__card:hover .timeline__reveal,
+.timeline__card.is-active .timeline__reveal {
+  max-height: 190px;
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.timeline__controls {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.timeline__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  background: var(--grey-pure-white);
+  border: 1px solid #e3e3e3; /* no matching Figma token */
+  box-shadow: 0px 0px 6.9px 0px rgba(0, 0, 0, 0.08); /* no matching Figma token */
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.timeline__arrow:hover {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  transform: scale(1.08);
+}
+
+.timeline__arrow:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.timeline__arrow:active {
+  transform: scale(0.95);
+}
+
+.timeline__arrow img {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.15s ease;
+}
+
+.timeline__arrow--prev img {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1023px) {
+  .timeline {
+    padding: 48px 0;
+  }
+
+  .timeline__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 639px) {
+  .timeline__card {
+    flex-basis: 260px;
+  }
+}

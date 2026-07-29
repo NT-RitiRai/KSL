@@ -1,0 +1,130 @@
+/* Why Khandwala Securities Limited — Figma node 2370:8113 */
+
+.wealthmgmt-whyksl {
+  position: relative;
+  overflow: hidden;
+  background: var(--blue-tint-04);
+  padding: 64px 0;
+}
+
+.wealthmgmt-whyksl__blob {
+  position: absolute;
+  width: 226px;
+  height: 183px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.wealthmgmt-whyksl__blob--right {
+  right: -80px;
+  bottom: -40px;
+  background: var(--primary-blue);
+}
+
+.wealthmgmt-whyksl__blob--left {
+  left: -140px;
+  top: -80px;
+  background: var(--secondary-red);
+}
+
+.wealthmgmt-whyksl__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.wealthmgmt-whyksl__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.wealthmgmt-whyksl__heading h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--grey-pure-black);
+}
+
+.wealthmgmt-whyksl__heading p {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--grey-dark-charcoal);
+}
+
+.wealthmgmt-whyksl__grid {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.wealthmgmt-whyksl__card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: var(--grey-pure-white);
+  border: 1px solid var(--grey-off-white);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.wealthmgmt-whyksl__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--grey-pure-white);
+  border-radius: 12px;
+  box-shadow: 0px 2px 8.1px 0px rgba(0, 0, 0, 0.08);
+}
+
+.wealthmgmt-whyksl__icon img {
+  width: 28px;
+  height: 28px;
+}
+
+.wealthmgmt-whyksl__card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--grey-pure-black);
+}
+
+.wealthmgmt-whyksl__card p {
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--grey-dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .wealthmgmt-whyksl__grid {
+    flex-wrap: wrap;
+  }
+
+  .wealthmgmt-whyksl__card {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 639px) {
+  .wealthmgmt-whyksl {
+    padding: 48px 0;
+  }
+
+  .wealthmgmt-whyksl__heading h2 {
+    font-size: 30px;
+  }
+
+  .wealthmgmt-whyksl__card {
+    flex: 1 1 100%;
+  }
+}

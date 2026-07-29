@@ -1,0 +1,63 @@
+/* IPV Startup Investment Platform — Figma node 2822:12239 */
+
+.products-ipv {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.products-feature__text--gap32 {
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.products-feature__text-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.products-feature__desc-plain {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-medium-dark-grey);
+}
+
+.products-ipv__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  background: rgba(223, 36, 45, 0.08);
+  border: 1px solid #d2003e;
+  border-radius: 12px;
+  padding: 14.5px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary-red);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.products-ipv__btn:hover {
+  background: var(--secondary-red);
+  color: var(--grey-pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(223, 36, 45, 0.24);
+}
+
+.products-ipv__btn:active {
+  transform: translateY(0);
+  filter: brightness(0.92);
+  box-shadow: none;
+}
+
+@media (max-width: 1023px) {
+  .products-ipv__btn {
+    align-self: center;
+  }
+}
+
+@media (max-width: 639px) {
+  .products-ipv {
+    padding: 48px 0;
+  }
+}

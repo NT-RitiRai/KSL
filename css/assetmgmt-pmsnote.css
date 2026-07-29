@@ -1,0 +1,45 @@
+/* A Note on Our PMS Offering — Figma node 2657:11560 */
+
+.assetmgmt-pmsnote {
+  background: linear-gradient(0deg, #001f35 0%, var(--primary-blue) 100%);
+  padding: 64px 80px;
+}
+
+.assetmgmt-pmsnote__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  max-width: 814px;
+  margin: 0 auto;
+}
+
+.assetmgmt-pmsnote__inner h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.assetmgmt-pmsnote__inner p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-off-white);
+}
+
+.assetmgmt-pmsnote__inner p strong {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--grey-pure-white);
+}
+
+@media (max-width: 639px) {
+  .assetmgmt-pmsnote {
+    padding: 48px 24px;
+  }
+
+  .assetmgmt-pmsnote__inner h2 {
+    font-size: 28px;
+  }
+}

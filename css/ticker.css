@@ -1,0 +1,153 @@
+/* ===========================
+   TRUST TICKER / MARQUEE
+=========================== */
+
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 89, 154, 0.16);
+}
+
+.ticker__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 22.5px;
+}
+
+.ticker__title {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--grey-off-black);
+  text-align: center;
+}
+
+.ticker__rule {
+  width: 200px;
+  height: 1px;
+  background: var(--grey-lightest-grey);
+}
+
+/* ===========================
+   MARQUEE
+=========================== */
+
+.ticker__marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 16px 0 22.5px;
+
+  /* Fade edges */
+  mask-image: linear-gradient(to right,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent);
+
+  -webkit-mask-image: linear-gradient(to right,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent);
+}
+
+.ticker__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+
+  animation: marquee 36s linear infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.ticker__track:hover {
+  animation-play-state: paused;
+}
+
+.ticker__badges {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-right: 56px;
+
+  flex-shrink: 0;
+}
+
+.ticker__badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+  color: var(--grey-off-black);
+}
+
+.ticker__badge img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   SMOOTH INFINITE SCROLL
+=========================== */
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:1023px) {
+
+  .ticker__track {
+    animation-duration: 28s;
+  }
+
+  .ticker__badges {
+    gap: 32px;
+    padding-right: 32px;
+  }
+
+  .ticker__badge {
+    font-size: 14px;
+  }
+
+}
+
+/* ===========================
+   ACCESSIBILITY
+=========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ticker__track {
+    animation: marquee 30s linear infinite;
+  }
+
+  .ticker__marquee {
+    overflow-x: auto;
+    mask: none;
+    -webkit-mask: none;
+  }
+
+}

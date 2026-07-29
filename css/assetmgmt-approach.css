@@ -1,0 +1,125 @@
+/* Our Approach to Asset Management — Figma node 2367:6604 */
+
+.assetmgmt-approach {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.assetmgmt-approach__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.assetmgmt-approach__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 604px;
+  min-width: 0;
+  max-width: 604px;
+}
+
+.assetmgmt-approach__text h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+}
+
+.assetmgmt-approach__text p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  max-width: 571px;
+}
+
+.assetmgmt-approach__card {
+  flex-shrink: 0;
+  width: 636px;
+  max-width: 100%;
+  background: #f8fafc;
+  border: 1px solid var(--grey-lightest-grey);
+  border-radius: 24px;
+  box-shadow: 0px 1px 10.2px 0px rgba(0, 0, 0, 0.05);
+  padding: 32px 24px 24px;
+}
+
+.assetmgmt-approach__card h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+  margin-bottom: 28px;
+}
+
+.assetmgmt-approach__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.assetmgmt-approach__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.assetmgmt-approach__icon {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--grey-pure-white);
+  border-radius: 12px;
+  box-shadow: 0px 2px 8.1px 0px rgba(0, 0, 0, 0.08);
+}
+
+.assetmgmt-approach__icon img {
+  width: 22px;
+  height: 22px;
+}
+
+.assetmgmt-approach__icon img:nth-child(2) {
+  position: absolute;
+}
+
+.assetmgmt-approach__item span:last-child {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-pure-black);
+}
+
+@media (max-width: 1023px) {
+  .assetmgmt-approach__inner {
+    flex-direction: column;
+  }
+
+  .assetmgmt-approach__text {
+    flex: 1 1 auto;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .assetmgmt-approach__card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .assetmgmt-approach {
+    padding: 48px 0;
+  }
+
+  .assetmgmt-approach__text h2 {
+    font-size: 30px;
+  }
+
+  .assetmgmt-approach__card {
+    padding: 24px;
+  }
+}

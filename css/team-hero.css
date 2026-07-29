@@ -1,0 +1,102 @@
+/* The Minds Behind Khandwala Securities — Figma node 2433:6706 */
+
+.team-hero {
+  background: #f5f8fb; /* no matching Figma token — matches other page-hero backgrounds */
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.team-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.team-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 644px;
+}
+
+.team-hero__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  background: rgba(0, 89, 154, 0.02);
+  border: 1px solid var(--primary-blue);
+  border-radius: 29px;
+  padding: 10px 18px;
+  font-size: 16px;
+  color: var(--primary-blue);
+  margin-bottom: 12px;
+}
+
+.team-hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.92px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.team-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+  max-width: 643px;
+}
+
+.team-hero__visual {
+  flex-shrink: 0;
+  width: 551px;
+  max-width: 44vw;
+}
+
+.team-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1180px) {
+  .team-hero__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .team-hero {
+    padding: 56px 0;
+  }
+
+  .team-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .team-hero__badge {
+    align-self: center;
+  }
+
+  .team-hero__visual {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 639px) {
+  .team-hero__title {
+    font-size: 34px;
+    letter-spacing: -0.9px;
+  }
+
+  .team-hero__subtitle {
+    font-size: 16px;
+  }
+}

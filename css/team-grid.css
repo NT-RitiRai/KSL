@@ -1,0 +1,66 @@
+/* Investment / Research / Sales & Wealth Team grids — Figma nodes 2433:9535, 2433:9536, 2433:9565
+   .person-card is shared with css/aboutpage-board.css */
+
+.team-grid {
+  padding: 32px 0;
+}
+
+.team-grid__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.team-grid__heading {
+  text-align: center;
+}
+
+.team-grid__heading h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-dark-charcoal);
+  margin-bottom: 16px;
+}
+
+.team-grid__heading p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+}
+
+.team-grid__cards {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.team-grid__cards .person-card {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .team-grid__cards {
+    flex-wrap: wrap;
+  }
+
+  .team-grid__cards .person-card {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 639px) {
+  .team-grid {
+    padding: 24px 0;
+  }
+
+  .team-grid__heading h2 {
+    font-size: 30px;
+  }
+
+  .team-grid__cards .person-card {
+    flex: 1 1 100%;
+  }
+}

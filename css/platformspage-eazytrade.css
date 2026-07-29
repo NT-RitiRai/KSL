@@ -1,0 +1,137 @@
+/* KSL EazyTrade — Figma node 1255:8058 */
+
+.platformspage-eazytrade {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+  scroll-margin-top: 96px;
+}
+
+.platformspage-eazytrade__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.platformspage-eazytrade__intro h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-black);
+}
+
+.platformspage-eazytrade__intro p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+}
+
+.platformspage-eazytrade__layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.platformspage-eazytrade__visual {
+  flex-shrink: 0;
+  width: 523px;
+  max-width: 36vw;
+}
+
+.platformspage-eazytrade__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.platformspage-eazytrade__right {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.platformspage-eazytrade__downloads {
+  display: flex;
+  gap: 16px;
+}
+
+.platformspage-eazytrade__download-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--grey-off-black);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 12.5px 14px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grey-pure-white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.platformspage-eazytrade__download-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.platformspage-eazytrade__download-btn:active {
+  transform: translateY(0);
+  filter: brightness(0.8);
+  box-shadow: none;
+}
+
+.platformspage-eazytrade__download-btn img {
+  width: 19px;
+  height: 21px;
+}
+
+@media (max-width: 1180px) {
+  .platformspage-eazytrade__layout {
+    flex-wrap: wrap;
+  }
+
+  .platformspage-eazytrade__visual {
+    max-width: 320px;
+    order: -1;
+  }
+
+  .feature-list {
+    flex: 1 1 260px;
+  }
+}
+
+@media (max-width: 639px) {
+  .platformspage-eazytrade {
+    padding: 48px 0;
+  }
+
+  .platformspage-eazytrade__intro h2 {
+    font-size: 30px;
+  }
+
+  .platformspage-eazytrade__layout {
+    flex-direction: column;
+  }
+
+  .platformspage-eazytrade__visual {
+    max-width: 100%;
+  }
+
+  .feature-list,
+  .platformspage-eazytrade__right {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .platformspage-eazytrade__downloads {
+    flex-direction: column;
+  }
+}

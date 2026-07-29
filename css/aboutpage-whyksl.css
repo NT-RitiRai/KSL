@@ -1,0 +1,102 @@
+/* "Why KSL?" — About page, Figma node 989:2416 */
+
+.why-ksl {
+  /* gradient stops match Figma fill; same pattern used in css/market.css .market__panel, no single token */
+  background: linear-gradient(180deg, var(--primary-blue) 0%, #001e34 100%);
+  padding: 64px 0;
+}
+
+.why-ksl__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.why-ksl__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 29px;
+  border: 1px solid var(--grey-pure-white);
+  background: rgba(255, 255, 255, 0.02); /* no matching Figma token */
+  color: var(--grey-pure-white);
+  font-size: 16px;
+}
+
+.why-ksl__title {
+  max-width: 754px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.why-ksl__subtitle {
+  max-width: 754px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-lightest-grey);
+}
+
+.why-ksl__grid {
+  width: 100%;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.why-ksl__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 88px;
+  padding: 0 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08); /* no matching Figma token — translucent card on gradient */
+}
+
+.why-ksl__item img {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.why-ksl__item span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+@media (max-width: 1023px) {
+  .why-ksl__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-ksl__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 639px) {
+  .why-ksl {
+    padding: 48px 0;
+  }
+
+  .why-ksl__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-ksl__title {
+    font-size: 26px;
+  }
+
+  .why-ksl__item {
+    padding: 16px 20px;
+    min-height: auto;
+  }
+}

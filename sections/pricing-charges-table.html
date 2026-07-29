@@ -1,0 +1,50 @@
+<section class="charges-table">
+  <div class="container">
+    <div class="charges-table__card">
+      <h2 class="charges-table__title">Regulatory &amp; Statutory Charges</h2>
+
+      <!-- Note: Figma's source only authors real charge data for the default
+           "Stock Investments" tab. The Intraday Trading / Futures / Options tabs
+           are shown for visual fidelity but are not wired to switch table data,
+           since fabricating specific regulatory percentages for them risks
+           publishing incorrect financial information. -->
+      <div class="charges-table__tabs" role="tablist" aria-label="Charge category">
+        <button type="button" class="charges-table__tab is-active" role="tab" aria-selected="true">Stock Investments</button>
+        <button type="button" class="charges-table__tab" role="tab" aria-selected="false">Intraday Trading</button>
+        <button type="button" class="charges-table__tab" role="tab" aria-selected="false">Futures</button>
+        <button type="button" class="charges-table__tab" role="tab" aria-selected="false">Options</button>
+      </div>
+
+      <table class="charges-table__table">
+        <thead>
+          <tr>
+            <th>Charge Type</th>
+            <th>Stock Investments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Transaction Charges</td>
+            <td>NSE: 0.003070% <em>BSE*: As per the stock group (Buy/Sell)</em></td>
+          </tr>
+          <tr>
+            <td>STT (Securities Transaction Tax)</td>
+            <td>0.10% <em>(Buy/Sell)</em></td>
+          </tr>
+          <tr>
+            <td>GST</td>
+            <td>18%</td>
+          </tr>
+          <tr>
+            <td>Stamp Duty Charges</td>
+            <td>0.015% <em>(Buy)</em></td>
+          </tr>
+          <tr>
+            <td>SEBI Charges</td>
+            <td>&#8377;10 / Crore</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

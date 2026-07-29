@@ -1,0 +1,134 @@
+/* Wealth Solutions — Figma node 2370:7879 */
+
+.wealthmgmt-solutions {
+  background: linear-gradient(180deg, var(--primary-blue) 0%, #001e34 100%);
+  padding: 64px 80px;
+}
+
+.wealthmgmt-solutions__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: none;
+  padding: 0;
+}
+
+.wealthmgmt-solutions__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.wealthmgmt-solutions__heading h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.wealthmgmt-solutions__heading p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-off-white);
+  max-width: 746px;
+}
+
+.wealthmgmt-solutions__tag {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px !important;
+}
+
+.wealthmgmt-solutions__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.wealthmgmt-solutions__row {
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+.wealthmgmt-solutions__row--two {
+  justify-content: center;
+}
+
+.wealthmgmt-solutions__card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 24px 20px;
+}
+
+.wealthmgmt-solutions__row--two .wealthmgmt-solutions__card {
+  flex: 0 1 410px;
+}
+
+.wealthmgmt-solutions__icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.wealthmgmt-solutions__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.wealthmgmt-solutions__card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--grey-pure-white);
+  margin-bottom: 15px;
+}
+
+.wealthmgmt-solutions__card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: disc;
+  padding-left: 24px;
+}
+
+.wealthmgmt-solutions__card li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--grey-off-white);
+}
+
+@media (max-width: 1023px) {
+  .wealthmgmt-solutions {
+    padding: 56px 40px;
+  }
+
+  .wealthmgmt-solutions__row,
+  .wealthmgmt-solutions__row--two {
+    flex-direction: column;
+  }
+
+  .wealthmgmt-solutions__card,
+  .wealthmgmt-solutions__row--two .wealthmgmt-solutions__card {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .wealthmgmt-solutions {
+    padding: 48px 24px;
+  }
+
+  .wealthmgmt-solutions__heading h2 {
+    font-size: 30px;
+  }
+}

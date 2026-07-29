@@ -1,0 +1,105 @@
+/* Board Compositions — Figma node 1149:3026 */
+
+.ir-board {
+  background: linear-gradient(0deg, #001e34 0%, var(--primary-blue) 100%);
+  padding: 64px 80px;
+}
+
+.ir-board__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.ir-board__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.ir-board__subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-lightest-grey);
+}
+
+.ir-board__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.ir-board__card {
+  flex: 1 1 calc(33.333% - 17px);
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.ir-board__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.ir-board__card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ir-board__card-text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--grey-pure-white);
+}
+
+.ir-board__card-text span {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--grey-light-grey);
+}
+
+.ir-board__committees {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ir-board__committees h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--grey-pure-white);
+}
+
+.ir-board__committees p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-lightest-grey);
+}
+
+@media (max-width: 1023px) {
+  .ir-board__card {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 639px) {
+  .ir-board {
+    padding: 48px 24px;
+  }
+
+  .ir-board__title {
+    font-size: 30px;
+  }
+
+  .ir-board__card {
+    flex: 1 1 100%;
+  }
+}

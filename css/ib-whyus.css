@@ -1,0 +1,145 @@
+/* Why Us — Figma node 2692:11410 */
+
+.ib-whyus {
+  position: relative;
+  background: linear-gradient(180deg, #001f35 0%, var(--primary-blue) 100%);
+  padding: 64px 0;
+  overflow: hidden;
+}
+
+.ib-whyus__banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.ib-whyus__inner {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ib-whyus__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 620px;
+  max-width: 100%;
+}
+
+.ib-whyus__card {
+  background: rgba(23, 37, 57, 0.2);
+  border-radius: 16px;
+  padding: 20px 28px;
+}
+
+.ib-whyus__card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--grey-pure-white);
+  margin-bottom: 8px;
+}
+
+.ib-whyus__card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-lightest-grey);
+}
+
+.ib-whyus__platform {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+  padding: 31px;
+  margin-top: 16px;
+}
+
+.ib-whyus__platform-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ib-whyus__platform-col h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--grey-pure-white);
+}
+
+.ib-whyus__platform-lead {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--grey-lightest-grey);
+}
+
+.ib-whyus__numbered {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ib-whyus__numbered li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--grey-pure-white);
+}
+
+.ib-whyus__numbered li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--primary-blue);
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ib-whyus__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+@media (max-width: 1023px) {
+  .ib-whyus__inner {
+    justify-content: center;
+  }
+
+  .ib-whyus__banner {
+    height: 240px;
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 639px) {
+  .ib-whyus {
+    padding: 48px 0;
+  }
+
+  .ib-whyus__card {
+    padding: 20px;
+  }
+
+  .ib-whyus__platform {
+    padding: 24px;
+  }
+
+  .ib-whyus__platform-col h3 {
+    font-size: 26px;
+  }
+}

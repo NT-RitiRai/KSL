@@ -1,0 +1,274 @@
+/* Offer Documents — Figma node 2520:16486 */
+
+.od-hero {
+  background: #f5f8fb; /* no matching Figma token — matches other page-hero backgrounds */
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.od-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.od-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 533px;
+}
+
+.od-hero__text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.5px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.od-hero__text p {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+}
+
+.od-hero__visual {
+  flex-shrink: 0;
+  width: 440px;
+  max-width: 38vw;
+}
+
+.od-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.od-grid {
+  background: var(--grey-pure-white);
+  padding: 0 0 64px;
+}
+
+.od-grid__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.od-tabs {
+  display: flex;
+  justify-content: flex-end;
+  gap: 48px;
+  width: 100%;
+  border-bottom: 1px solid var(--grey-lightest-grey);
+  padding-bottom: 12px;
+}
+
+.od-tabs__tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-dark-grey);
+}
+
+.od-tabs__tab-underline {
+  height: 4px;
+  width: 100%;
+  border-radius: 8px 16px 0 0;
+  background: transparent;
+}
+
+.od-tabs__tab.is-active {
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.od-tabs__tab.is-active .od-tabs__tab-underline {
+  background: var(--primary-blue);
+}
+
+.od-grid__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.od-grid__row {
+  display: flex;
+  gap: 24px;
+}
+
+.od-card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--grey-pure-white);
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  padding: 20px 24px;
+}
+
+.od-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+}
+
+.od-card__divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+  width: 210px;
+}
+
+.od-card__links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.od-card__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-off-black);
+}
+
+.od-card__links img {
+  width: 20px;
+  height: 19px;
+}
+
+.od-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.od-pagination__step {
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-medium-dark-grey);
+}
+
+.od-pagination__step--next {
+  color: var(--primary-blue);
+}
+
+.od-pagination__numbers {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.od-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.od-page--active {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--grey-pure-white);
+}
+
+.od-page--ellipsis {
+  border-color: var(--primary-blue);
+}
+
+@media (max-width: 1180px) {
+  .od-hero__text h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .od-hero {
+    padding: 56px 0;
+  }
+
+  .od-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .od-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .od-hero__visual {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .od-tabs {
+    justify-content: center;
+  }
+
+  .od-grid__row {
+    flex-wrap: wrap;
+  }
+
+  .od-card {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 240px;
+  }
+}
+
+@media (max-width: 639px) {
+  .od-hero__text h1 {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+
+  .od-hero__text p {
+    font-size: 16px;
+  }
+
+  .od-grid {
+    padding: 0 0 48px;
+  }
+
+  .od-card {
+    flex: 1 1 100%;
+  }
+
+  .od-tabs {
+    gap: 24px;
+  }
+
+  .od-pagination {
+    gap: 12px;
+  }
+
+  .od-page {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+}

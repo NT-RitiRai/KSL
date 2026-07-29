@@ -1,0 +1,167 @@
+/* Deals — Figma node 2516:15149 */
+
+.deals-hero {
+  background: #f5f8fb; /* no matching Figma token — matches other page-hero backgrounds */
+  padding: 55px 0 80px;
+  overflow: hidden;
+}
+
+.deals-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.deals-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 533px;
+}
+
+.deals-hero__text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.5px; /* no matching Figma token */
+  color: var(--grey-dark-charcoal);
+}
+
+.deals-hero__text p {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--grey-medium-dark-grey);
+}
+
+.deals-hero__visual {
+  flex-shrink: 0;
+  width: 440px;
+  max-width: 38vw;
+}
+
+.deals-hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.deals-grid {
+  background: var(--grey-pure-white);
+  padding: 0 0 64px;
+}
+
+.deals-grid__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.deals-grid__row {
+  display: flex;
+  gap: 24px;
+}
+
+.deal-card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 293px;
+  background: var(--grey-pure-white);
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  padding: 16px 24px 20px;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.deal-card__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 72px;
+  background: #f5f8fb;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--grey-medium-light-grey);
+}
+
+.deal-card__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--grey-pure-black);
+}
+
+.deal-card__role {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--primary-blue);
+  max-width: 175px;
+}
+
+.deal-card__meta {
+  font-size: 16px;
+  color: var(--grey-darkest-grey);
+}
+
+@media (max-width: 1180px) {
+  .deals-hero__text h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .deals-hero {
+    padding: 56px 0;
+  }
+
+  .deals-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .deals-hero__text {
+    max-width: none;
+    align-items: center;
+  }
+
+  .deals-hero__visual {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .deals-grid__row {
+    flex-wrap: wrap;
+  }
+
+  .deal-card {
+    flex: 1 1 calc(33.333% - 16px);
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 639px) {
+  .deals-hero__text h1 {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+
+  .deals-hero__text p {
+    font-size: 16px;
+  }
+
+  .deals-grid {
+    padding: 0 0 48px;
+  }
+
+  .deal-card {
+    flex: 1 1 100%;
+  }
+}

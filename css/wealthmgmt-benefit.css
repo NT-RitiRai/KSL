@@ -1,0 +1,107 @@
+/* We work with: — Figma node 2421:14113 */
+
+.wealthmgmt-benefit {
+  background: var(--grey-pure-white);
+  padding: 64px 0;
+}
+
+.wealthmgmt-benefit__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.wealthmgmt-benefit__badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 89, 154, 0.02);
+  border: 1px solid var(--primary-blue);
+  border-radius: 29px;
+  padding: 10px 18px;
+  font-size: 16px;
+  color: var(--primary-blue);
+}
+
+.wealthmgmt-benefit__intro h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--grey-pure-black);
+}
+
+.wealthmgmt-benefit__intro p {
+  font-size: 16px;
+  color: var(--grey-dark-grey);
+  max-width: 647px;
+}
+
+.wealthmgmt-benefit__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.wealthmgmt-benefit__card {
+  flex: 1 1 calc(25% - 18px);
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: #f7f8fa;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 296px;
+}
+
+.wealthmgmt-benefit__card img {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: contain;
+  margin-top: 12px;
+}
+
+.wealthmgmt-benefit__text {
+  width: 100%;
+  padding: 0 24px 24px;
+}
+
+.wealthmgmt-benefit__text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--grey-pure-black);
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--secondary-red);
+  display: inline-block;
+}
+
+.wealthmgmt-benefit__text p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--grey-dark-grey);
+  margin-top: 12px;
+}
+
+@media (max-width: 1023px) {
+  .wealthmgmt-benefit__card {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 639px) {
+  .wealthmgmt-benefit {
+    padding: 48px 0;
+  }
+
+  .wealthmgmt-benefit__intro h2 {
+    font-size: 30px;
+  }
+
+  .wealthmgmt-benefit__card {
+    flex: 1 1 100%;
+  }
+}

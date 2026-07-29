@@ -1,0 +1,106 @@
+/* Building for the Future — Figma node 2370:6879 */
+
+.assetmgmt-future {
+  background: linear-gradient(0deg, #001f35 0%, var(--primary-blue) 100%);
+  padding: 64px 80px;
+}
+
+.assetmgmt-future__layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.assetmgmt-future__vision {
+  flex: 1 1 620px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.assetmgmt-future__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.assetmgmt-future__heading h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-pure-white);
+}
+
+.assetmgmt-future__heading p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-off-white);
+}
+
+.assetmgmt-future__checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.assetmgmt-future__checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.assetmgmt-future__checklist img {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.assetmgmt-future__checklist span {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--grey-lightest-grey);
+}
+
+.assetmgmt-future__panel {
+  flex: 1 1 620px;
+  min-width: 0;
+  background: rgba(23, 37, 57, 0.2);
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+
+.assetmgmt-future__panel h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--grey-pure-white);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1023px) {
+  .assetmgmt-future__layout {
+    flex-direction: column;
+  }
+
+  .assetmgmt-future__vision,
+  .assetmgmt-future__panel {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .assetmgmt-future {
+    padding: 48px 24px;
+  }
+
+  .assetmgmt-future__heading h2 {
+    font-size: 30px;
+  }
+
+  .assetmgmt-future__panel {
+    padding: 24px;
+  }
+}
