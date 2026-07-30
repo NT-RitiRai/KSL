@@ -2,6 +2,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     var tabs = document.querySelectorAll(".hero__tab");
     var panels = document.querySelectorAll(".hero__panel-text");
+    var cta = document.getElementById("heroPanelCta");
 
     if (!tabs.length) return;
 
@@ -16,7 +17,12 @@
         });
 
         panels.forEach(function (panel) {
-          panel.hidden = panel.getAttribute("data-panel") !== target;
+          var isTarget = panel.getAttribute("data-panel") === target;
+          panel.hidden = !isTarget;
+          if (isTarget && cta) {
+            var href = panel.getAttribute("data-href");
+            if (href) cta.setAttribute("href", href);
+          }
         });
       });
     });

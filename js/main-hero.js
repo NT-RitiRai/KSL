@@ -8,7 +8,7 @@
     var prevBtn = root.querySelector(".main-hero__arrow--prev");
     var nextBtn = root.querySelector(".main-hero__arrow--next");
     var current = 0;
-    var AUTOPLAY_MS = 3500;
+    var AUTOPLAY_MS = 3000;
     var timer = null;
 
     function goTo(index) {

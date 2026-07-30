@@ -62,6 +62,12 @@
   background: rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 24px 20px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.ib-services__card:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.1);
 }
 
 .ib-services__icon {

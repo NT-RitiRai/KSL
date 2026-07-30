@@ -68,6 +68,12 @@
   background: rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 24px 20px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.wealthmgmt-solutions__card:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.1);
 }
 
 .wealthmgmt-solutions__row--two .wealthmgmt-solutions__card {
