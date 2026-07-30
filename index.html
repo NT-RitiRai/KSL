@@ -43,10 +43,19 @@
                 <a href="pricing.html" class="nav__link">Pricing</a>
                 <a href="partner-with-us.html" class="nav__link">Partner with us</a>
 
-                <button class="nav__login" type="button">
-                    Log in
-                    <img src="assets/icons/caret-down.svg" alt="" />
-                </button>
+                <div class="nav__login-item" id="navLoginItem">
+                    <button class="nav__login" type="button" id="navLoginToggle" aria-haspopup="true"
+                        aria-expanded="false" aria-controls="navLoginMenu">
+                        Log in
+                        <img src="assets/icons/caret-down.svg" alt="" />
+                    </button>
+                    <div class="nav__login-menu" id="navLoginMenu">
+                        <a href="https://tradepluse.kslindia.com/TradeNetX" target="_blank" rel="noopener"
+                            class="nav__login-menu-link">Branch Login</a>
+                        <a href="https://tradepluse.kslindia.com/TradeWeb45/Login.aspx" target="_blank"
+                            rel="noopener" class="nav__login-menu-link">Back Office Login</a>
+                    </div>
+                </div>
 
                 <a href="#" class="nav__cta">Open an account</a>
 
@@ -117,10 +126,6 @@
 
             <!-- Slide 1 -->
             <article class="main-hero__slide is-active" data-slide="0" aria-hidden="false">
-                <div class="main-hero__bg main-hero__bg--1" aria-hidden="true">
-                    <img src="assets/images/main-hero-slide1-bg.png" alt="" />
-                </div>
-
                 <div class="main-hero__text">
                     <span class="main-hero__badge">
                         <img src="assets/icons/main-hero-badge-icon.svg" alt="" />
@@ -134,31 +139,31 @@
                     </div>
                 </div>
 
-                <div class="main-hero__visual main-hero__visual--phone">
-                    <img src="assets/images/main-hero-slide1-phone.svg"
-                        alt="KSL Eazytrade market app screenshot on a smartphone" />
-                </div>
-                <div class="main-hero__visual main-hero__visual--coins">
-                    <img src="assets/images/main-hero-slide1-coins.svg" alt="" />
+                <div class="main-hero__media">
+                    <div class="main-hero__bg main-hero__bg--1" aria-hidden="true">
+                        <img src="assets/images/main-hero-slide1-bg.png" alt="" />
+                    </div>
+
+                    <div class="main-hero__visual main-hero__visual--phone">
+                        <img src="assets/images/main-hero-slide1-phone.svg"
+                            alt="KSL Eazytrade market app screenshot on a smartphone" />
+                    </div>
+                    <div class="main-hero__visual main-hero__visual--coins">
+                        <img src="assets/images/main-hero-slide1-coins.svg" alt="" />
+                    </div>
                 </div>
             </article>
 
             <!-- Slide 2 -->
             <article class="main-hero__slide" data-slide="1" hidden aria-hidden="true">
-                <div class="main-hero__bg main-hero__bg--2" aria-hidden="true">
-                    <img src="assets/images/main-hero-slide2-bg.png" alt="" />
-                </div>
-
                 <div class="main-hero__text">
                     <span class="main-hero__badge">
                         <img src="assets/icons/main-hero-badge-icon.svg" alt="" />
                         Trusted Since 1934
                     </span>
-                    <h1 class="main-hero__title">
-                        <p>Build Wealth Across
-                            Market Cycles: KSL Portfolio
-                            Partners Pro Services (PPPS)</p>
-                    </h1>
+                    <h1 class="main-hero__title main-hero__title--slide2">Build Wealth Across Market Cycles:<br>
+                        KSL Portfolio Partners Pro<br>
+                        Services (PPPS)</h1>
                     <p class="main-hero__subtitle">A research-driven, actively managed portfolio strategy designed to
                         generate consistent, long-term returns with dynamic asset allocation and risk management.</p>
                     <div class="main-hero__ctas">
@@ -167,18 +172,20 @@
                     </div>
                 </div>
 
-                <div class="main-hero__visual main-hero__visual--slide2-illustration">
-                    <img src="assets/images/main-hero-slide2-illustration.png"
-                        alt="Illustration of two analysts reviewing a portfolio performance chart" />
+                <div class="main-hero__media">
+                    <div class="main-hero__bg main-hero__bg--2" aria-hidden="true">
+                        <img src="assets/images/main-hero-slide2-bg.png" alt="" />
+                    </div>
+
+                    <div class="main-hero__visual main-hero__visual--slide2-illustration">
+                        <img src="assets/images/main-hero-slide2-illustration.png"
+                            alt="Illustration of two analysts reviewing a portfolio performance chart" />
+                    </div>
                 </div>
             </article>
 
             <!-- Slide 3 -->
             <article class="main-hero__slide" data-slide="2" hidden aria-hidden="true">
-                <div class="main-hero__bg main-hero__bg--3" aria-hidden="true">
-                    <img src="assets/images/main-hero-slide3-bg.png" alt="" />
-                </div>
-
                 <div class="main-hero__text">
                     <span class="main-hero__badge">
                         <img src="assets/icons/main-hero-badge-icon.svg" alt="" />
@@ -194,15 +201,21 @@
                     </div>
                 </div>
 
-                <div class="main-hero__visual main-hero__visual--slide3-illustration">
-                    <img src="assets/images/main-hero-slide3-illustration.png"
-                        alt="Illustration of an AI robot assistant with investors and market data icons" />
-                </div>
-                <div class="main-hero__visual main-hero__visual--slide3-badge">
-                    <img src="assets/images/main-hero-slide3-badge-photo.png" alt="" />
-                </div>
-                <div class="main-hero__visual main-hero__visual--slide3-decor">
-                    <img src="assets/images/main-hero-slide3-icon-decor.svg" alt="" />
+                <div class="main-hero__media">
+                    <div class="main-hero__bg main-hero__bg--3" aria-hidden="true">
+                        <img src="assets/images/main-hero-slide3-bg.png" alt="" />
+                    </div>
+
+                    <div class="main-hero__visual main-hero__visual--slide3-illustration">
+                        <img src="assets/images/main-hero-slide3-illustration.png"
+                            alt="Illustration of an AI robot assistant with investors and market data icons" />
+                    </div>
+                    <div class="main-hero__visual main-hero__visual--slide3-badge">
+                        <img src="assets/images/main-hero-slide3-badge-photo.png" alt="" />
+                    </div>
+                    <div class="main-hero__visual main-hero__visual--slide3-decor">
+                        <img src="assets/images/main-hero-slide3-icon-decor.svg" alt="" />
+                    </div>
                 </div>
             </article>
 
@@ -369,50 +382,101 @@
 
     <section class="market">
         <div class="container market__inner">
-            <div class="market__panel">
-                <h2 class="market__title">Your Market. Your Terms.</h2>
-                <p class="market__subtitle">Zero account opening charges. Research-backed execution. Start trading with
-                    over ninety years of expertise behind you.</p>
+            <div class="market__card">
+                <div class="market__panel">
+                    <div class="market__panel-inner">
+                        <div class="market__panel-head">
+                            <h2 class="market__title">Your Market. Your Terms.</h2>
+                            <p class="market__subtitle">Zero account opening charges. Research-backed execution.
+                                Start trading with over ninety years of expertise behind you.</p>
+                        </div>
 
-                <ul class="market__features">
-                    <li class="market__feature">
-                        <img src="assets/icons/icon-rm-service.svg" alt="" width="32" height="32" />
-                        <span>Dedicated RM services</span>
-                    </li>
-                    <li class="market__feature">
-                        <img src="assets/icons/icon-transparent-comm.svg" alt="" width="32" height="32" />
-                        <span>Transparent communication</span>
-                    </li>
-                    <li class="market__feature">
-                        <img src="assets/icons/icon-long-term.svg" alt="" width="32" height="32" />
-                        <span>Long term relationship</span>
-                    </li>
-                    <li class="market__feature">
-                        <img src="assets/icons/icon-zero-cost.svg" alt="" width="32" height="32" />
-                        <span>Zero cost to start</span>
-                    </li>
-                    <li class="market__feature">
-                        <img src="assets/icons/icon-research-based.svg" alt="" width="32" height="32" />
-                        <span>Research based</span>
-                    </li>
-                    <li class="market__feature">
-                        <img src="assets/icons/icon-tailored-service.svg" alt="" width="32" height="32" />
-                        <span>Tailored service</span>
-                    </li>
-                    <li class="market__feature">
-                        <img src="assets/icons/icon-investor-ai.svg" alt="" width="32" height="32" />
-                        <span>Investor AI</span>
-                    </li>
-                    <li class="market__feature">
-                        <img src="assets/icons/icon-customer-security.svg" alt="" width="32" height="32" />
-                        <span>Customer security</span>
-                    </li>
-                </ul>
-            </div>
+                        <ul class="market__features">
+                            <li class="market__feature">
+                                <img src="assets/icons/icon-rm-service.svg" alt="" width="32" height="32" />
+                                <span>Dedicated RM services</span>
+                            </li>
+                            <li class="market__feature">
+                                <img src="assets/icons/icon-transparent-comm.svg" alt="" width="32" height="32" />
+                                <span>Transparent communication</span>
+                            </li>
+                            <li class="market__feature">
+                                <img src="assets/icons/icon-long-term.svg" alt="" width="32" height="32" />
+                                <span>Long term relationship</span>
+                            </li>
+                            <li class="market__feature">
+                                <img src="assets/icons/icon-zero-cost.svg" alt="" width="32" height="32" />
+                                <span>Zero cost to start</span>
+                            </li>
+                            <li class="market__feature">
+                                <img src="assets/icons/icon-research-based.svg" alt="" width="32" height="32" />
+                                <span>Research based</span>
+                            </li>
+                            <li class="market__feature">
+                                <img src="assets/icons/icon-tailored-service.svg" alt="" width="32" height="32" />
+                                <span>Tailored service</span>
+                            </li>
+                            <li class="market__feature">
+                                <img src="assets/icons/icon-investor-ai.svg" alt="" width="32" height="32" />
+                                <span>Investor AI</span>
+                            </li>
+                            <li class="market__feature">
+                                <img src="assets/icons/icon-customer-security.svg" alt="" width="32" height="32" />
+                                <span>Customer security</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-            <div class="market__visual">
-                <img src="assets/images/market-trading-mockup.png" alt="Get Started account sign-up form preview"
-                    width="464" height="570" />
+                <div class="market__form">
+                    <div class="market__form-inner">
+                        <div class="market__form-head">
+                            <h3 class="market__form-title">Get Started</h3>
+                            <p class="market__form-subtitle">Join 15,000+ investors and access a trading experience
+                                built on research, reliability, and trust.</p>
+                        </div>
+
+                        <form class="market__form-fields">
+                            <div class="market__form-field">
+                                <label for="marketFullName">Full Name</label>
+                                <input type="text" id="marketFullName" name="fullName" placeholder="John Doe" />
+                            </div>
+
+                            <div class="market__form-row">
+                                <div class="market__form-field">
+                                    <label for="marketMobile">Mobile Number</label>
+                                    <div class="market__form-phone">
+                                        <span class="market__form-phone-code">+91</span>
+                                        <input type="tel" id="marketMobile" name="mobile" placeholder="97097079998" />
+                                    </div>
+                                </div>
+                                <div class="market__form-field">
+                                    <label for="marketEmail">Email ID</label>
+                                    <input type="email" id="marketEmail" name="email" placeholder="abc@gmail.com" />
+                                </div>
+                            </div>
+
+                            <label class="market__form-consent">
+                                <input type="checkbox" name="consent" />
+                                <span>I agree to the terms &amp; conditions and consent to receive account-related
+                                    communication.</span>
+                            </label>
+
+                            <div class="market__form-captcha">
+                                <label class="market__form-captcha-check">
+                                    <input type="checkbox" name="notRobot" />
+                                    <span>I'm not a robot</span>
+                                </label>
+                                <div class="market__form-captcha-badge">
+                                    <img src="assets/icons/main-hero-badge-icon.svg" alt="reCAPTCHA" />
+                                    <span>reCAPTCHA<br /><a href="#">Privacy</a> - <a href="#">Terms</a></span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="market__form-submit">Sign me up</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -613,9 +677,9 @@
                     <p class="section-subtitle">Stay updated with the latest stock market news, insights, and articles.
                     </p>
                 </div>
-                <a href="#" class="blogs__view-all">
+                <a href="http://127.0.0.1:5500/blogs.html" class="blogs__view-all">
                     View all blogs
-                    <img src="assets/icons/caret-down.svg" alt="" class="blogs__view-all-icon" />
+                    <img src="assets/icons/caret-right.svg" alt="" class="blogs__view-all-icon" />
                 </a>
             </div>
 
@@ -666,67 +730,67 @@
 
                 <div class="blogs__list">
                     <article class="blogs__card blogs__card--small">
-                        <div class="blogs__thumb blogs__thumb--small">
-                            <img src="assets/images/blog-thumb-3.png" alt="Gold bars and bullion" loading="lazy" />
-                        </div>
-                        <div class="blogs__row-body">
+                        <div class="blogs__media--small">
+                            <div class="blogs__thumb blogs__thumb--small">
+                                <img src="assets/images/blog-thumb-3.png" alt="Gold bars and bullion" loading="lazy" />
+                            </div>
                             <div class="blogs__meta blogs__meta--stacked">
                                 <span class="blogs__date">may 09, 2025</span>
                                 <span class="blogs__tags">Investment</span>
                             </div>
-                            <div class="blogs__content blogs__content--small">
-                                <div class="blogs__text blogs__text--small">
-                                    <h3 class="blogs__title blogs__title--small">Gold&rsquo;s Enduring Shine: Why Indian
-                                        Investors Turn to the Yellow Metal in Uncertain Times</h3>
-                                    <p class="blogs__excerpt blogs__excerpt--small">In 2025, gold prices have soared to
-                                        unprecedented levels, with spot gold reaching...</p>
-                                </div>
-                                <a href="#" class="blogs__link-text">Read more</a>
+                        </div>
+                        <div class="blogs__content blogs__content--small">
+                            <div class="blogs__text blogs__text--small">
+                                <h3 class="blogs__title blogs__title--small">Gold&rsquo;s Enduring Shine: Why Indian
+                                    Investors Turn to the Yellow Metal in Uncertain Times</h3>
+                                <p class="blogs__excerpt blogs__excerpt--small">In 2025, gold prices have soared to
+                                    unprecedented levels, with spot gold reaching...</p>
                             </div>
+                            <a href="#" class="blogs__link-text">Read more</a>
                         </div>
                     </article>
 
                     <article class="blogs__card blogs__card--small">
-                        <div class="blogs__thumb blogs__thumb--small">
-                            <img src="assets/images/blog-thumb-4.png"
-                                alt="Two people shaking hands in a business meeting" loading="lazy" />
-                        </div>
-                        <div class="blogs__row-body">
+                        <div class="blogs__media--small">
+                            <div class="blogs__thumb blogs__thumb--small">
+                                <img src="assets/images/blog-thumb-4.png"
+                                    alt="Two people shaking hands in a business meeting" loading="lazy" />
+                            </div>
                             <div class="blogs__meta blogs__meta--stacked">
                                 <span class="blogs__date">apr 23, 2025</span>
                                 <span class="blogs__tags">Wealth Management</span>
                             </div>
-                            <div class="blogs__content blogs__content--small">
-                                <div class="blogs__text blogs__text--small">
-                                    <h3 class="blogs__title blogs__title--small">Future-Proofing Your Family Business:
-                                        The Essentials of Succession Planning</h3>
-                                    <p class="blogs__excerpt blogs__excerpt--small">For India&rsquo;s
-                                        ultra-high-net-worth individuals (UHNIs), family businesses are not just...</p>
-                                </div>
-                                <a href="#" class="blogs__link-text">Read more</a>
+                        </div>
+                        <div class="blogs__content blogs__content--small">
+                            <div class="blogs__text blogs__text--small">
+                                <h3 class="blogs__title blogs__title--small">Future-Proofing Your Family Business:
+                                    The Essentials of Succession Planning</h3>
+                                <p class="blogs__excerpt blogs__excerpt--small">For India&rsquo;s
+                                    ultra-high-net-worth individuals (UHNIs), family businesses are not just...</p>
                             </div>
+                            <a href="#" class="blogs__link-text">Read more</a>
                         </div>
                     </article>
 
                     <article class="blogs__card blogs__card--small">
-                        <div class="blogs__thumb blogs__thumb--small">
-                            <img src="assets/images/blog-thumb-5.png" alt="Downward trending stock market chart"
-                                loading="lazy" />
-                        </div>
-                        <div class="blogs__row-body">
+                        <div class="blogs__media--small">
+                            <div class="blogs__thumb blogs__thumb--small">
+                                <img src="assets/images/blog-thumb-5.png" alt="Downward trending stock market chart"
+                                    loading="lazy" />
+                            </div>
                             <div class="blogs__meta blogs__meta--stacked">
                                 <span class="blogs__date">apr 23, 2025</span>
                                 <span class="blogs__tags">Stock market</span>
                             </div>
-                            <div class="blogs__content blogs__content--small">
-                                <div class="blogs__text blogs__text--small">
-                                    <h3 class="blogs__title blogs__title--small">The Next Financial Crisis? 8 Indicators
-                                        That Could Signal Trouble in 2025</h3>
-                                    <p class="blogs__excerpt blogs__excerpt--small">As 2025 unfolds, Indian investors
-                                        are closely monitoring economic indicators...</p>
-                                </div>
-                                <a href="#" class="blogs__link-text">Read more</a>
+                        </div>
+                        <div class="blogs__content blogs__content--small">
+                            <div class="blogs__text blogs__text--small">
+                                <h3 class="blogs__title blogs__title--small">The Next Financial Crisis? 8 Indicators
+                                    That Could Signal Trouble in 2025</h3>
+                                <p class="blogs__excerpt blogs__excerpt--small">As 2025 unfolds, Indian investors
+                                    are closely monitoring economic indicators...</p>
                             </div>
+                            <a href="#" class="blogs__link-text">Read more</a>
                         </div>
                     </article>
                 </div>
@@ -836,57 +900,53 @@
                 </div>
             </div>
 
-            <button class="btn btn-outline faq__view-more" type="button">View More</button>
+            <a class="btn btn-outline faq__view-more" href="http://127.0.0.1:5500/faqs.html" role="button">View More</a>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer__ticker" aria-label="Investor alerts">
-            <div class="alert-marquee">
-                <div class="alert-marquee__track">
-
-                    <span class="alert-marquee__text">
-                        Investor Alert : 1. KYC is a one-time exercise while dealing in securities markets – once KYC is
-                        done through a SEBI registered intermediary (Broker, DP, Mutual Fund etc.), you need not undergo
-                        the same process again when you approach another intermediary. • 2. For Stock Broking
-                        Transaction ‘Prevent unauthorised transactions in your account – Update your mobile
-                        numbers/email IDs with your stock brokers. Receive information of your transactions directly
-                        from Exchange on your mobile/email at the end of the day…Issued in the interest of Investors. •
-                        3. For Depository Transaction ‘Prevent Unauthorized Transactions in your demat account – Update
-                        your Mobile Number with your Depository Participant. Receive alerts on your Registered Mobile
-                        for all debit and other important transactions in your demat account directly from CDSL/NSDL on
-                        the same day…Issued in the interest of investors. • 4. No need to issue cheques by investors
-                        while subscribing to IPO. Just write the bank account number and sign in the application form to
-                        authorise your bank to make payment in case of allotment. • 5. Investors should be cautious on
-                        unsolicited emails and SMS advising to buy, sell or hold securities and trade only on the basis
-                        of informed decision. Investors are advised to invest after conducting appropriate analysis of
-                        respective companies and not to blindly follow unfounded rumours, tips etc. • Fraudulent
-                        activities detected. Investors should only transact with authorized Khandwala Securities Limited
-                        channels. Read our full advisory on https://kslindia.com
-                    </span>
-
-                    <!-- Duplicate -->
-                    <span class="alert-marquee__text" aria-hidden="true">
-                        Investor Alert : 1. KYC is a one-time exercise while dealing in securities markets – once KYC is
-                        done through a SEBI registered intermediary (Broker, DP, Mutual Fund etc.), you need not undergo
-                        the same process again when you approach another intermediary. • 2. For Stock Broking
-                        Transaction ‘Prevent unauthorised transactions in your account – Update your mobile
-                        numbers/email IDs with your stock brokers. Receive information of your transactions directly
-                        from Exchange on your mobile/email at the end of the day…Issued in the interest of Investors. •
-                        3. For Depository Transaction ‘Prevent Unauthorized Transactions in your demat account – Update
-                        your Mobile Number with your Depository Participant. Receive alerts on your Registered Mobile
-                        for all debit and other important transactions in your demat account directly from CDSL/NSDL on
-                        the same day…Issued in the interest of investors. • 4. No need to issue cheques by investors
-                        while subscribing to IPO. Just write the bank account number and sign in the application form to
-                        authorise your bank to make payment in case of allotment. • 5. Investors should be cautious on
-                        unsolicited emails and SMS advising to buy, sell or hold securities and trade only on the basis
-                        of informed decision. Investors are advised to invest after conducting appropriate analysis of
-                        respective companies and not to blindly follow unfounded rumours, tips etc. • Fraudulent
-                        activities detected. Investors should only transact with authorized Khandwala Securities Limited
-                        channels. Read our full advisory on https://kslindia.com
-                    </span>
-
-                </div>
+            <div class="footer__ticker-track">
+                <p class="footer__ticker-text">Investor Alert : 1. KYC is a one-time exercise while dealing in
+                    securities markets – once KYC is done through a SEBI registered intermediary (Broker, DP, Mutual
+                    Fund etc.), you need not undergo the same process again when you approach another intermediary. 2.
+                    For Stock Broking Transaction ‘Prevent unauthorised transactions in your account –> Update your
+                    mobile numbers/email IDs with your stock brokers. Receive information of your transactions directly
+                    from Exchange on your mobile/email at the end of the day…Issued in the interest of Investors. 3. For
+                    Depository Transaction ‘Prevent Unauthorized Transactions in your demat account –> Update your
+                    Mobile Number with your Depository Participant. Receive alerts on your Registered Mobile for all
+                    debit and other important transactions in your demat account directly from CDSL/NSDL on the same
+                    day…Issued in the interest of investors. 4. No need to issue cheques by investors while subscribing
+                    to IPO. Just write the bank account number and sign in the application form to authorise your bank
+                    to make payment in case of allotment. No worries for refund as the money remains in
+                    investor’s account. 5. Investors should be cautious on unsolicited emails and SMS advising to buy,
+                    sell or hold securities and trade only on the basis of informed decision. Investors are advised to
+                    invest after conducting appropriate analysis of respective companies and not to blindly follow
+                    unfounded rumours, tips etc. Further, you are also requested to share your knowledge or evidence of
+                    systemic wrongdoing, potential frauds or unethical behaviour through the anonymous portal facility
+                    provided on BSE &amp; NSE website. **Fraudulent activities detected. Investors should only transact
+                    with authorized Khandwala Securities Limited channels. Read our full advisory on
+                    https://kslindia.com</p>
+                <p class="footer__ticker-text" aria-hidden="true">Investor Alert : 1. KYC is a one-time exercise while
+                    dealing in securities markets – once KYC is done through a SEBI registered intermediary (Broker, DP,
+                    Mutual Fund etc.), you need not undergo the same process again when you approach another
+                    intermediary. 2. For Stock Broking Transaction ‘Prevent unauthorised transactions in your
+                    account –> Update your mobile numbers/email IDs with your stock brokers. Receive
+                    information of your transactions directly from Exchange on your mobile/email at the end of the
+                    day…Issued in the interest of Investors. 3. For Depository Transaction ‘Prevent
+                    Unauthorized Transactions in your demat account –> Update your Mobile Number with your
+                    Depository Participant. Receive alerts on your Registered Mobile for all debit and other important
+                    transactions in your demat account directly from CDSL/NSDL on the same day…Issued in the
+                    interest of investors. 4. No need to issue cheques by investors while subscribing to IPO. Just write
+                    the bank account number and sign in the application form to authorise your bank to make payment in
+                    case of allotment. No worries for refund as the money remains in investor’s account. 5.
+                    Investors should be cautious on unsolicited emails and SMS advising to buy, sell or hold securities
+                    and trade only on the basis of informed decision. Investors are advised to invest after conducting
+                    appropriate analysis of respective companies and not to blindly follow unfounded rumours, tips etc.
+                    Further, you are also requested to share your knowledge or evidence of systemic wrongdoing,
+                    potential frauds or unethical behaviour through the anonymous portal facility provided on BSE &amp;
+                    NSE website. **Fraudulent activities detected. Investors should only transact with authorized
+                    Khandwala Securities Limited channels. Read our full advisory on https://kslindia.com</p>
             </div>
         </div>
 
@@ -1018,8 +1078,27 @@
                 </div>
                 <div class="footer__legal-notice">
                     <p>* Attention Investors...</p>
-                    <button type="button" class="footer__legal-toggle">Read more</button>
+                    <button type="button" class="footer__legal-toggle" aria-expanded="false">Read more</button>
                 </div>
+                <p class="footer__legal-more" hidden>Investor Alert : 1. KYC is a one-time exercise while dealing in
+                    securities markets &ndash; once KYC is done through a SEBI registered intermediary (Broker, DP,
+                    Mutual Fund etc.), you need not undergo the same process again when you approach another
+                    intermediary. 2. For Stock Broking Transaction &lsquo;Prevent unauthorised transactions in your
+                    account &ndash; Update your mobile numbers/email IDs with your stock brokers. Receive information
+                    of your transactions directly from Exchange on your mobile/email at the end of the day&hellip;Issued
+                    in the interest of Investors. 3. For Depository Transaction &lsquo;Prevent Unauthorized
+                    Transactions in your demat account &ndash; Update your Mobile Number with your Depository
+                    Participant. Receive alerts on your Registered Mobile for all debit and other important
+                    transactions in your demat account directly from CDSL/NSDL on the same day&hellip;Issued in the
+                    interest of investors. 4. No need to issue cheques by investors while subscribing to IPO. Just
+                    write the bank account number and sign in the application form to authorise your bank to make
+                    payment in case of allotment. No worries for refund as the money remains in investor&rsquo;s
+                    account. 5. Investors should be cautious on unsolicited emails and SMS advising to buy, sell or
+                    hold securities and trade only on the basis of informed decision. Investors are advised to invest
+                    after conducting appropriate analysis of respective companies and not to blindly follow unfounded
+                    rumours, tips etc. Further, you are also requested to share your knowledge or evidence of
+                    systemic wrongdoing, potential frauds or unethical behaviour through the anonymous portal
+                    facility provided on BSE &amp; NSE website.</p>
             </div>
         </div>
     </footer>

@@ -223,6 +223,17 @@
   opacity: 0.7;
 }
 
+.footer__legal-more {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--grey-medium-light-grey);
+}
+
+.footer__legal-more[hidden] {
+  display: none;
+}
+
 @media (max-width: 1023px) {
   .footer__top {
     flex-direction: column;

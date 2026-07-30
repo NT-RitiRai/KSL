@@ -10,6 +10,31 @@
       });
     }
 
+    var loginItem = document.getElementById("navLoginItem");
+    var loginToggle = document.getElementById("navLoginToggle");
+
+    if (loginItem && loginToggle) {
+      loginToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        var isOpen = loginItem.classList.toggle("is-open");
+        loginToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!loginItem.contains(event.target)) {
+          loginItem.classList.remove("is-open");
+          loginToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          loginItem.classList.remove("is-open");
+          loginToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
     var menuItem = document.getElementById("navMenuItem");
     var menuToggle = document.getElementById("navMenuToggle");
 
@@ -42,5 +67,23 @@
         });
       });
     }
+
+    document.querySelectorAll(".footer__legal-toggle").forEach(function (legalToggle) {
+      var more = legalToggle.closest(".footer__legal") &&
+        legalToggle.closest(".footer__legal").querySelector(".footer__legal-more");
+
+      if (!more) return;
+
+      legalToggle.addEventListener("click", function () {
+        var isOpen = more.hasAttribute("hidden");
+        if (isOpen) {
+          more.removeAttribute("hidden");
+        } else {
+          more.setAttribute("hidden", "");
+        }
+        legalToggle.textContent = isOpen ? "Read less" : "Read more";
+        legalToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    });
   });
 })();

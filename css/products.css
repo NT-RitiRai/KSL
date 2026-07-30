@@ -63,22 +63,6 @@
   gap: 32px;
 }
 
-/* The clip-and-reveal "Know more" interaction (Figma hover variant 2381:9151, 426px vs.
-   378px default) only makes sense where hover is a real, sustained input — on touch it
-   would permanently hide the CTA behind an unreachable hover state, so it's scoped to
-   hover-capable/fine-pointer devices. Touch/coarse-pointer keeps the link always visible
-   via the plain flex flow below. */
-@media (hover: hover) and (pointer: fine) {
-  .products__card {
-    overflow: hidden;
-    transition: height 0.3s ease-out;
-  }
-
-  .products__card:hover {
-    height: 426px;
-  }
-}
-
 .products__icon {
   height: 64px;
   width: 64px;
@@ -145,9 +129,11 @@
 }
 
 .products__card-link {
-  /* Safe default: always visible, in normal flex flow (pinned to the bottom via
-     margin-top:auto on .products__card-body's sibling gap). Overridden below for
-     hover-capable devices to match Figma's clip-and-reveal interaction. */
+  /* Always visible, in normal flex flow — pinned to the bottom via margin-top:auto
+     on .products__card-body's sibling gap. Previously hidden until hover and
+     revealed via a clip-and-reveal height animation, but hover/pointer media
+     features are unreliable on touch and hybrid devices, leaving the CTA
+     permanently clipped out of view — so it now always renders in flow. */
   margin-top: auto;
   display: inline-flex;
   align-items: center;
@@ -158,24 +144,6 @@
 .products__card-link img {
   width: 24px;
   height: 24px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .products__card-link {
-    /* Positioned below the card's default 378px bounds (clipped by .products__card's
-       overflow:hidden) and slides up into view on hover — kf_2381_9161_translate_0.
-       top:470px + translateY(-88px) on hover == 382px, landing 20px above the card's
-       426px hover-state bottom edge, matching Figma's own two variants exactly. */
-    position: absolute;
-    left: 19px;
-    top: 470px;
-    margin-top: 0;
-    transition: transform 0.3s ease-out;
-  }
-
-  .products__card:hover .products__card-link {
-    transform: translateY(-88px);
-  }
 }
 
 @media (max-width: 1023px) {
@@ -194,17 +162,5 @@
     height: auto;
     min-height: 340px;
     overflow: visible;
-  }
-
-  /* Defensive reset: guarantees "Know more" is never clipped/lost at narrow widths,
-     even in the edge case of a fine-pointer/hover-capable device (e.g. a resized
-     desktop browser window) where the @media(hover:hover) rules above would otherwise
-     still apply alongside this breakpoint. */
-  .products__card-link {
-    position: static;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin-top: auto;
   }
 }

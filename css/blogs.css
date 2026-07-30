@@ -131,14 +131,18 @@
 
 .blogs__card--small {
   display: flex;
+  gap: 16px;
   padding: 16px;
   overflow: hidden;
   /* No matching Figma variable for this drop-shadow value */
   box-shadow: 0px 2px 32px rgba(0, 0, 0, 0.05);
 }
 
-.blogs__card--small > .blogs__thumb--small {
-  margin-right: 16px;
+.blogs__media--small {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .blogs__thumb--small {
@@ -147,12 +151,6 @@
   aspect-ratio: auto;
   flex-shrink: 0;
   border-radius: 8px;
-}
-
-.blogs__row-body {
-  display: flex;
-  gap: 16px;
-  width: 100%;
 }
 
 .blogs__meta--stacked {
@@ -203,10 +201,6 @@
   .blogs__grid {
     grid-template-columns: 1fr;
   }
-
-  .blogs__row-body {
-    flex-wrap: nowrap;
-  }
 }
 
 @media (max-width: 639px) {
@@ -223,15 +217,13 @@
     flex-direction: column;
   }
 
-  .blogs__card--small > .blogs__thumb--small {
-    margin-right: 0;
-    margin-bottom: 12px;
+  .blogs__media--small {
+    flex-direction: row;
+    align-items: center;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
   }
 
-  .blogs__row-body {
-    flex-direction: column;
+  .blogs__thumb--small {
+    width: 110px;
   }
 }
