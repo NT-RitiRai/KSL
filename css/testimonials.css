@@ -44,6 +44,12 @@
   background: rgba(255, 255, 255, 0.08);
   /* one-off: translucent border, no matching Figma variable */
   border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.testimonials__card:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.1);
 }
 
 .testimonials__rating {

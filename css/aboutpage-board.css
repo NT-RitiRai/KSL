@@ -30,6 +30,12 @@
   border: 1px solid var(--primary-blue);
   border-radius: 24px;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
 .person-card__name {

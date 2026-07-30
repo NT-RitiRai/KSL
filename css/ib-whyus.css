@@ -37,6 +37,12 @@
   background: rgba(23, 37, 57, 0.2);
   border-radius: 16px;
   padding: 20px 28px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.ib-whyus__card:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.1);
 }
 
 .ib-whyus__card h3 {

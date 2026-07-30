@@ -51,6 +51,12 @@
   flex-direction: column;
   gap: 24px;
   overflow: hidden;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.partner-ways__card:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.1);
 }
 
 .partner-ways__card--popular {

@@ -141,13 +141,7 @@
 @media (prefers-reduced-motion: reduce) {
 
   .ticker__track {
-    animation: marquee 30s linear infinite;
-  }
-
-  .ticker__marquee {
-    overflow-x: auto;
-    mask: none;
-    -webkit-mask: none;
+    animation-duration: 60s;
   }
 
 }
