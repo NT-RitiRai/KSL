@@ -87,6 +87,12 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blogs-listing__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
 .blogs-listing__thumb {

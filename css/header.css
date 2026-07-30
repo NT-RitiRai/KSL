@@ -336,8 +336,44 @@
     transform: translateX(0);
   }
 
+  .nav__menu-item {
+    width: 100%;
+  }
+
   .nav__menu-toggle {
     display: none;
+  }
+
+  /* Flyout has no hover on touch and its trigger is hidden above — render it
+     inline as part of the drawer instead, matching the Figma mobile panel
+     (Figma node 1644:5997) where the mega-menu is always visible once the
+     single hamburger opens the drawer. */
+  .nav__flyout {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    box-shadow: none;
+    padding: 24px 0 0;
+    margin-top: 4px;
+    border-top: 1px solid var(--grey-lightest-grey);
+  }
+
+  .nav__flyout__products {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .nav__flyout__product {
+    width: auto;
+    flex: 1 1 30%;
+  }
+
+  .nav__flyout__columns {
+    flex-direction: column;
+    gap: 20px;
   }
 
   .nav__mobile-toggle {

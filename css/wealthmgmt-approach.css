@@ -99,6 +99,12 @@
   border-radius: 24px;
   box-shadow: 0px 1px 10.2px 0px rgba(0, 0, 0, 0.05);
   padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wealthmgmt-approach__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
 .wealthmgmt-approach__card > h3 {

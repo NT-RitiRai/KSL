@@ -196,6 +196,20 @@
   color: var(--grey-light-grey);
 }
 
+.footer__legal-expanded {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__legal-expanded[hidden] {
+  display: none;
+}
+
+.footer__legal-expanded p {
+  margin: 0;
+}
+
 .footer__legal-notice {
   display: flex;
   align-items: center;

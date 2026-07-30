@@ -46,6 +46,12 @@
   border-radius: 24px;
   padding: 28px;
   text-align: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.ir-documents__card:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.1);
 }
 
 .ir-documents__icon {

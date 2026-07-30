@@ -48,6 +48,12 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.partner-testimonials__card:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.1);
 }
 
 .partner-testimonials__stars {

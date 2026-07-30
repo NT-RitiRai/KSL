@@ -339,7 +339,7 @@
 
                 <div class="hero__panel">
                     <div class="hero__panel-copy">
-                        <div class="hero__panel-text" data-panel="equity">
+                        <div class="hero__panel-text" data-panel="equity" data-href="equity-capital-markets.html">
                             <h3 class="hero__panel-title">Equity Capital Markets</h3>
                             <p class="hero__panel-tagline">Deep research. Disciplined execution. Real edge.</p>
                             <p class="hero__panel-desc">Whether you are an institutional player or an individual
@@ -347,28 +347,28 @@
                                 smarter, more informed market decisions.</p>
                         </div>
                         <!-- Placeholder copy: Figma only authored full content for the default "Equity Capital Markets" tab state; the other 3 tab panels below are written to match KSL's tone but are not verbatim Figma text. -->
-                        <div class="hero__panel-text" data-panel="banking" hidden>
+                        <div class="hero__panel-text" data-panel="banking" data-href="investment-banking.html" hidden>
                             <h3 class="hero__panel-title">Investment Banking</h3>
                             <p class="hero__panel-tagline">Strategic capital advisory, from idea to execution.</p>
                             <p class="hero__panel-desc">KSL&rsquo;s investment banking team partners with businesses on
                                 fundraising, mergers, acquisitions, and public offerings &mdash; backed by nine decades
                                 of market relationships.</p>
                         </div>
-                        <div class="hero__panel-text" data-panel="asset" hidden>
+                        <div class="hero__panel-text" data-panel="asset" data-href="asset-management.html" hidden>
                             <h3 class="hero__panel-title">Asset Management &ndash; PMS</h3>
                             <p class="hero__panel-tagline">Actively managed portfolios, built around your goals.</p>
                             <p class="hero__panel-desc">Our SEBI-registered portfolio management service combines
                                 disciplined research and dynamic allocation to help investors capture opportunities
                                 across market cycles.</p>
                         </div>
-                        <div class="hero__panel-text" data-panel="wealth" hidden>
+                        <div class="hero__panel-text" data-panel="wealth" data-href="wealth-management.html" hidden>
                             <h3 class="hero__panel-title">Wealth Management</h3>
                             <p class="hero__panel-tagline">Holistic planning for long-term financial goals.</p>
                             <p class="hero__panel-desc">From estate and succession planning to diversified investment
                                 strategies, KSL&rsquo;s wealth management practice helps families protect and grow what
                                 matters most.</p>
                         </div>
-                        <a href="#" class="hero__panel-cta">Know more</a>
+                        <a href="equity-capital-markets.html" class="hero__panel-cta" id="heroPanelCta">Know more</a>
                     </div>
 
                     <div class="hero__panel-visual">
@@ -1075,10 +1075,28 @@
                         to investorgrievances@kslindia.com In case of grievances for services like stock broking,
                         depository participant, research analyst or any other services rendered by Khandwala Securities
                         Limited write to investorgrievances@kslindia.com.</p>
+
+                <div class="footer__legal-expanded" id="footerLegalExpanded" hidden>
+                    <p><strong>* Attention Investors</strong></p>
+                    <p>1. Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 1, 2020.</p>
+                    <p>2. Update your mobile number &amp; email Id with your stock broker/depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.</p>
+                    <p>3. Pay 20% upfront margin of the transaction value to trade in cash market segment.</p>
+                    <p>4. Investors may please refer to the Exchange&rsquo;s Frequently Asked Questions (FAQs) issued vide circular reference NSE/INSP/45191 dated July 31, 2020 and NSE/INSP/45534 and BSE vide notice no. 20200731-7 dated July 31, 2020 and 20200831-45 dated August 31, 2020 and other guidelines issued from time to time in this regard.</p>
+                    <p>5. Check your Securities /MF/ Bonds in the consolidated account statement issued by NSDL/CDSL every month.</p>
+
+                    <p><strong>Investor Alert</strong></p>
+                    <p>1. KYC is a one-time exercise while dealing in securities markets &ndash; once KYC is done through a SEBI registered intermediary (Broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary.</p>
+                    <p>2. For Stock Broking Transaction &lsquo;Prevent unauthorised transactions in your account &ndash;&gt; Update your mobile numbers/email IDs with your stock brokers. Receive information of your transactions directly from Exchange on your mobile/email at the end of the day&hellip;Issued in the interest of Investors.</p>
+                    <p>3. For Depository Transaction &lsquo;Prevent Unauthorized Transactions in your demat account &ndash;&gt; Update your Mobile Number with your Depository Participant. Receive alerts on your Registered Mobile for all debit and other important transactions in your demat account directly from CDSL/NSDL on the same day&hellip;Issued in the interest of investors.</p>
+                    <p>4. No need to issue cheques by investors while subscribing to IPO. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment. No worries for refund as the money remains in investor&rsquo;s account.</p>
+                    <p>5. Investors should be cautious on unsolicited emails and SMS advising to buy, sell or hold securities and trade only on the basis of informed decision. Investors are advised to invest after conducting appropriate analysis of respective companies and not to blindly follow unfounded rumours, tips etc. Further, you are also requested to share your knowledge or evidence of systemic wrongdoing, potential frauds or unethical behaviour through the anonymous portal facility provided on BSE &amp; NSE website.</p>
+                    <p>This is to inform that, many instances were reported by general public where fraudsters are cheating general public by misusing our brand name Khandwala Securities Limited. The fraudsters are luring the general public to transfer them money by falsely committing attractive brokerage / investment schemes of share market and/or Mutual Funds and/or personal loan facilities.</p>
+                    <p>Though we have filed complaint with police for the safety of your money we request you to not fall prey to such fraudsters. You can check about our products and services by visiting our website www.kslindia.com. You can also write to us at kslsupport@kslindia.com, to know more about products and services.</p>
+                </div>
                 </div>
                 <div class="footer__legal-notice">
                     <p>* Attention Investors...</p>
-                    <button type="button" class="footer__legal-toggle" aria-expanded="false">Read more</button>
+                    <button type="button" class="footer__legal-toggle" id="footerLegalToggle" aria-expanded="false" aria-controls="footerLegalExpanded">Read more</button>
                 </div>
                 <p class="footer__legal-more" hidden>Investor Alert : 1. KYC is a one-time exercise while dealing in
                     securities markets &ndash; once KYC is done through a SEBI registered intermediary (Broker, DP,

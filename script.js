@@ -68,22 +68,16 @@
       });
     }
 
-    document.querySelectorAll(".footer__legal-toggle").forEach(function (legalToggle) {
-      var more = legalToggle.closest(".footer__legal") &&
-        legalToggle.closest(".footer__legal").querySelector(".footer__legal-more");
+    var footerLegalToggle = document.getElementById("footerLegalToggle");
+    var footerLegalExpanded = document.getElementById("footerLegalExpanded");
 
-      if (!more) return;
-
-      legalToggle.addEventListener("click", function () {
-        var isOpen = more.hasAttribute("hidden");
-        if (isOpen) {
-          more.removeAttribute("hidden");
-        } else {
-          more.setAttribute("hidden", "");
-        }
-        legalToggle.textContent = isOpen ? "Read less" : "Read more";
-        legalToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    if (footerLegalToggle && footerLegalExpanded) {
+      footerLegalToggle.addEventListener("click", function () {
+        var isOpen = footerLegalExpanded.hidden;
+        footerLegalExpanded.hidden = !isOpen;
+        footerLegalToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        footerLegalToggle.textContent = isOpen ? "less" : "Read more";
       });
-    });
+    }
   });
 })();
