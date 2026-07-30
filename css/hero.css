@@ -12,7 +12,8 @@
   height: 183px;
   border-radius: 50%;
   background: var(--primary-blue);
-  opacity: 0.11; /* value taken from Figma blur-effect node, no matching token */
+  opacity: 0.11;
+  /* value taken from Figma blur-effect node, no matching token */
   filter: blur(68px);
   pointer-events: none;
 }
@@ -116,8 +117,10 @@
   height: 48px;
   flex-shrink: 0;
   border-radius: 10px;
-  background: rgba(0, 89, 154, 0.08); /* no matching Figma token */
-  border: 1px solid rgba(0, 89, 154, 0.16); /* no matching Figma token */
+  background: rgba(0, 89, 154, 0.08);
+  /* no matching Figma token */
+  border: 1px solid rgba(0, 89, 154, 0.16);
+  /* no matching Figma token */
 }
 
 .hero__tab-icon img {
@@ -127,14 +130,16 @@
 
 .hero__tab.is-active {
   background: var(--primary-blue);
-  border-color: #003e6b; /* no matching Figma token — active-tab border */
+  border-color: #003e6b;
+  /* no matching Figma token — active-tab border */
   color: var(--grey-pure-white);
   justify-content: flex-start;
   padding-left: 12px;
 }
 
 .hero__tab.is-active .hero__tab-icon {
-  background: rgba(255, 255, 255, 0.16); /* no matching Figma token */
+  background: rgba(255, 255, 255, 0.16);
+  /* no matching Figma token */
   border: none;
 }
 
@@ -245,7 +250,35 @@
   }
 
   .hero__tabs {
+   
+    border-radius: 12px;
+    height: 40px;
+   
     flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero__tab {
+    border-radius: 16px;
+    gap: 10px;
+    padding: 8px 8px;
+    font-size: 15px;
+  }
+
+  .hero__tab-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .hero__tab-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero__tab.is-active {
+    border-radius: 16px;
+    padding-left: 10px;
   }
 
   .hero__panel {

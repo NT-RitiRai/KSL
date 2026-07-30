@@ -42,5 +42,17 @@
         });
       });
     }
+
+    var footerLegalToggle = document.getElementById("footerLegalToggle");
+    var footerLegalExpanded = document.getElementById("footerLegalExpanded");
+
+    if (footerLegalToggle && footerLegalExpanded) {
+      footerLegalToggle.addEventListener("click", function () {
+        var isOpen = footerLegalExpanded.hidden;
+        footerLegalExpanded.hidden = !isOpen;
+        footerLegalToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        footerLegalToggle.textContent = isOpen ? "less" : "Read more";
+      });
+    }
   });
 })();
