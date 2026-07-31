@@ -52,7 +52,11 @@
   z-index: 1;
   flex: 0 0 302px;
   scroll-snap-align: start;
-  height: 378px;
+  /* Base height matches Figma's hover/CTA-visible state (426px). On devices
+     without real hover (touch), the "Know more" link stays always visible here
+     — see .products__card-link comment. Mouse/trackpad devices get the
+     Figma-accurate collapsed-until-hover treatment below. */
+  height: 426px;
   background: var(--grey-pure-white);
   border: 1px solid rgba(0, 89, 154, 0.16);
   border-radius: 24px;
@@ -129,11 +133,11 @@
 }
 
 .products__card-link {
-  /* Always visible, in normal flex flow — pinned to the bottom via margin-top:auto
-     on .products__card-body's sibling gap. Previously hidden until hover and
-     revealed via a clip-and-reveal height animation, but hover/pointer media
-     features are unreliable on touch and hybrid devices, leaving the CTA
-     permanently clipped out of view — so it now always renders in flow. */
+  /* Always visible by default, in normal flex flow — pinned to the bottom via
+     margin-top:auto. On touch/hybrid devices hover/pointer media features are
+     unreliable, so the CTA stays in flow here to avoid it ever being
+     permanently clipped out of view. Mouse/trackpad devices get the
+     collapsed-until-hover treatment in the (hover: hover) block below. */
   margin-top: auto;
   display: inline-flex;
   align-items: center;
@@ -144,6 +148,27 @@
 .products__card-link img {
   width: 24px;
   height: 24px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .products__card {
+    height: 378px;
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+  }
+
+  .products__card:hover {
+    height: 426px;
+  }
+
+  .products__card-link {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  .products__card:hover .products__card-link {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1023px) {
