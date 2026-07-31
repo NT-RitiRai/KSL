@@ -192,6 +192,15 @@
   color: var(--grey-medium-light-grey);
 }
 
+.footer__legal-text a {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+.footer__legal-text a:hover {
+  color: var(--grey-pure-white);
+}
+
 .footer__legal-address {
   color: var(--grey-light-grey);
 }
@@ -203,7 +212,7 @@
 }
 
 .footer__legal-expanded[hidden] {
-  display: none;
+  display: none !important;
 }
 
 .footer__legal-expanded p {

@@ -73,12 +73,14 @@
   transition: transform 0.2s ease;
 }
 
-.ib-nav__dropdown.is-open .ib-nav__dropdown-toggle {
+.ib-nav__dropdown.is-open .ib-nav__dropdown-toggle,
+.ib-nav__dropdown:hover .ib-nav__dropdown-toggle {
   color: var(--primary-blue);
   font-weight: 500;
 }
 
-.ib-nav__dropdown.is-open .ib-nav__dropdown-toggle img {
+.ib-nav__dropdown.is-open .ib-nav__dropdown-toggle img,
+.ib-nav__dropdown:hover .ib-nav__dropdown-toggle img {
   transform: rotate(180deg);
 }
 
@@ -98,9 +100,11 @@
   visibility: hidden;
   transform: translateY(8px);
   transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  z-index: 1000;
 }
 
-.ib-nav__dropdown.is-open .ib-nav__dropdown-panel {
+.ib-nav__dropdown.is-open .ib-nav__dropdown-panel,
+.ib-nav__dropdown:hover .ib-nav__dropdown-panel {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

@@ -279,3 +279,13 @@ p {
     transform: translate3d(0, 0, 0);
   }
 }
+
+.grid-empty-state {
+  width: 100%;
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--grey-medium-dark-grey);
+  font-size: 16px;
+  border: 1px dashed #d1d5db;
+  border-radius: 16px;
+}

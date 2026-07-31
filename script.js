@@ -1,10 +1,33 @@
+window.toggleFooterLegal = function (e) {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  var btn = document.getElementById("footerLegalToggle");
+  var expanded = document.getElementById("footerLegalExpanded");
+  if (!expanded || !btn) return;
+  var isCurrentlyHidden = expanded.hasAttribute("hidden") || expanded.style.display === "none";
+  if (isCurrentlyHidden) {
+    expanded.removeAttribute("hidden");
+    expanded.style.display = "flex";
+    btn.setAttribute("aria-expanded", "true");
+    btn.textContent = "Read less";
+  } else {
+    expanded.setAttribute("hidden", "hidden");
+    expanded.style.display = "none";
+    btn.setAttribute("aria-expanded", "false");
+    btn.textContent = "Read more";
+  }
+};
+
 (function () {
-  document.addEventListener("DOMContentLoaded", function () {
+  function initMainHeader() {
     var toggle = document.getElementById("navMobileToggle");
     var navLinks = document.getElementById("navLinks");
 
     if (toggle && navLinks) {
-      toggle.addEventListener("click", function () {
+      toggle.addEventListener("click", function (e) {
+        e.stopPropagation();
         var isOpen = navLinks.classList.toggle("is-open");
         toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
@@ -39,7 +62,8 @@
     var menuToggle = document.getElementById("navMenuToggle");
 
     if (menuItem && menuToggle) {
-      menuToggle.addEventListener("click", function () {
+      menuToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
         var isOpen = menuItem.classList.toggle("is-open");
         menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
@@ -72,12 +96,15 @@
     var footerLegalExpanded = document.getElementById("footerLegalExpanded");
 
     if (footerLegalToggle && footerLegalExpanded) {
-      footerLegalToggle.addEventListener("click", function () {
-        var isOpen = footerLegalExpanded.hidden;
-        footerLegalExpanded.hidden = !isOpen;
-        footerLegalToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        footerLegalToggle.textContent = isOpen ? "less" : "Read more";
+      footerLegalToggle.addEventListener("click", function (e) {
+        window.toggleFooterLegal(e);
       });
     }
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMainHeader);
+  } else {
+    initMainHeader();
+  }
 })();
