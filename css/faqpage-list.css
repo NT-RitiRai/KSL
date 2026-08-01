@@ -38,15 +38,25 @@
 
 .faqpage-list__filters {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 10px;
   background: rgba(0, 89, 154, 0.12);
   border-radius: 56px;
   padding: 12px;
+  max-width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.faqpage-list__filters::-webkit-scrollbar {
+  display: none;
 }
 
 .faqpage-list__filter {
+  flex: 0 0 auto;
+  white-space: nowrap;
   background: var(--grey-pure-white);
   border: none;
   border-radius: 56px;

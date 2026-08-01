@@ -49,7 +49,7 @@
   align-items: center;
   gap: 8px;
   background: none;
-  border: none;
+  border: 1px solid var(--grey-light-grey);
   border-radius: 10px;
   font-family: var(--font-base);
   font-size: 16px;

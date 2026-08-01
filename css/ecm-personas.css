@@ -1,7 +1,7 @@
 /* Built for Every Market Participant — Figma node 2348:7140 */
 
 .ecm-personas {
-  background: var(--grey-pure-white);
+  background: linear-gradient(180deg, #00599a 0%, #001e34 100%);
   padding: 64px 0;
 }
 
@@ -22,18 +22,18 @@
 }
 
 .ecm-personas__title {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 600;
-  line-height: 1.35;
-  color: var(--grey-pure-black);
+  line-height: 1.25;
+  color: var(--grey-pure-white);
 }
 
 .ecm-personas__tagline {
-  font-size: 16px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 500;
-  line-height: 1.35;
-  color: var(--grey-dark-charcoal);
+  line-height: 1.5;
+  color: var(--grey-pure-white);
 }
 
 .ecm-personas__grid {
@@ -51,6 +51,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -60,12 +61,12 @@
 }
 
 .ecm-personas__img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin: -24px -24px 0;
   width: calc(100% + 48px);
   max-width: none;
+  aspect-ratio: 302 / 199.85;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: -24px -24px 0;
 }
 
 .ecm-personas__name {

@@ -12,21 +12,20 @@
   width: 226px;
   height: 183px;
   border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.5;
+  filter: blur(68.3px);
+  opacity: 0.11;
+  background: var(--primary-blue);
   pointer-events: none;
 }
 
 .faq__blob--right {
   right: -80px;
   bottom: -40px;
-  background: var(--primary-blue);
 }
 
 .faq__blob--left {
   left: -140px;
   top: -80px;
-  background: var(--secondary-red);
 }
 
 .faq__inner {

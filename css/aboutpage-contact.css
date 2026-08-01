@@ -17,13 +17,17 @@
   overflow: hidden;
 }
 
-/* Decorative diagonal wedge in the top-left corner, matching Figma's background shape */
+/* Rectangle 9659 — diagonal wash from the top-left corner to the bottom-right corner, filled below/left of the line */
 .contact-cta__panel::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 12px;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 0;
-  background: linear-gradient(135deg, var(--blue-tint-04) 0%, var(--blue-tint-04) 42%, transparent 43%);
+  background: rgba(228, 234, 255, 0.48); /* no matching Figma token */
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
   pointer-events: none;
 }
 
@@ -110,8 +114,12 @@
 }
 
 .contact-cta__map {
-  flex: 0 1 567px;
-  align-self: stretch;
+  flex: 0 0 567px;
+  width: 567px;
+  height: 461px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #d2d2d2; /* placeholder tone behind the map while it loads */
 }
 
 .contact-cta__map img,

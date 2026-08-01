@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/ir-committee.css">
     <link rel="stylesheet" href="css/ir-bank-accounts.css">
     <link rel="stylesheet" href="css/ir-documents.css">
-    <link rel="stylesheet" href="css/contact-form.css">
+    <link rel="stylesheet" href="css/aboutpage-contact.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 
@@ -134,10 +134,6 @@
         <div class="container ir-legacy__inner">
             <div class="ir-legacy__photo">
                 <img src="assets/images/ir-page/legacy-profile.png" alt="KSL office and team" />
-                <div class="ir-legacy__tag">
-                    <img src="assets/icons/ir-page/tag-about.png" alt="" />
-                    <span>About Us</span>
-                </div>
             </div>
             <div class="ir-legacy__text">
                 <h2 class="ir-legacy__title">Our Legacy &amp; Profile</h2>
@@ -266,8 +262,19 @@
                         A. matters required to be included in the director&rsquo;s responsibility statement to be
                         included in the board&rsquo;s report in terms of clause (c) of sub-section (3) of Section 134
                         of the Companies Act, 2013.<br />
-                        B. changes, if any, in accounting policies and practices and reasons
-                        <button type="button" class="committee__read-more">Read more</button>
+                        B. changes, if any, in accounting policies and practices and reasons for the same.
+                        <span id="committeeTermsExpanded" hidden><br />
+                            C. major accounting entries involving estimates based on the exercise of judgment by
+                            management.<br />
+                            D. significant adjustments made in the financial statements arising out of audit
+                            findings.<br />
+                            E. compliance with listing and other legal requirements relating to financial
+                            statements.<br />
+                            F. disclosure of any related party transactions.<br />
+                            G. modified opinion(s) in the draft audit report.
+                        </span>
+                        <button type="button" class="committee__read-more" id="committeeTermsToggle"
+                            aria-expanded="false" aria-controls="committeeTermsExpanded">Read more</button>
                     </li>
                 </ol>
             </div>
@@ -465,50 +472,44 @@
         </div>
     </section>
 
-    <section class="contact-form" id="ir-contact-form">
+    <section class="contact-cta" id="ir-contact-form">
         <div class="container">
-            <div class="contact-form__panel">
-                <div class="contact-form__fields">
-                    <h2 class="contact-form__title">Get in Touch</h2>
-                    <p class="contact-form__desc">Fill out the form below and we&rsquo;ll get back to you as soon as
-                        possible.</p>
+            <div class="contact-cta__panel">
+                <div class="contact-cta__text">
+                    <div class="contact-cta__heading">
+                        <h2 class="contact-cta__title">Let&rsquo;s Build Something Together</h2>
+                        <p class="contact-cta__desc">Whether you are an investor seeking growth, a corporation with
+                            ambitions to scale, or a family looking to protect and grow generational wealth &mdash; KSL
+                            brings the expertise, the relationships, and nine decades of market experience to help you
+                            get there.</p>
+                    </div>
 
-                    <form class="contact-form__form">
-                        <div class="contact-form__field">
-                            <label for="irName">Name</label>
-                            <input type="text" id="irName" name="name" placeholder="John Doe" />
+                    <div class="contact-cta__chips">
+                        <a href="tel:02240767373" class="contact-cta__chip">
+                            <img src="assets/icons/about-page/icon-phone.png" alt="" />
+                            022-40767373
+                        </a>
+                        <a href="https://wa.me/912240767373" target="_blank" rel="noopener" class="contact-cta__chip">
+                            <img src="assets/icons/about-page/icon-whatsapp.png" alt="" />
+                            Whatsapp
+                        </a>
+                        <a href="mailto:investorgrievances@kslindia.com" class="contact-cta__chip">
+                            <img src="assets/icons/about-page/icon-email.png" alt="" />
+                            Email
+                        </a>
+                    </div>
+
+                    <div class="contact-cta__address">
+                        <img src="assets/icons/about-page/icon-pin.svg" alt="" />
+                        <div>
+                            <span class="contact-cta__address-title">Registered Office</span>
+                            <p class="contact-cta__address-text">Khandwala Securities Limited G-II, Ground Floor,
+                                Dalamal House, Nariman Point, Mumbai &ndash; 400021</p>
                         </div>
-
-                        <div class="contact-form__row">
-                            <div class="contact-form__field">
-                                <label for="irPhone">Contact Number</label>
-                                <div class="contact-form__phone">
-                                    <span>+91</span>
-                                    <input type="tel" id="irPhone" name="phone" placeholder="97097079998" />
-                                </div>
-                            </div>
-                            <div class="contact-form__field">
-                                <label for="irEmail">Email ID</label>
-                                <input type="email" id="irEmail" name="email" placeholder="abc@gmail.com" />
-                            </div>
-                        </div>
-
-                        <div class="contact-form__field">
-                            <label for="irSubject">Subject</label>
-                            <select id="irSubject" name="subject">
-                                <option value="" selected disabled>How can we help?</option>
-                                <option value="general">General Enquiry</option>
-                                <option value="investor-grievance">Investor Grievance</option>
-                                <option value="shareholding">Shareholding &amp; Documents</option>
-                                <option value="other">Something else</option>
-                            </select>
-                        </div>
-
-                        <button type="submit" class="contact-form__submit">Submit</button>
-                    </form>
+                    </div>
                 </div>
 
-                <div class="contact-form__visual">
+                <div class="contact-cta__map">
                     <iframe class="map-embed" src="https://maps.google.com/maps?q=Khandwala+Securities+Limited,+G-II+Ground+Floor,+Dalamal+House,+Nariman+Point,+Mumbai,+Maharashtra+400021@18.9239071,72.8208294&z=17&hl=en&output=embed"
                         title="Map showing Khandwala Securities Limited's registered office at Dalamal House, Nariman Point, Mumbai"
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>

@@ -6,18 +6,19 @@
 }
 
 .contact-form__panel {
+  position: relative;
   background: var(--grey-pure-white);
   border: 1px solid var(--primary-blue);
   border-radius: 40px;
-  box-shadow: 0px 4px 16px 0px rgba(0, 89, 154, 0.24); /* no matching Figma token */
+  box-shadow: 0px 4px 32px 0px rgba(0, 89, 154, 0.24); /* no matching Figma token */
   display: flex;
   overflow: hidden;
 }
 
 .contact-form__fields {
-  flex: 1 1 0;
+  flex: 1 1 549px;
   min-width: 0;
-  padding: 39px 43px;
+  padding: 40px 40px 40px 44px;
 }
 
 .contact-form__title {
@@ -137,6 +138,7 @@
 .contact-form__visual {
   flex: 0 0 651px;
   align-self: stretch;
+  background: linear-gradient(180deg, #00599a 0%, #001e34 100%); /* placeholder tone behind the map while it loads */
 }
 
 .contact-form__visual img,
@@ -152,6 +154,10 @@
 }
 
 @media (max-width: 1180px) {
+  .contact-form__fields {
+    padding: 32px;
+  }
+
   .contact-form__visual {
     flex-basis: 45%;
   }
@@ -164,6 +170,7 @@
 
   .contact-form__visual {
     flex-basis: auto;
+    width: 100%;
     height: 260px;
   }
 }
@@ -173,8 +180,12 @@
     padding: 48px 0;
   }
 
+  .contact-form__panel {
+    border-radius: 24px;
+  }
+
   .contact-form__fields {
-    padding: 32px 24px;
+    padding: 24px;
   }
 
   .contact-form__title {

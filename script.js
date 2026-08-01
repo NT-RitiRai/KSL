@@ -100,6 +100,24 @@ window.toggleFooterLegal = function (e) {
         window.toggleFooterLegal(e);
       });
     }
+
+    var committeeTermsToggle = document.getElementById("committeeTermsToggle");
+    var committeeTermsExpanded = document.getElementById("committeeTermsExpanded");
+
+    if (committeeTermsToggle && committeeTermsExpanded) {
+      committeeTermsToggle.addEventListener("click", function () {
+        var isHidden = committeeTermsExpanded.hasAttribute("hidden");
+        if (isHidden) {
+          committeeTermsExpanded.removeAttribute("hidden");
+          committeeTermsToggle.setAttribute("aria-expanded", "true");
+          committeeTermsToggle.textContent = "Read less";
+        } else {
+          committeeTermsExpanded.setAttribute("hidden", "hidden");
+          committeeTermsToggle.setAttribute("aria-expanded", "false");
+          committeeTermsToggle.textContent = "Read more";
+        }
+      });
+    }
   }
 
   if (document.readyState === "loading") {

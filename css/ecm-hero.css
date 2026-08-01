@@ -80,4 +80,8 @@
   .ecm-hero__subtitle {
     font-size: 16px;
   }
+
+  .ecm-hero__break {
+    display: none;
+  }
 }

@@ -1,7 +1,7 @@
 /* Key Personnel — Figma node 1059:1769 */
 
 .contact-personnel {
-  background: var(--grey-pure-white);
+  background: linear-gradient(360deg, #001e34 0%, #00599a 100%); /* no matching Figma token */
   padding: 64px 0;
 }
 
@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 56px;
 }
 
 .contact-personnel__heading {
@@ -21,16 +21,16 @@
 }
 
 .contact-personnel__title {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 1.25;
-  color: var(--grey-dark-charcoal);
+  color: var(--grey-pure-white);
 }
 
 .contact-personnel__subtitle {
   font-size: 16px;
   line-height: 1.5;
-  color: var(--grey-dark-grey);
+  color: #eeeeee; /* no matching Figma token */
 }
 
 .contact-personnel__grid {
@@ -73,6 +73,14 @@
   justify-content: center;
 }
 
+.contact-personnel__icon--muted {
+  background: #f3f4f6; /* no matching Figma token */
+}
+
+.contact-personnel__icon--accent {
+  background: #dcfce7; /* no matching Figma token */
+}
+
 .contact-personnel__icon img {
   width: 24px;
   height: 24px;
@@ -91,6 +99,14 @@
   line-height: 1.25;
   color: var(--primary-blue);
   margin-top: 10px;
+}
+
+.contact-personnel__role--muted {
+  color: #4b5563; /* no matching Figma token */
+}
+
+.contact-personnel__role--accent {
+  color: #15803d; /* no matching Figma token */
 }
 
 .contact-personnel__row {
