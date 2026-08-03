@@ -27,6 +27,21 @@
       if (window.localStorage) {
         window.localStorage.setItem(STORAGE_KEY, "1");
       }
+
+      var tokenMeta = document.querySelector('meta[name="csrf-token"]');
+      if (tokenMeta) {
+        fetch("/consent-submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN": tokenMeta.getAttribute("content"),
+          },
+          body: JSON.stringify({
+            consent_type: "ib-terms-and-disclosures",
+            page_url: window.location.href,
+          }),
+        }).catch(function () {});
+      }
     }
 
     if (acceptBtn) acceptBtn.addEventListener("click", openDisclosures);

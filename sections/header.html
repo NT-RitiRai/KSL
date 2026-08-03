@@ -5,10 +5,17 @@
     </a>
 
     <button class="nav__mobile-toggle" id="navMobileToggle" aria-label="Toggle menu" aria-expanded="false">
-      <img src="assets/icons/list.svg" alt="" />
+      <img class="nav__mobile-icon--open" src="assets/icons/list.svg" alt="Menu" />
+      <img class="nav__mobile-icon--close" src="assets/icons/menu-close.svg" alt="Close" />
     </button>
 
     <div class="nav__links" id="navLinks">
+      <div class="nav__drawer-header">
+        <span class="nav__drawer-title">Menu</span>
+        <button type="button" class="nav__drawer-close" id="navDrawerClose" aria-label="Close menu">
+          <img src="assets/icons/menu-close.svg" alt="Close" />
+        </button>
+      </div>
       <a href="#" class="nav__link">Pricing</a>
       <a href="#" class="nav__link">Partner with us</a>
 
@@ -37,7 +44,10 @@
               <span class="nav__flyout__product-name">KSL Prive</span>
               <span class="nav__flyout__product-desc">Smart Trading</span>
             </a>
-            <div class="nav__flyout__product">
+            <div class="nav__login-menu" id="navLoginMenu">
+            <a href="https://tradepluse.kslindia.com/TradeWeb45/Login.aspx" target="_blank" rel="noopener" class="nav__login-menu-link">Back Office Login</a>
+            <a href="https://tradepluse.kslindia.com/TradeNetX" target="_blank" rel="noopener" class="nav__login-menu-link">Branch Login</a>
+          </div>    <div class="nav__flyout__product">
               <img src="assets/icons/product-ppps.svg" alt="" />
               <a href="https://wealthbeats.kslindia.com/" target="_blank" rel="noopener" class="nav__flyout__product-name">KSL PPPS</a>
               <span class="nav__flyout__product-desc">Growth Portfolios</span>

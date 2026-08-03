@@ -19,12 +19,14 @@
   position: relative;
   width: 904px;
   max-width: 100%;
-  max-height: 90vh;
+  max-height: 88vh;
+  max-height: 88dvh;
   background: var(--grey-pure-white);
   border-radius: 24px;
   padding: 28px 32px 32px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .ib-modal__title {
@@ -37,32 +39,34 @@
 .ib-modal__divider {
   height: 1px;
   background: var(--grey-lightest-grey);
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-.ib-modal__body {
-  overflow-y: auto;
+.ib-modal__body,
+.ib-modal__body--static {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-y !important;
   margin-top: 13px;
   padding-right: 8px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-height: 338px;
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: 60vh;
 }
 
-.ib-modal__body p {
+.ib-modal__body p,
+.ib-modal__body--static p {
   font-size: 16px;
   line-height: 1.5;
   color: var(--grey-darkest-grey);
 }
 
-.ib-modal__body strong {
+.ib-modal__body strong,
+.ib-modal__body--static strong {
   font-weight: 500;
-}
-
-.ib-modal__body--static {
-  max-height: none;
-  overflow-y: visible;
 }
 
 .ib-modal__accept {
@@ -135,17 +139,36 @@
 }
 
 @media (max-width: 639px) {
+  .ib-modal-overlay {
+    padding: 12px;
+  }
+
   .ib-modal {
-    padding: 24px 20px 24px;
+    padding: 20px 16px 20px;
     border-radius: 16px;
+    max-height: 90vh;
+    max-height: 90dvh;
   }
 
   .ib-modal__title {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.3;
+    padding-right: 36px;
   }
 
-  .ib-modal__body {
-    max-height: 50vh;
+  .ib-modal__body,
+  .ib-modal__body--static {
+    max-height: 65vh !important;
+    max-height: 65dvh !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y !important;
+  }
+
+  .ib-modal__close {
+    top: 16px;
+    right: 16px;
+    padding: 6px;
   }
 
   .ib-modal__accept {

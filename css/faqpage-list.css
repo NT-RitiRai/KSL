@@ -3,7 +3,8 @@
 
 .faqpage-list {
   background: var(--grey-pure-white);
-  padding: 0 0 64px;
+  padding: 24px 0 64px;
+  margin-top: 0;
 }
 
 .faqpage-list__inner {
@@ -20,6 +21,8 @@
   gap: 20px;
   text-align: center;
   max-width: 743px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .faqpage-list__title {
@@ -44,8 +47,11 @@
   background: rgba(0, 89, 154, 0.12);
   border-radius: 56px;
   padding: 12px;
+  width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -68,9 +74,8 @@
   transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
-.faqpage-list__filter:not(.is-active):hover {
-  background: var(--blue-tint-04);
-  color: var(--primary-blue);
+.faqpage-list__filter:hover {
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .faqpage-list__filter:active {
@@ -79,12 +84,13 @@
 
 .faqpage-list__filter.is-active {
   background: var(--primary-blue);
-  font-weight: 600;
   color: var(--grey-pure-white);
+  box-shadow: 0 2px 8px rgba(0, 89, 154, 0.25);
 }
 
-.faqpage-list__filter.is-active:hover {
-  filter: brightness(1.1);
+.faqpage-list__filter:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
 }
 
 .faqpage-list .faq__list {
@@ -93,12 +99,20 @@
 }
 
 @media (max-width: 639px) {
+  .faqpage-list {
+    padding: 16px 0 48px;
+    margin-top: 0;
+  }
+
   .faqpage-list__title {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .faqpage-list__filters {
-    border-radius: 24px;
+    justify-content: flex-start !important;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 32px;
   }
 
   .faqpage-list__filter {

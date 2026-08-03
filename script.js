@@ -24,12 +24,83 @@ window.toggleFooterLegal = function (e) {
   function initMainHeader() {
     var toggle = document.getElementById("navMobileToggle");
     var navLinks = document.getElementById("navLinks");
+    var overlay = document.getElementById("navMobileOverlay");
+
+    function closeMobileNav() {
+      if (navLinks) navLinks.classList.remove("is-open");
+      if (toggle) {
+        toggle.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+      document.body.classList.remove("mobile-nav-open");
+    }
+
+    var drawerClose = document.getElementById("navDrawerClose");
+    if (drawerClose) {
+      drawerClose.onclick = function (e) {
+        e.preventDefault();
+        closeMobileNav();
+      };
+    }
 
     if (toggle && navLinks) {
-      toggle.addEventListener("click", function (e) {
+      toggle.onclick = function (e) {
+        e.preventDefault();
         e.stopPropagation();
-        var isOpen = navLinks.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        var isOpen = navLinks.classList.contains("is-open");
+        if (isOpen) {
+          closeMobileNav();
+        } else {
+          navLinks.classList.add("is-open");
+          toggle.classList.add("is-open");
+          toggle.setAttribute("aria-expanded", "true");
+          document.body.classList.add("mobile-nav-open");
+          navLinks.scrollTop = 0;
+          // Keep forcing scrollTop back to 0 for a short window after opening.
+          // Async image/font loads inside the always-expanded products flyout
+          // can shift layout after the drawer opens, and some browsers'
+          // scroll-anchoring will silently scroll the drawer down to
+          // compensate — a couple of one-shot timeouts isn't reliably enough
+          // to outlast that, so poll via rAF for ~600ms instead.
+          var resetDeadline = Date.now() + 600;
+          function forceScrollTop() {
+            if (!navLinks || !navLinks.classList.contains("is-open")) return;
+            navLinks.scrollTop = 0;
+            if (Date.now() < resetDeadline && window.requestAnimationFrame) {
+              window.requestAnimationFrame(forceScrollTop);
+            }
+          }
+          if (window.requestAnimationFrame) {
+            window.requestAnimationFrame(forceScrollTop);
+          } else {
+            setTimeout(function () {
+              if (navLinks) navLinks.scrollTop = 0;
+            }, 50);
+            setTimeout(function () {
+              if (navLinks) navLinks.scrollTop = 0;
+            }, 250);
+          }
+        }
+      };
+
+      if (overlay) {
+        overlay.onclick = function (e) {
+          e.preventDefault();
+          closeMobileNav();
+        };
+      }
+
+      document.addEventListener("click", function (e) {
+        if (navLinks.classList.contains("is-open") && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+          closeMobileNav();
+        }
+      });
+
+      var navAnchors = navLinks.querySelectorAll("a:not(#navLoginToggle)");
+      navAnchors.forEach(function (link) {
+        link.addEventListener("click", function () {
+          closeMobileNav();
+        });
       });
     }
 
@@ -37,10 +108,22 @@ window.toggleFooterLegal = function (e) {
     var loginToggle = document.getElementById("navLoginToggle");
 
     if (loginItem && loginToggle) {
+      // Desktop hover is handled purely by CSS (.nav__login-item:hover
+      // .nav__login-menu), so click is the only JS-driven toggle here.
+      // mouseenter/mouseleave listeners used to duplicate that, but touch
+      // devices synthesize mouseenter+mouseleave right around a tap, which
+      // raced with this click handler and made the dropdown flash open then
+      // immediately close instead of staying open.
       loginToggle.addEventListener("click", function (event) {
         event.stopPropagation();
-        var isOpen = loginItem.classList.toggle("is-open");
-        loginToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        var isOpen = loginItem.classList.contains("is-open");
+        if (isOpen) {
+          loginItem.classList.remove("is-open");
+          loginToggle.setAttribute("aria-expanded", "false");
+        } else {
+          loginItem.classList.add("is-open");
+          loginToggle.setAttribute("aria-expanded", "true");
+        }
       });
 
       document.addEventListener("click", function (event) {

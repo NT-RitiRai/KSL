@@ -35,10 +35,17 @@
             </a>
 
             <button class="nav__mobile-toggle" id="navMobileToggle" aria-label="Toggle menu" aria-expanded="false">
-                <img src="assets/icons/list.svg" alt="" />
+                <img class="nav__mobile-icon--open" src="assets/icons/list.svg" alt="Menu" />
+                <img class="nav__mobile-icon--close" src="assets/icons/menu-close.svg" alt="Close" />
             </button>
 
             <div class="nav__links" id="navLinks">
+                <div class="nav__drawer-header">
+                    <span class="nav__drawer-title">Menu</span>
+                    <button type="button" class="nav__drawer-close" id="navDrawerClose" aria-label="Close menu">
+                        <img src="assets/icons/menu-close.svg" alt="Close" />
+                    </button>
+                </div>
                 <a href="products.html" class="nav__link">Products</a>
                 <a href="pricing.html" class="nav__link">Pricing</a>
                 <a href="partner-with-us.html" class="nav__link">Partner with us</a>
@@ -430,58 +437,71 @@
 
                 <div class="market__form">
                     <div class="market__form-inner">
-                        <div class="market__form-head">
-                            <h3 class="market__form-title">Get Started</h3>
-                            <p class="market__form-subtitle">Join 15,000+ investors and access a trading experience
-                                built on research, reliability, and trust.</p>
-                        </div>
-
-                        <form class="market__form-fields">
-                            <div class="market__form-field">
-                                <label for="marketFullName">Full Name</label>
-                                <input type="text" id="marketFullName" name="fullName" placeholder="John Doe" />
+                        <!-- Step 2: Inline OTP Verification (Matching Screenshot Design) -->
+                        <div id="heroStep2" style="display: none;">
+                            <div class="market__form-head">
+                                <h3 class="market__form-title" style="font-size: 28px; font-weight: 700; color: var(--grey-dark-charcoal, #0c2340);">Verify OTP</h3>
+                                <p class="market__form-subtitle" style="font-size: 14px; color: var(--grey-medium-dark-grey, #64748b); margin-top: 4px;">
+                                    Sent to <strong id="otpSentEmail">abc@gmail.com</strong> 
+                                    <button type="button" id="editHeroStep1Btn" style="background: none; border: none; color: var(--primary-blue, #0056b3); font-weight: 600; cursor: pointer; text-decoration: underline; margin-left: 6px;">Edit</button>
+                                    <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; margin-top: 8px;">
+                                        <button type="button" id="resendHeroOtpBtn" style="background: none; border: none; font-weight: 600; color: var(--grey-dark-charcoal, #0c2340); text-decoration: underline; cursor: pointer; padding: 0;">Resend OTP</button>
+                                        <span id="heroOtpTimer" style="color: var(--grey-medium-dark-grey, #64748b);">0:30</span>
+                                    </div>
+                                    <p style="font-size: 13px; color: var(--grey-medium-dark-grey, #64748b); margin: 4px 0 0;">
+                                        Didn't receive the email? Please check your <strong style="color: var(--grey-dark-charcoal, #0c2340);">Spam or Junk</strong> folder.
+                                    </p>
+                                </p>
                             </div>
 
-                            <div class="market__form-row">
+                            <form id="heroOtpForm" style="display: flex; flex-direction: column; gap: 18px; margin-top: 20px;">
                                 <div class="market__form-field">
-                                    <label for="marketMobile">Mobile Number</label>
-                                    <div class="market__form-phone">
-                                        <span class="market__form-phone-code">+91</span>
-                                        <input type="tel" id="marketMobile" name="mobile" placeholder="97097079998" />
+                                    <label style="font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--grey-medium-dark-grey, #64748b);">ENTER OTP</label>
+                                    <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: space-between;" id="heroOtpBoxes">
+                                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="hero-otp-box" style="width: 44px; height: 50px; border: 1px solid var(--grey-light-grey, #cbd5e0); border-radius: 8px; text-align: center; font-size: 20px; font-weight: 700; background: #f8fafc; color: #0c2340; box-sizing: border-box; padding: 0; outline: none;" autocomplete="one-time-code" />
+                                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="hero-otp-box" style="width: 44px; height: 50px; border: 1px solid var(--grey-light-grey, #cbd5e0); border-radius: 8px; text-align: center; font-size: 20px; font-weight: 700; background: #f8fafc; color: #0c2340; box-sizing: border-box; padding: 0; outline: none;" />
+                                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="hero-otp-box" style="width: 44px; height: 50px; border: 1px solid var(--grey-light-grey, #cbd5e0); border-radius: 8px; text-align: center; font-size: 20px; font-weight: 700; background: #f8fafc; color: #0c2340; box-sizing: border-box; padding: 0; outline: none;" />
+                                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="hero-otp-box" style="width: 44px; height: 50px; border: 1px solid var(--grey-light-grey, #cbd5e0); border-radius: 8px; text-align: center; font-size: 20px; font-weight: 700; background: #f8fafc; color: #0c2340; box-sizing: border-box; padding: 0; outline: none;" />
+                                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="hero-otp-box" style="width: 44px; height: 50px; border: 1px solid var(--grey-light-grey, #cbd5e0); border-radius: 8px; text-align: center; font-size: 20px; font-weight: 700; background: #f8fafc; color: #0c2340; box-sizing: border-box; padding: 0; outline: none;" />
+                                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="hero-otp-box" style="width: 44px; height: 50px; border: 1px solid var(--grey-light-grey, #cbd5e0); border-radius: 8px; text-align: center; font-size: 20px; font-weight: 700; background: #f8fafc; color: #0c2340; box-sizing: border-box; padding: 0; outline: none;" />
+                                    </div>
+                                    <div id="heroOtpError" style="color: #e53e3e; font-size: 13px; margin-top: 6px; display: none;"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Step 1: Registration Form -->
+                        <div id="heroStep1">
+                            <div class="market__form-head">
+                                <h3 class="market__form-title">Get Started</h3>
+                                <p class="market__form-subtitle">Join 15,000+ investors and access a trading experience
+                                    built on research, reliability, and trust.</p>
+                            </div>
+
+                            <form class="market__form-fields hero-signup-form" id="heroSignupForm">
+                                <div class="market__form-field">
+                                    <label for="marketFullName">Full Name</label>
+                                    <input type="text" id="marketFullName" name="name" placeholder="John Doe" required />
+                                </div>
+
+                                <div class="market__form-row">
+                                    <div class="market__form-field">
+                                        <label for="marketMobile">Mobile Number</label>
+                                        <div class="market__form-phone">
+                                            <span class="market__form-phone-code">+91</span>
+                                            <input type="tel" id="marketMobile" name="phone" placeholder="97097079998" required />
+                                        </div>
+                                    </div>
+                                    <div class="market__form-field">
+                                        <label for="marketEmail">Email ID</label>
+                                        <input type="email" id="marketEmail" name="email" placeholder="abc@gmail.com" required />
                                     </div>
                                 </div>
-                                <div class="market__form-field">
-                                    <label for="marketEmail">Email ID</label>
-                                    <input type="email" id="marketEmail" name="email" placeholder="abc@gmail.com" />
-                                </div>
-                            </div>
 
-                            <label class="market__form-consent">
-                                <input type="checkbox" name="consent" />
-                                <span>I agree to the terms &amp; conditions and consent to receive account-related
-                                    communication.</span>
-                            </label>
-
-                            <div class="market__form-captcha">
-                                <label class="market__form-captcha-check">
-                                    <input type="checkbox" name="notRobot" />
-                                    <span>I'm not a robot</span>
+                                <label class="market__form-consent">
+                                    <input type="checkbox" name="consent" />
+                                    <span>I agree to the terms &amp; conditions and consent to receive account-related
+                                        communication.</span>
                                 </label>
-                                <div class="market__form-captcha-badge">
-                                    <img src="assets/icons/main-hero-badge-icon.svg" alt="reCAPTCHA" />
-                                    <span>reCAPTCHA<br /><a href="#">Privacy</a> - <a href="#">Terms</a></span>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="market__form-submit">Sign me up</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="products" id="products">
         <div class="products__blob products__blob--tr" aria-hidden="true"></div>
         <div class="products__blob products__blob--bl" aria-hidden="true"></div>
         <div class="container">
@@ -1126,6 +1146,7 @@
     <script src="js/faq.js" defer></script>
     <script src="js/testimonials.js" defer></script>
     <script src="script.js" defer></script>
+  <script src="js/form-validation.js"></script>
 </body>
 
 </html>

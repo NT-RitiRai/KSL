@@ -45,6 +45,8 @@
   display: flex;
   align-items: center;
   gap: 28px;
+  margin-left: auto;
+  justify-content: flex-end;
 }
 
 .nav__link {
@@ -131,7 +133,7 @@
 .nav__login-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 4px);
   left: 0;
   min-width: 200px;
   background: var(--grey-pure-white);
@@ -144,8 +146,27 @@
   z-index: 20;
 }
 
+.nav__login-menu::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: transparent;
+}
+
 .nav__login-item.is-open .nav__login-menu {
   display: flex;
+}
+
+/* Scoped to real hover-capable pointers (mouse/trackpad) — on touch devices
+   :hover can stick after a tap with no matching "unhover" gesture, fighting
+   the click-based toggle above. */
+@media (hover: hover) and (pointer: fine) {
+  .nav__login-item:hover .nav__login-menu {
+    display: flex;
+  }
 }
 
 .nav__login-menu-link {
@@ -223,6 +244,7 @@
 .nav__mobile-toggle img {
   width: 24px;
   height: 24px;
+  pointer-events: none;
 }
 
 /* Hamburger flyout — Figma node 1134:3811 ("Header", Variant2), replaces the old
@@ -314,52 +336,201 @@
   color: var(--primary-blue);
 }
 
+.nav__drawer-header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--grey-lightest-grey, #e2e8f0);
+}
+
+.nav__drawer-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--grey-dark-charcoal, #0c2340);
+}
+
+.nav__drawer-close {
+  background: #f1f5f9;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__drawer-close img {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
 @media (max-width: 1023px) {
+  .nav__drawer-header {
+    display: flex;
+  }
+
+  .nav__mobile-toggle .nav__mobile-icon--close {
+    display: none;
+  }
+
+  .nav__mobile-toggle.is-open .nav__mobile-icon--open {
+    display: none;
+  }
+
+  .nav__mobile-toggle.is-open .nav__mobile-icon--close {
+    display: block;
+  }
+
   .nav__links {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    width: min(320px, 85vw);
+    height: 100dvh;
+    width: min(340px, 88vw);
     background: var(--grey-pure-white);
     flex-direction: column;
-    align-items: flex-start;
-    padding: 96px 24px 24px;
-    gap: 20px;
-    box-shadow: var(--dropdown-shadow);
+    align-items: stretch;
+    /* Base (desktop) rule sets justify-content: flex-end for the horizontal
+       row layout — never meant for this vertical column drawer, where it
+       silently pushed all content toward the bottom (invisible before, since
+       the always-expanded flyout used to fill the full height anyway; now
+       that the flyout collapses by default, the shorter content leaves room
+       for it to visibly happen, showing as blank space above the links). */
+    justify-content: flex-start;
+    padding: max(20px, env(safe-area-inset-top)) 24px 32px;
+    gap: 16px;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
     transform: translateX(100%);
-    transition: transform 0.25s ease;
-    overflow-y: auto;
-    z-index: 9999;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y !important;
+    overscroll-behavior: contain !important;
+    z-index: 99999;
   }
 
   .nav__links.is-open {
-    transform: translateX(0);
+    display: flex !important;
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .nav__links > * {
+    flex-shrink: 0 !important;
+  }
+
+  .nav__mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(12, 35, 64, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 9998;
+  }
+
+  body.mobile-nav-open .nav__mobile-overlay {
+    display: block;
+  }
+
+  .nav__link {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--grey-dark-charcoal);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--grey-lightest-grey);
+  }
+
+  .nav__login-item {
+    width: 100%;
+  }
+
+  .nav__login {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--blue-tint-04);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    cursor: pointer;
+  }
+
+  .nav__login-menu {
+    position: static;
+    display: none;
+    flex-direction: column;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 8px 0 0 8px;
+    gap: 8px;
+  }
+
+  .nav__login-item.is-open .nav__login-menu {
+    display: flex !important;
+  }
+
+  .nav__login-menu::before {
+    display: none;
+  }
+
+  .nav__login-menu-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--grey-dark-grey);
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 6px;
+  }
+
+  .nav__cta {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 4px;
   }
 
   .nav__menu-item {
     width: 100%;
   }
 
+  /* The toggle button itself isn't needed on mobile — the flyout below is
+     shown directly, always expanded, right after "Open an account" rather
+     than behind a tap. */
   .nav__menu-toggle {
     display: none;
   }
 
-  /* Flyout has no hover on touch and its trigger is hidden above — render it
-     inline as part of the drawer instead, matching the Figma mobile panel
-     (Figma node 1644:5997) where the mega-menu is always visible once the
-     single hamburger opens the drawer. */
   .nav__flyout {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    width: 100%;
-    max-width: none;
-    box-shadow: none;
-    padding: 24px 0 0;
-    margin-top: 4px;
-    border-top: 1px solid var(--grey-lightest-grey);
+    position: static !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    padding: 20px 0 0 !important;
+    margin-top: 8px !important;
+    border-top: 1px solid var(--grey-lightest-grey) !important;
   }
 
   .nav__flyout__products {
@@ -369,7 +540,7 @@
 
   .nav__flyout__product {
     width: auto;
-    flex: 1 1 30%;
+    flex: 1 1 45%;
   }
 
   .nav__flyout__columns {
@@ -380,6 +551,18 @@
   .nav__mobile-toggle {
     display: inline-flex;
     position: relative;
-    z-index: 10000;
+    z-index: 10001;
+    cursor: pointer;
+    background: var(--blue-tint-04);
+    padding: 8px;
+    border-radius: 50%;
+  }
+
+  .nav__mobile-toggle.is-open {
+    background: var(--primary-blue);
+  }
+
+  .nav__mobile-toggle.is-open img {
+    filter: brightness(0) invert(1);
   }
 }
