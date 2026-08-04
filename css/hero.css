@@ -229,6 +229,10 @@
   height: auto;
 }
 
+.hero__panel-visual img[hidden] {
+  display: none;
+}
+
 @media (max-width: 1180px) {
   .hero__widget {
     flex-direction: column;

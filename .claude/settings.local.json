@@ -31,7 +31,10 @@
       "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --no-sandbox --screenshot=/private/tmp/claude-501/-Users-ntmac-Documents-FED-Learnings/0c42591c-b887-4c58-94c0-1c6ab6487306/scratchpad/shots/full.png --window-size=1440,6000 --hide-scrollbars --virtual-time-budget=5000 http://localhost:8123/index.html)",
       "Bash(sed -i '' \"s/await send\\('Page.enable'\\);/await send\\('Page.enable'\\); await send\\('Network.enable'\\); await send\\('Network.setCacheDisabled', { cacheDisabled: true }\\);/\" ecm-interaction-test.mjs)",
       "Bash(node ecm-interaction-test.mjs)",
-      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/9b4cf7fb-8a95-43cc-aa61-5394ba47737c\" -o assets/images/data-protection-page/hero-illustration.png)"
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/9b4cf7fb-8a95-43cc-aa61-5394ba47737c\" -o assets/images/data-protection-page/hero-illustration.png)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(sed -i 's/8794/8795/' shot4.js)",
+      "Bash(node shot4.js)"
     ]
   }
 }

@@ -2,6 +2,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     var tabs = document.querySelectorAll(".hero__tab");
     var panels = document.querySelectorAll(".hero__panel-text");
+    var visuals = document.querySelectorAll("[data-panel-visual]");
     var cta = document.getElementById("heroPanelCta");
 
     if (!tabs.length) return;
@@ -23,6 +24,10 @@
             var href = panel.getAttribute("data-href");
             if (href) cta.setAttribute("href", href);
           }
+        });
+
+        visuals.forEach(function (visual) {
+          visual.hidden = visual.getAttribute("data-panel-visual") !== target;
         });
       });
     });
