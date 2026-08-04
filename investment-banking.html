@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/ib-hero.css">
     <link rel="stylesheet" href="css/ib-stats.css">
     <link rel="stylesheet" href="css/ib-services.css">
+    <link rel="stylesheet" href="css/ib-value-prop.css">
     <link rel="stylesheet" href="css/ib-approach.css">
     <link rel="stylesheet" href="css/ib-whyus.css">
     <link rel="stylesheet" href="css/ib-clients.css">
@@ -243,38 +244,52 @@
         </div>
     </section>
 
-    <section class="ib-approach">
-        <div class="container ib-approach__inner">
-            <div class="ib-approach__text">
-                <span class="ib-approach__badge">Our Approach</span>
-                <h2>How We Create Value</h2>
-                <p>Unlike traditional intermediaries, our approach is strategy-first and execution-driven:</p>
-
-                <ul class="ib-approach__checklist">
-                    <li>
-                        <img src="assets/icons/ib-page/icon-check-value.svg" alt="" />
-                        <span>Deep understanding of business drivers &amp; market positioning</span>
-                    </li>
-                    <li>
-                        <img src="assets/icons/ib-page/icon-check-value.svg" alt="" />
-                        <span>Customized capital structuring solutions</span>
-                    </li>
-                    <li>
-                        <img src="assets/icons/ib-page/icon-check-value.svg" alt="" />
-                        <span>Strong institutional investor network</span>
-                    </li>
-                    <li>
-                        <img src="assets/icons/ib-page/icon-check-value.svg" alt="" />
-                        <span>End-to-end transaction ownership</span>
-                    </li>
-                </ul>
-
-                <p class="ib-approach__tag">Not Just Capital. Strategic Capital.</p>
+    <section class="ib-value-prop">
+        <div class="container ib-value-prop__inner">
+            <div class="ib-value-prop__heading">
+                <h2>Our Value Proposition</h2>
+                <p>We Structure Outcomes, Not Just Transactions.</p>
             </div>
 
-            <div class="ib-approach__visual">
-                <img src="assets/images/ib-page/approach-illustration.png"
-                    alt="Illustration representing strategic business growth" width="596" height="420" />
+            <div class="ib-value-prop__grid">
+                <article class="ib-value-prop__card">
+                    <span class="ib-value-prop__icon"><img src="assets/icons/icon-research-based.svg" alt="" /></span>
+                    <h3>Strategy-Led Capital Advisory</h3>
+                    <p>We don&rsquo;t begin with a transaction. We begin with your business, your vision, and your
+                        growth trajectory &mdash; and design capital strategies aligned to long-term value creation.
+                    </p>
+                </article>
+                <article class="ib-value-prop__card">
+                    <span class="ib-value-prop__icon"><img src="assets/icons/icon-long-term.svg" alt="" /></span>
+                    <h3>End-to-End Ownership</h3>
+                    <p>From idea to execution &mdash; we take complete ownership of the transaction lifecycle:
+                        structuring, documentation, investor engagement, and closure.</p>
+                </article>
+                <article class="ib-value-prop__card">
+                    <span class="ib-value-prop__icon"><img src="assets/icons/icon-tailored-service.svg"
+                            alt="" /></span>
+                    <h3>Mid-Market Expertise with Institutional Depth</h3>
+                    <p>Deep focus on mid-market businesses combined with institutional-grade execution capabilities.
+                    </p>
+                </article>
+                <article class="ib-value-prop__card">
+                    <span class="ib-value-prop__icon"><img src="assets/icons/icon-rm-service.svg" alt="" /></span>
+                    <h3>Investor Access &amp; Capital Syndication</h3>
+                    <p>Strong relationships across HNIs, family offices, institutional investors, and strategic
+                        partners.</p>
+                </article>
+                <article class="ib-value-prop__card">
+                    <span class="ib-value-prop__icon"><img src="assets/icons/icon-customer-security.svg"
+                            alt="" /></span>
+                    <h3>Regulatory &amp; Structuring Excellence</h3>
+                    <p>Strong command over SEBI regulations, compliance frameworks, and deal structuring.</p>
+                </article>
+                <article class="ib-value-prop__card">
+                    <span class="ib-value-prop__icon"><img src="assets/icons/icon-transparent-comm.svg"
+                            alt="" /></span>
+                    <h3>Long-Term Partnership Approach</h3>
+                    <p>We don&rsquo;t exit at listing or deal closure &mdash; we stay invested in your journey.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -346,6 +361,42 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ib-approach">
+        <div class="container ib-approach__inner">
+            <div class="ib-approach__text">
+                <span class="ib-approach__badge">Our Approach</span>
+                <h2>How We Create Value</h2>
+                <p>Unlike traditional intermediaries, our approach is strategy-first and execution-driven:</p>
+
+                <ul class="ib-approach__checklist">
+                    <li>
+                        <img src="assets/icons/ib-page/icon-check-value.svg" alt="" />
+                        <span>Deep understanding of business drivers &amp; market positioning</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/ib-page/icon-check-value.svg" alt="" />
+                        <span>Customized capital structuring solutions</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/ib-page/icon-check-value.svg" alt="" />
+                        <span>Strong institutional investor network</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/ib-page/icon-check-value.svg" alt="" />
+                        <span>End-to-end transaction ownership</span>
+                    </li>
+                </ul>
+
+                <p class="ib-approach__tag">Not Just Capital. Strategic Capital.</p>
+            </div>
+
+            <div class="ib-approach__visual">
+                <img src="assets/images/ib-page/approach-illustration.png"
+                    alt="Illustration representing strategic business growth" width="596" height="420" />
             </div>
         </div>
     </section>
@@ -474,7 +525,9 @@
                     </div>
 
                     <div class="assetmgmt-contact__actions">
+                        <!-- Disabled for now — re-enable when ready:
                         <a href="#" class="assetmgmt-contact__btn">Schedule a Consultation</a>
+                        -->
                         <a href="#" class="assetmgmt-contact__btn">Connect With Our Team</a>
                     </div>
                 </div>

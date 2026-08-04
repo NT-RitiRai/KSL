@@ -9,17 +9,6 @@
   padding: 24px 0;
 }
 
-.parent {
-  position: relative;
-}
-
-.pricing-promo {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
 .pricing-promo__inner {
   display: flex;
   align-items: center;

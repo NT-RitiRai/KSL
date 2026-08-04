@@ -144,21 +144,26 @@
     <section class="od-grid">
         <div class="container od-grid__inner">
             <div class="od-tabs" role="tablist">
-                <button class="od-tabs__tab is-active" role="tab" aria-selected="true" type="button">
+                <button class="od-tabs__tab is-active" role="tab" aria-selected="true" type="button"
+                    id="odTabOngoing" aria-controls="odPanelOngoing" data-tab="ongoing">
                     Ongoing Transactions
                     <span class="od-tabs__tab-underline"></span>
                 </button>
-                <button class="od-tabs__tab" role="tab" aria-selected="false" type="button">
+                <button class="od-tabs__tab" role="tab" aria-selected="false" type="button" id="odTabPast"
+                    aria-controls="odPanelPast" data-tab="past">
                     Past Transactions
+                    <span class="od-tabs__tab-underline"></span>
                 </button>
             </div>
 
             <!-- Placeholder: Figma source authors one real document set (ArMee Infotech Limited - 2025)
-                 and repeats it across all twelve card slots — reproduced faithfully rather than
-                 inventing eleven additional offer documents that don't exist in the source design. -->
-            <div class="od-grid__rows">
-                <div class="od-grid__row">
-                    <article class="od-card">
+                 and repeats it across all card slots in both tabs — reproduced faithfully rather than
+                 inventing offer documents that don't exist in the source design. Cards are split 6-per-page
+                 across two data-page groups purely to exercise the pagination control against real markup. -->
+            <div class="od-tabpanel" id="odPanelOngoing" role="tabpanel" aria-labelledby="odTabOngoing"
+                data-tabpanel="ongoing">
+                <div class="od-grid__rows">
+                    <article class="od-card" data-page="1">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -167,7 +172,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                    <article class="od-card">
+                    <article class="od-card" data-page="1">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -176,7 +181,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                    <article class="od-card">
+                    <article class="od-card" data-page="1">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -185,9 +190,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                </div>
-                <div class="od-grid__row">
-                    <article class="od-card">
+                    <article class="od-card" data-page="1">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -196,7 +199,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                    <article class="od-card">
+                    <article class="od-card" data-page="1">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -205,7 +208,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                    <article class="od-card">
+                    <article class="od-card" data-page="1">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -214,9 +217,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                </div>
-                <div class="od-grid__row">
-                    <article class="od-card">
+                    <article class="od-card" data-page="2">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -225,7 +226,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                    <article class="od-card">
+                    <article class="od-card" data-page="2">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -234,7 +235,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                    <article class="od-card">
+                    <article class="od-card" data-page="2">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -243,9 +244,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                </div>
-                <div class="od-grid__row">
-                    <article class="od-card">
+                    <article class="od-card" data-page="2">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -254,7 +253,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                    <article class="od-card">
+                    <article class="od-card" data-page="2">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -263,7 +262,7 @@
                             <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
                         </div>
                     </article>
-                    <article class="od-card">
+                    <article class="od-card" data-page="2">
                         <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
                         <div class="od-card__divider"></div>
                         <div class="od-card__links">
@@ -275,20 +274,115 @@
                 </div>
             </div>
 
-            <!-- Pagination is visual-only: Figma shows 24 pages but no corresponding data exists
-                 for pages beyond the first, and there is no live reference to source real content from. -->
-            <nav class="od-pagination" aria-label="Offer documents pages">
-                <span class="od-pagination__step">Prev</span>
-                <div class="od-pagination__numbers">
-                    <span class="od-page od-page--active" aria-current="page">01</span>
-                    <span class="od-page">02</span>
-                    <span class="od-page">03</span>
-                    <span class="od-page">04</span>
-                    <span class="od-page">05</span>
-                    <span class="od-page od-page--ellipsis">&hellip;</span>
-                    <span class="od-page">24</span>
+            <div class="od-tabpanel" id="odPanelPast" role="tabpanel" aria-labelledby="odTabPast"
+                data-tabpanel="past" hidden>
+                <div class="od-grid__rows">
+                    <article class="od-card" data-page="1">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="1">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="1">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="1">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="1">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="1">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="2">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="2">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="2">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="2">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
+                    <article class="od-card" data-page="2">
+                        <h3 class="od-card__title">ArMee Infotech Limited - 2025</h3>
+                        <div class="od-card__divider"></div>
+                        <div class="od-card__links">
+                            <a href="#">Hindi AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">English AV Link <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                            <a href="#">Draft Red Herring Prospectus <img src="assets/icons/ib-page/icon-external-link.svg" alt="" /></a>
+                        </div>
+                    </article>
                 </div>
-                <span class="od-pagination__step od-pagination__step--next">Next</span>
+            </div>
+
+            <nav class="od-pagination" aria-label="Offer documents pages" data-pagination>
+                <button type="button" class="od-pagination__step" data-page-prev>Prev</button>
+                <div class="od-pagination__numbers" data-page-numbers></div>
+                <button type="button" class="od-pagination__step od-pagination__step--next" data-page-next>Next</button>
             </nav>
         </div>
     </section>
@@ -539,6 +633,7 @@
 
     <script src="js/ib-header.js" defer></script>
     <script src="js/od-modal.js" defer></script>
+    <script src="js/offer-documents.js" defer></script>
     <script src="script.js" defer></script>
   <script src="js/form-validation.js"></script>
 </body>

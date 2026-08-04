@@ -47,7 +47,7 @@
 
 .od-grid {
   background: var(--grey-pure-white);
-  padding: 0 0 64px;
+  padding: 40px 0 64px;
 }
 
 .od-grid__inner {
@@ -59,23 +59,29 @@
 
 .od-tabs {
   display: flex;
-  justify-content: flex-end;
-  gap: 48px;
+  justify-content: flex-start;
+  gap: 40px;
   width: 100%;
   border-bottom: 1px solid var(--grey-lightest-grey);
-  padding-bottom: 12px;
 }
 
 .od-tabs__tab {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 12px;
   background: none;
   border: none;
+  padding: 4px 2px 12px;
   font-size: 16px;
   font-weight: 500;
   color: var(--grey-dark-grey);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.od-tabs__tab:hover {
+  color: var(--primary-blue);
 }
 
 .od-tabs__tab-underline {
@@ -94,20 +100,22 @@
   background: var(--primary-blue);
 }
 
+.od-tabpanel[hidden] {
+  display: none;
+}
+
 .od-grid__rows {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   width: 100%;
 }
 
-.od-grid__row {
-  display: flex;
-  gap: 24px;
+.od-card[hidden] {
+  display: none;
 }
 
 .od-card {
-  flex: 1 1 0;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -164,10 +172,19 @@
   font-size: 18px;
   font-weight: 600;
   color: var(--grey-medium-dark-grey);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
 }
 
 .od-pagination__step--next {
   color: var(--primary-blue);
+}
+
+.od-pagination__step:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .od-pagination__numbers {
@@ -183,11 +200,18 @@
   justify-content: center;
   width: 49px;
   height: 49px;
+  background: none;
   border: 1px solid var(--primary-blue);
   border-radius: 8px;
   font-size: 18px;
   font-weight: 600;
   color: var(--primary-blue);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.od-page:hover:not(.od-page--active) {
+  background: rgba(0, 89, 154, 0.08);
 }
 
 .od-page--active {
@@ -226,17 +250,8 @@
     max-width: 380px;
   }
 
-  .od-tabs {
-    justify-content: center;
-  }
-
-  .od-grid__row {
-    flex-wrap: wrap;
-  }
-
-  .od-card {
-    flex: 1 1 calc(50% - 12px);
-    min-width: 240px;
+  .od-grid__rows {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -251,11 +266,11 @@
   }
 
   .od-grid {
-    padding: 0 0 48px;
+    padding: 32px 0 48px;
   }
 
-  .od-card {
-    flex: 1 1 100%;
+  .od-grid__rows {
+    grid-template-columns: 1fr;
   }
 
   .od-tabs {

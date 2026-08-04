@@ -21,10 +21,10 @@
 }
 
 .deals-hero__text h1 {
-  font-size: 56px;
+  font-size: 64px;
   font-weight: 700;
   line-height: 1.25;
-  letter-spacing: -1.5px; /* no matching Figma token */
+  letter-spacing: -0.03em;
   color: var(--grey-dark-charcoal);
 }
 

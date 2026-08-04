@@ -15,12 +15,13 @@
 
 .board__grid {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
 .person-card {
-  flex: 1 1 0;
-  min-width: 0;
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;

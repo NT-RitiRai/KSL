@@ -60,17 +60,17 @@
 /* Placeholder: Figma source authors three real track-record cards (Udayshivakumar Infra
    Limited, DCX Systems Limited, Tolins Tyres Limited) and repeats that same row three times —
    reproduced faithfully rather than inventing six additional companies that don't exist in
-   the source design. */
+   the source design. Cards carry a data-page attribute so the pagination control below
+   operates on real markup instead of being purely decorative. */
 .tr-grid__rows {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   width: 100%;
 }
 
-.tr-grid__row {
-  display: flex;
-  gap: 24px;
+.ib-track__card[hidden] {
+  display: none;
 }
 
 .tr-pagination {
@@ -87,10 +87,19 @@
   font-size: 18px;
   font-weight: 600;
   color: var(--grey-medium-dark-grey);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
 }
 
 .tr-pagination__step--next {
   color: var(--primary-blue);
+}
+
+.tr-pagination__step:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .tr-pagination__numbers {
@@ -106,11 +115,18 @@
   justify-content: center;
   width: 49px;
   height: 49px;
+  background: none;
   border: 1px solid var(--primary-blue);
   border-radius: 8px;
   font-size: 18px;
   font-weight: 600;
   color: var(--primary-blue);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tr-page:hover:not(.tr-page--active) {
+  background: rgba(0, 89, 154, 0.08);
 }
 
 .tr-page--active {
@@ -149,13 +165,8 @@
     max-width: 380px;
   }
 
-  .tr-grid__row {
-    flex-wrap: wrap;
-  }
-
-  .tr-grid__row .ib-track__card {
-    flex: 1 1 calc(50% - 12px);
-    min-width: 240px;
+  .tr-grid__rows {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -173,8 +184,8 @@
     padding: 0 0 48px;
   }
 
-  .tr-grid__row .ib-track__card {
-    flex: 1 1 100%;
+  .tr-grid__rows {
+    grid-template-columns: 1fr;
   }
 
   .tr-pagination {
