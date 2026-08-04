@@ -2,7 +2,7 @@
 
 .products-investorai {
   background: var(--blue-tint-04);
-  padding: 64px 0 0;
+  padding: 64px 0;
 }
 
 .products-feature__intro {
@@ -83,7 +83,7 @@
 
 @media (max-width: 639px) {
   .products-investorai {
-    padding: 48px 0 0;
+    padding: 48px 0;
   }
 
   .products-tech h2 {

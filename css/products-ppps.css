@@ -2,11 +2,11 @@
 
 .products-ppps {
   background: var(--grey-pure-white);
-  padding: 64px 0 0;
+  padding: 64px 0;
 }
 
 @media (max-width: 639px) {
   .products-ppps {
-    padding: 48px 0 0;
+    padding: 48px 0;
   }
 }

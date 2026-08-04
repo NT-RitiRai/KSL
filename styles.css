@@ -59,6 +59,12 @@ body {
   color: var(--grey-off-black);
   background: var(--grey-pure-white);
   -webkit-font-smoothing: antialiased;
+  /* overflow-x: hidden was here to hide decorative-element bleed, but any
+     non-visible overflow on an ancestor of a position:sticky element turns
+     it into that element's scroll container — since the sticky header is a
+     direct child of body, this silently broke the sticky header on every
+     page. Sections with decorative bleed (blobs, illustrations) already
+     clip themselves locally via their own overflow: hidden. */
 }
 
 img {

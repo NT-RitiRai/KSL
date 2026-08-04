@@ -5,21 +5,29 @@
 }
 
 .blogs__head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
   margin-bottom: 32px;
 }
 
+/* Now sits below .blogs__grid rather than beside the heading. Block-level
+   + margin:auto (rather than inline-flex) so it actually centers as a
+   standalone element in normal flow. */
 .blogs__view-all {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
+  justify-content: center;
   gap: 4px;
+  margin: 32px auto 0;
   font-size: 18px;
   font-weight: 500;
   color: var(--grey-dark-charcoal);
   white-space: nowrap;
+  transition: color 0.15s ease, gap 0.15s ease;
+}
+
+.blogs__view-all:hover {
+  color: var(--primary-blue);
+  gap: 8px;
 }
 
 .blogs__view-all-icon {
@@ -214,22 +222,85 @@
     padding: 40px 0;
   }
 
-  .blogs__head {
+  /* Below this width the 3 "small" list cards should read identically to
+     the 2 "large" cards above them — same full-width thumb, same type
+     scale, same outline "Read more" button — instead of the compact
+     side-by-side row treatment meant for the desktop 3rd column. */
+  .blogs__card--small {
     flex-direction: column;
     gap: 16px;
   }
 
-  .blogs__card--small {
-    flex-direction: column;
-  }
-
   .blogs__media--small {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
     width: 100%;
   }
 
   .blogs__thumb--small {
-    width: 110px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920 / 1080;
+  }
+
+  .blogs__meta--stacked {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .blogs__meta--stacked .blogs__date,
+  .blogs__meta--stacked .blogs__tags {
+    font-size: 16px;
+  }
+
+  .blogs__meta--stacked .blogs__tags {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .blogs__content--small {
+    gap: 24px;
+  }
+
+  .blogs__text--small {
+    gap: 8px;
+  }
+
+  .blogs__title--small {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .blogs__excerpt--small {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  .blogs__link-text {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    background: var(--blue-tint-04);
+    border: 1px solid var(--primary-blue);
+    border-radius: 10px;
+    padding: 10px 16px;
+    color: var(--primary-blue);
+    transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  }
+
+  .blogs__link-text:hover {
+    background: var(--primary-blue);
+    color: var(--grey-pure-white);
+    box-shadow: 0 8px 20px rgba(0, 89, 154, 0.24);
+    transform: translateY(-2px);
   }
 }

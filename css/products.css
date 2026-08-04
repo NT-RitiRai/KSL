@@ -61,10 +61,12 @@
   border: 1px solid rgba(0, 89, 154, 0.16);
   border-radius: 24px;
   box-shadow: 0px 3px 32px 0px rgba(0, 0, 0, 0.04);
-  padding: 19px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .products__icon {
@@ -161,10 +163,10 @@
     height: 426px;
   }
 
-  .products__card-link {
+  /* .products__card-link {
     opacity: 0;
     transition: opacity 0.2s ease-out;
-  }
+  } */
 
   .products__card:hover .products__card-link {
     opacity: 1;
@@ -183,9 +185,17 @@
   }
 
   .products__card {
-    flex-basis: 260px;
+    /* flex-basis: 260px; */
     height: auto;
     min-height: 340px;
     overflow: visible;
+  }
+
+  .products__icon {
+    background-color: #00599a;
+  }
+
+  .products__icon img {
+    filter: brightness(0) invert(1);
   }
 }

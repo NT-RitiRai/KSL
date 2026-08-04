@@ -193,6 +193,7 @@
 .ib-nav__mobile-toggle img {
   width: 24px;
   height: 24px;
+  pointer-events: none;
 }
 
 @media (max-width: 1023px) {

@@ -374,6 +374,19 @@
 @media (max-width: 1023px) {
   .nav__drawer-header {
     display: flex;
+    /* Pin the title + close button to the top of the drawer's own scroll
+       area so they stay reachable while the (now-long, with the inlined
+       flyout) menu content scrolls underneath. Negative horizontal margins
+       cancel .nav__links' side padding so the sticky bar spans full-bleed. */
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    margin: 0 -24px 8px;
+    /* Top padding absorbs the inset .nav__links used to reserve as its own
+       top padding, so this element's solid background now covers that
+       region too — nothing can render above/behind it once stuck. */
+    padding: max(20px, env(safe-area-inset-top)) 24px 16px;
+    background: var(--grey-pure-white);
   }
 
   .nav__mobile-toggle .nav__mobile-icon--close {
@@ -405,7 +418,10 @@
        that the flyout collapses by default, the shorter content leaves room
        for it to visibly happen, showing as blank space above the links). */
     justify-content: flex-start;
-    padding: max(20px, env(safe-area-inset-top)) 24px 32px;
+    /* Top inset moved onto .nav__drawer-header's own padding (below) instead
+       of here — as container padding it left a gap above the sticky header
+       with no solid background, letting scrolled content bleed through it. */
+    padding: 0 24px 32px;
     gap: 16px;
     box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
     transform: translateX(100%);
@@ -518,6 +534,11 @@
 
   .nav__flyout {
     position: static !important;
+    /* Desktop rule sets z-index: 1000 for the absolutely-positioned popover;
+       left on a static element it's inert for layout but can still confuse
+       browsers' stacking resolution against later-painted positioned
+       siblings (like the sticky drawer header), so it's reset here. */
+    z-index: auto !important;
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
